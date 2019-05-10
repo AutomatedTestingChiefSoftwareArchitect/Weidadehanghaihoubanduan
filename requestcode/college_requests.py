@@ -2,8 +2,6 @@ import requests
 import datetime
 import random
 
-# import time
-
 
 class Interface(object):
 
