@@ -53,7 +53,7 @@ if __name__ == '__main__':
     ret = Requests("https://www.baidu.com",
                    "https://www.baidu.com")
     i = 0
-    while i < 10:
+    while i < 1:
         i += 1
         threading.Thread(target=ret.page_get, args=()).start()
         threading.Thread(target=ret.interface_get, args=()).start()
