@@ -57,3 +57,58 @@ if __name__ == '__main__':
         i += 1
         threading.Thread(target=ret.page_get, args=()).start()
         threading.Thread(target=ret.interface_get, args=()).start()
+
+
+"""
+
+# 增加并发数和总数
+import threading
+from time import time
+import requests
+ 
+THREAD_NUM = 100  # 多少线程，多少请求
+ONE_WORKER_NUM = 10   # 虚拟用户数
+ 
+ 
+# test()此处的程序，可以替换
+def test():
+    r = requests.get()
+    print("测试程序")
+ 
+ 
+# 多线程，虚拟用户数
+def working():
+    global ONE_WORKER_NUM
+    for i in range(0, ONE_WORKER_NUM):
+        test()
+ 
+ 
+def t():
+    global THREAD_NUM
+    Threads = []
+    start_time = time()  # 开始时间
+ 
+    for i in range(THREAD_NUM):
+        t = threading.Thread(target=working(), name="T"+str(i))
+        t.setDaemon(True)
+        Threads.append(t)
+    for t in Threads:
+        t.start()
+    for t in Threads:
+        t.join()
+ 
+    end_time = time()  # 结束时间
+    num = THREAD_NUM * ONE_WORKER_NUM   # 请求总数
+    run_time = end_time - start_time    # 总消耗时间
+    one_requests_time = float(run_time) / num  # 每个请求平均消耗时间
+    print("请求总数:" + str(num))
+    print("开始时间：" + str(start_time))
+    print("结束时间：" + str(end_time))
+    print("总消耗时间：" + str(run_time) + "秒")
+    print("每个请求平均消耗时间：" + str(one_requests_time) + "秒")
+ 
+ 
+if __name__ == "__main__":
+    t()
+
+"""
