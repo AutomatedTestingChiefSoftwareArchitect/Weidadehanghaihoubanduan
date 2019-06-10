@@ -3,6 +3,8 @@ import json
 from common.Log import logger
 
 logger = logger
+
+
 class RunMain():
 
     def send_post(self, url, data):# 定义一个方法，传入需要的参数url和data
