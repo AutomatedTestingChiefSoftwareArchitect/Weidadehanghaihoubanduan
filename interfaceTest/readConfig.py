@@ -26,5 +26,5 @@ class ReadConfig():
 
 if __name__ == '__main__':
     ret = ReadConfig()
-    print("baseurl = %s" % ret.get_http('baseurl')) # 多取
-    print("port = %s" % ret.get_http('port'))
+    print("baseurl = %s" % ret.get_http('baseurl'))
+    print("port = %s" % ret.get_http('port'))  # add num
