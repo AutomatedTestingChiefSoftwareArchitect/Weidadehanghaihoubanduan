@@ -50,3 +50,6 @@
   "message": "参数不能为空！"
 }
 2018-12-04 10:41:02,470 - logs… - INFO - send email ok!!!!
+2019-07-03 14:20:22,346 - logs… - ERROR - hahah
+2019-07-03 14:21:00,827 - logs… - ERROR - hahah
+2019-07-03 14:21:00,827 - logs… - INFO - 123

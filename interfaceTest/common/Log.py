@@ -1,9 +1,10 @@
 import os
 import logging
 from logging.handlers import TimedRotatingFileHandler
-import getpathInfo
+import interfaceTest.getpathInfo
 
-path = getpathInfo.get_Path()
+
+path = interfaceTest.getpathInfo.get_Path()
 log_path = os.path.join(path, 'result')  # 存放log文件的路径
 
 

@@ -1,8 +1,7 @@
 import requests
 import json
-from common.Log import logger
-
-logger = logger
+from interfaceTest.common import Log
+logger = Log.logger
 
 
 class RunMain():
