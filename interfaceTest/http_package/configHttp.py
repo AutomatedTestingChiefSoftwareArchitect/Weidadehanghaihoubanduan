@@ -1,36 +1,58 @@
 import requests
-import json
 from interfaceTest.log_and_logresult_package import Log
 
 logger = Log.logger
 
 
-class RunMain():
+class RunMain(object):
 
-    def send_post(self, url, data):  # 定义一个方法，传入需要的参数url和data
+    def __init__(self):
+        self.cookies = None
+        self.headers = None
+
+    def login_http(self):  # login
+        header = {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"}
+        url = 'https://www.review.xiaozao.org/api/user/phoneLogin?"'
+        querystring = {
+            "regionCodeIndex": 37,
+            "phone": 15721484677,
+            "password": "Dyc930701",
+            "remember": "true"
+        }
+        ret = requests.get(url=url, params=querystring, headers=header, timeout=2)
+        if ret.status_code == requests.codes.OK:
+            self.headers = header
+            self.cookies = ret.cookies
+            logger.info("login is successful")
+            return self.headers, self.cookies
+        else:
+            raise Exception("登陆接口错误码: %s" % ret.status_code)
+
+    def send_post(self, url, data, headers, cookies):  # 定义一个方法，传入需要的参数url和data
         # 参数必须按照url、data顺序传入
-        result = requests.post(url=url, data=data).json()  # 因为这里要封装post方法，所以这里的url和data值不能写死
-        res = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)
-        return res
+        result = requests.post(url=url, data=data, headers=headers, cookies=cookies)
+        # 因为这里要封装post方法，所以这里的url和data值不能写死
+        # res = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)
+        return result
 
-    def send_get(self, url, data):
-        result = requests.get(url=url, data=data)
-        res = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)
-        return res
+    def send_get(self, url, data, headers, cookies):
+        result = requests.get(url=url, data=data, headers=headers, cookies=cookies)
+        # res = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)
+        return result
 
-    def run_main(self, method, url=None, data=None):  # 定义一个run_main函数，通过传过来的method来进行不同的get或post请求
+    def run_main(self, method, url, data, headers, cookies):
+        # 定义一个run_main函数，通过传过来的method来进行不同的get或post请求
         result = None
         if method == 'post':
-            result = self.send_post(url, data)
-            logger.info(str(result))
+            result = self.send_post(url, data, headers, cookies)
         elif method == 'get':
-            result = self.send_get(url, data)
-            logger.info(str(result))
+            result = self.send_get(url, data, headers, cookies)
         else:
             print("method值错误！！！")
             logger.info("method值错误！！！")
         return result
 
 
-if __name__ == '__main__':  # 通过写死参数，来验证我们写的请求是否正确
-    result = RunMain()
+runmain = RunMain()

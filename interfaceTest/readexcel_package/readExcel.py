@@ -13,7 +13,6 @@ class readExcel():
         cls = []
         # 获取用例文件路径
         xlsPath = os.path.join(path, "testFile", xls_name)
-        print(xlsPath)
         file = open_workbook(xlsPath)  # 打开用例Excel
         sheet = file.sheet_by_name(sheet_name)  # 获得打开Excel的sheet
         # 获取这个sheet内容行数
@@ -24,7 +23,5 @@ class readExcel():
         return cls
 
 
-if __name__ == '__main__':  # 我们执行该文件测试一下是否可以正确获取Excel中的值
-    reads = readExcel()
-    # print(readExcel().get_xls('userCase.xlsx', 'login')[2][2])
-    # print(readExcel().get_xls('userCase.xlsx', 'login')[1][2])
+reds = readExcel()
+# print(reds.get_xls('userCase.xlsx', 'login')[0][1])

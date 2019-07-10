@@ -1,49 +1,60 @@
 import pymysql
-import interfaceTest.config_package.readConfig
 from interfaceTest.log_and_logresult_package import Log
+import random
 
 
-class Mysqldate:
+class DateBaseHandle(object):
 
     def __init__(self):
-        self.host = interfaceTest.config_package.readConfig.ret.get_mysql('host')
-        self.port = interfaceTest.config_package.readConfig.ret.get_mysql('port')
-        self.db = interfaceTest.config_package.readConfig.ret.get_mysql('db')
-        self.user = interfaceTest.config_package.readConfig.ret.get_mysql('user')
-        self.password = interfaceTest.config_package.readConfig.ret.get_mysql('password')
-        self.charset = 'utf-8'
-        self.log = Log.logger
 
-    def open_mysql(self):
+        self.conn = pymysql.connect(
+            host='rm-wz91670r7o0zi042j8o.mysql.rds.aliyuncs.com',
+            port=3306,
+            user='test_shanghai',
+            password='shanghai@jinglong',
+            db='axd_test',
+            charset='utf8'
+        )
+        self.logger = Log.logger
+        self.sid = []
+        self.name = []
+        self.list_mysql_sid = []
+        self.list_mysql_name = []
+        self.num = None
+        self.key = None
 
-        self.conn = pymysql.connect(host=self.host, port=self.port, db=self.db,
-                                    user=self.user, password=self.password, charset=self.charset)
-        self.cursor = self.conn.cursor()
+    def select_mysql(self, sql):
 
-    def select_mysql(self, key, value):
-        self.open_mysql()
-        date = "SELECT %s FROM %s;" % (key, value)
-        reslut = self.cursor.execute(date)
-        if reslut is None:
-            self.log.error("login error")
+        cursor = self.conn.cursor()
+        try:
+            cursor.execute(sql)
+            data = cursor.fetchall()
+            for rows, table in data:
+                self.sid.append(rows)
+                self.name.append(table)
+                self.list_mysql_sid.append(self.sid)
+                self.list_mysql_name.append(self.name)
+            for topic in self.list_mysql_sid:
+                self.num = random.choice(topic)
+            for topics in self.list_mysql_name:
+                self.key = random.choice(topics)
+            return self.num, self.key
+        except:
+            self.logger.error("select date error")
+        finally:
+            cursor.close()
 
-    def delete_mysql(self, value, key,ids):
-        self.open_mysql()
-        dates = "DELETE FROM %s WHERE %s=%s;" % (value,key, ids)
-        resluts = self.cursor.execute(dates)
-        if resluts is None:
-            self.log.error("login error")
-
-    def close_mysql(self, method, value, key, ids):
-        if method == "select":
-            self.select_mysql(key, value)
-        elif method == "delete":
-            self.delete_mysql(value, key, ids)
-        else:
-            self.log.error("method error")
-        self.cursor.close()
-        self.conn.close()
+    def delete_mysql(self, sql):
+        cursor = self.conn.cursor()
+        try:
+            cursor.execute(sql)
+            self.conn.commit()
+        except:
+            self.logger.info("···数据库删除数据错误，回滚中···")
+            self.conn.rollback()  # 错误时回滚
+            self.logger.info("···数据回滚成功···")
+        finally:
+            cursor.close()
 
 
-if __name__ == '__main__':
-    rets = Mysqldate()
+results = DateBaseHandle()
