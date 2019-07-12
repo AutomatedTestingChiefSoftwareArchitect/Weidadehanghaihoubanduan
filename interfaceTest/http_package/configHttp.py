@@ -9,6 +9,7 @@ class RunMain(object):
     def __init__(self):
         self.cookies = None
         self.headers = None
+        self.ret = None
 
     def login_http(self):  # login
         header = {
@@ -25,8 +26,9 @@ class RunMain(object):
         if ret.status_code == requests.codes.OK:
             self.headers = header
             self.cookies = ret.cookies
+            self.ret = ret.json()["response"]
             logger.info("login is successful")
-            return self.headers, self.cookies
+            return self.headers, self.cookies, self.ret
         else:
             raise Exception("登陆接口错误码: %s" % ret.status_code)
 

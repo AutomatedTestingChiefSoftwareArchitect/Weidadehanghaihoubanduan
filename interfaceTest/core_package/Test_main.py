@@ -13,7 +13,9 @@ logger = Log.logger
 
 
 class Interface(unittest.TestCase):
+
     """
+    //TODO this is unittest methods
     self.assertEqual(a, b)       check that a == b
     self.assertNotEqual(a, b)    check that a != b
     self.assertTrue(x)           check that bool(x) is true
@@ -26,28 +28,28 @@ class Interface(unittest.TestCase):
     self.assertNotIn(a,b)        check that a not in b
     self.assertIsInstance(a, b)  check that isinstance(a, b)
     self.assertNotIsInstance(a, b)  check that not isinstance(a, b)
-    """
-    @classmethod
-    def setUp(cls):
-        print("-------------date init----------------")
-
-    @classmethod
-    def tearDown(cls):
-        print("-------------date clean----------------")
-
-    """
-    @unittest.skipUnless(sys.platform.startswith("哈哈哈"), "not stat")
-    def test_interface(self):
-        pass  # this is to here ret.add_num codes
     unittest.skip(reason)
     unittest.skipIf(condition,reason)      即在满足condition条件下跳过该用例
-    unittest.skipUnless(condition,reason)  reason用于描述跳过的原因
+    unittest.skipUnless(condition,reason)  reason用于描述跳过的原因\
+
     """
-    def test_1_login(self):
 
-        configHttp.runmain.login_http()
+    def setUp(self):
+        self.verificationErrors = []
 
-    def test_2_college(self):
+    def tearDown(self):
+        self.assertEqual([], self.verificationErrors)
+
+    def login(self):
+        try:
+            configHttp.runmain.login_http()
+            self.assertIsNotNone(configHttp.runmain.ret)
+            logger.info("login response is successful")
+        except AssertionError as e:
+            self.verificationErrors.append(e)
+            logger.error("login response is %s" % configHttp.runmain.ret)
+
+    def college(self):
 
         url = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][1]
         parameter = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][2]
@@ -57,16 +59,22 @@ class Interface(unittest.TestCase):
         try:
             self.assertEqual(results.status_code, 200)
             logger.info("college interface is successful")
-        except:
+        except AssertionError as e:
+            self.verificationErrors.append(e)
             logger.error("college interface is %s" % results.status_code)
+
+        if results.json()["result"] is not None:
+            self.verificationErrors.append(results.json()["result"])
+            logger.error("results.json()['result'] is %s" % results.json()["result"])
+        else:
+            logger.info("results.json()['result'] is successful")
 
 
 if __name__ == '__main__':
 
     date = time.strftime('%Y-%m-%d-%H-%M-%S')
     suite = unittest.TestSuite()
-    suite.addTest(Interface("test_1_login"))
-    suite.addTest(Interface("test_2_college"))
+    suite.addTests(map(Interface, ["login", "college"]))
     path = interfaceTest.getpathInfo.get_Path()
     config_path = os.path.join(path, 'result\\report-'+date+'.html')
     if suite is not None:
