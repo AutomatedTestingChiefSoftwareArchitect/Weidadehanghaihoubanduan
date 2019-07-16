@@ -1,19 +1,18 @@
 import os
 import time
 import unittest
-from HTMLTestRunner import HTMLTestRunner
+import xmlrunner
 from interfaceTest.log_and_logresult_package import Log
 import interfaceTest.getpathInfo
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
 # from interfaceTest.sql_package import My_sql
-# import sys
+# from HTMLTestRunner import HTMLTestRunner
 
 logger = Log.logger
 
 
 class Interface(unittest.TestCase):
-
     """
     //TODO this is unittest methods
     self.assertEqual(a, b)       check that a == b
@@ -43,11 +42,11 @@ class Interface(unittest.TestCase):
     def login(self):
         try:
             configHttp.runmain.login_http()
-            self.assertIsNotNone(configHttp.runmain.ret)
+            self.assertIsNone(configHttp.runmain.ret)
             logger.info("login response is successful")
         except AssertionError as e:
-            self.verificationErrors.append(e)
             logger.error("login response is %s" % configHttp.runmain.ret)
+            self.verificationErrors.append(e)
 
     def college(self):
 
@@ -72,17 +71,21 @@ class Interface(unittest.TestCase):
 
 if __name__ == '__main__':
 
-    date = time.strftime('%Y-%m-%d-%H-%M-%S')
     suite = unittest.TestSuite()
     suite.addTests(map(Interface, ["login", "college"]))
+    date = time.strftime('%Y-%m-%d-%H-%M-%S')
     path = interfaceTest.getpathInfo.get_Path()
-    config_path = os.path.join(path, 'result\\report-'+date+'.html')
+    config_path = os.path.join(path, 'result\\report-'+date+'.xml')
     if suite is not None:
+        """
+         # 本地报告
         fp = open(config_path, 'wb')
         runner = HTMLTestRunner(stream=fp,
                                 title='Test Report',
                                 description='Test Description')
+        """
+        runner = xmlrunner.XMLTestRunner(output=config_path)  # jenkins report
         runner.run(suite)
-        fp.close()
+        # fp.close()
     else:
         logger.error("Have no case to test")
