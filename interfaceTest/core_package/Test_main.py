@@ -78,7 +78,7 @@ class Interface(unittest.TestCase):
         try:
             self.assertEqual(results.status_code, 200)
             logger.info("-----college is successful-----")
-            if results.json()["result"] is None:
+            if results.json()["result"] is not None:
                 self.verificationErrors.append(results.json()["result"])
                 logger.error("-----college results is error-----")
             else:

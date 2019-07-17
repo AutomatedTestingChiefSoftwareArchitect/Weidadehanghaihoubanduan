@@ -1,0 +1,5 @@
+Test_main.py - login - 2019-07-17 15:07:42,662 - logs… - INFO - -----login is successful-----
+Test_main.py - login - 2019-07-17 15:07:42,664 - logs… - INFO - -----login results is successful-----
+Test_main.py - login - 2019-07-17 15:07:42,665 - logs… - INFO - login cookie is : <RequestsCookieJar[]>
+Test_main.py - college - 2019-07-17 15:07:42,812 - logs… - INFO - -----college is successful-----
+Test_main.py - college - 2019-07-17 15:07:42,812 - logs… - INFO - -----college results is successful-----
