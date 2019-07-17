@@ -6,32 +6,6 @@ logger = Log.logger
 
 class RunMain(object):
 
-    def __init__(self):
-        self.cookies = None
-        self.headers = None
-        self.ret = None
-
-    def login_http(self):  # login
-        header = {
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"}
-        url = 'https://www.review.xiaozao.org/api/user/phoneLogin?"'
-        querystring = {
-            "regionCodeIndex": 37,
-            "phone": 15721484677,
-            "password": "Dyc930701",
-            "remember": "true"
-        }
-        ret = requests.get(url=url, params=querystring, headers=header, timeout=2)
-        if ret.status_code == requests.codes.OK:
-            self.headers = header
-            self.cookies = ret.cookies
-            self.ret = ret.json()["response"]
-            logger.info("login is successful")
-            return self.headers, self.cookies, self.ret
-        else:
-            raise Exception("登陆接口错误码: %s" % ret.status_code)
-
     def send_post(self, url, data, headers, cookies):  # 定义一个方法，传入需要的参数url和data
         # 参数必须按照url、data顺序传入
         result = requests.post(url=url, data=data, headers=headers, cookies=cookies)
