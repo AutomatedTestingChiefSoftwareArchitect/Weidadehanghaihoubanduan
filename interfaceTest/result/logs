@@ -3,3 +3,18 @@ Test_main.py - login - 2019-07-17 15:07:42,664 - logs… - INFO - -----login res
 Test_main.py - login - 2019-07-17 15:07:42,665 - logs… - INFO - login cookie is : <RequestsCookieJar[]>
 Test_main.py - college - 2019-07-17 15:07:42,812 - logs… - INFO - -----college is successful-----
 Test_main.py - college - 2019-07-17 15:07:42,812 - logs… - INFO - -----college results is successful-----
+Test_main.py - login - 2019-07-17 15:12:11,139 - logs… - INFO - -----login is successful-----
+Test_main.py - login - 2019-07-17 15:12:11,141 - logs… - INFO - -----login results is successful-----
+Test_main.py - login - 2019-07-17 15:12:11,142 - logs… - INFO - login cookie is : <RequestsCookieJar[]>
+Test_main.py - college - 2019-07-17 15:12:13,675 - logs… - INFO - -----college is successful-----
+Test_main.py - college - 2019-07-17 15:12:13,675 - logs… - INFO - -----college results is successful-----
+Test_main.py - login - 2019-07-17 15:17:57,557 - logs… - INFO - -----login is successful-----
+Test_main.py - login - 2019-07-17 15:17:57,559 - logs… - INFO - -----login results is successful-----
+Test_main.py - login - 2019-07-17 15:17:57,559 - logs… - INFO - login cookie is : <RequestsCookieJar[]>
+Test_main.py - college - 2019-07-17 15:17:57,710 - logs… - INFO - -----college is successful-----
+Test_main.py - college - 2019-07-17 15:17:57,710 - logs… - INFO - -----college results is successful-----
+Test_main.py - login - 2019-07-17 15:19:00,379 - logs… - INFO - -----login is successful-----
+Test_main.py - login - 2019-07-17 15:19:00,382 - logs… - INFO - -----login results is successful-----
+Test_main.py - login - 2019-07-17 15:19:00,382 - logs… - INFO - login cookie is : <RequestsCookieJar[]>
+Test_main.py - college - 2019-07-17 15:19:00,480 - logs… - INFO - -----college is successful-----
+Test_main.py - college - 2019-07-17 15:19:00,481 - logs… - INFO - -----college results is successful-----

@@ -64,7 +64,7 @@ class Interface(unittest.TestCase):
                 logger.info("-----login results is successful-----")
                 self.cookie = results.cookies
                 logger.info("login cookie is : %s" % self.cookie)
-                return self.cookie
+                return self.cookie, print(results.json())
 
         except AssertionError as e:
             logger.error("-----login is %s-----" % results.status_code)
@@ -82,7 +82,8 @@ class Interface(unittest.TestCase):
                 self.verificationErrors.append(results.json()["result"])
                 logger.error("-----college results is error-----")
             else:
-                return logger.info("-----college results is successful-----")
+                logger.info("-----college results is successful-----")
+                return print(results.json())
 
         except AssertionError as e:
             logger.error("-----college is error-----")
