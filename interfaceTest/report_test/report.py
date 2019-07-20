@@ -3,15 +3,14 @@ import unittest
 import time
 import interfaceTest.getpathInfo
 from HTMLTestRunner import HTMLTestRunner
-from interfaceTest.core_package import Test_main
 from interfaceTest.log_and_logresult_package import Log
 
 logger = Log.logger
 
 
-def report():
+def report(perform_class, perform_num):
     suite = unittest.TestSuite()
-    suite.addTests(map(Test_main.Interface, ["login", "college"]))
+    suite.addTests(map(perform_class, perform_num))
     date = time.strftime('%Y-%m-%d-%H-%M-%S')
     path = interfaceTest.getpathInfo.get_Path()
     config_path = os.path.join(path, 'result\\report-'+date+'.html')

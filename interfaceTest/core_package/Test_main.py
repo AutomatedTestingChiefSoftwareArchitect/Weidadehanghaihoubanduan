@@ -4,7 +4,7 @@ import requests
 from interfaceTest.log_and_logresult_package import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
-from interfaceTest.testCase import login_report
+from interfaceTest.report_test import report
 # import xmlrunner
 # from interfaceTest.sql_package import My_sql
 
@@ -72,4 +72,4 @@ class Interface(unittest.TestCase):
 
 if __name__ == '__main__':
 
-    login_report.report()
+    report.report(Interface, ['login', 'college'])
