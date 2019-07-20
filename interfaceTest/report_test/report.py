@@ -8,6 +8,7 @@ from interfaceTest.log_and_logresult_package import Log
 logger = Log.logger
 
 
+# this is test report
 def report(perform_class, perform_num):
     suite = unittest.TestSuite()
     suite.addTests(map(perform_class, perform_num))
