@@ -19,9 +19,9 @@ def report(perform_class, perform_num):
         runner = HTMLTestRunner(stream=fp,
                                 title='Test Report',
                                 description='Test Description')
-
         # runner = xmlrunner.XMLTestRunner(output=config_path)  # jenkins report
         runner.run(suite)
         fp.close()
+        logger.info("test report is successful")
     else:
         logger.error("Have no case to test")
