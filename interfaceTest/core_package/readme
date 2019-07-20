@@ -1,0 +1,19 @@
+    """
+    //TODO this is unittest methods
+    self.assertEqual(a, b)       check that a == b
+    self.assertNotEqual(a, b)    check that a != b
+    self.assertTrue(x)           check that bool(x) is true
+    self.assertFalse(x)          check that bool(x) is False
+    self.assertIs(a, b)          check that a is b
+    self.assertIsNot(a, b)       check that a is not b
+    self.assertIsNone(x)         check that x is none
+    self.assertIsNotNone(x)      check that x is not none
+    self.assertIn(a, b)          check that a in b
+    self.assertNotIn(a,b)        check that a not in b
+    self.assertIsInstance(a, b)  check that isinstance(a, b)
+    self.assertNotIsInstance(a, b)  check that not isinstance(a, b)
+    unittest.skip(reason)
+    unittest.skipIf(condition,reason)      即在满足condition条件下跳过该用例
+    unittest.skipUnless(condition,reason)  reason用于描述跳过的原因\
+
+    """
