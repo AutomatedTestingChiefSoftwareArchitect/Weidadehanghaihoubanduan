@@ -1,3 +1,5 @@
-Test_main.py - college - 2019-07-20 15:26:39,052 - logs… - INFO - -----college is successful-----
-Test_main.py - college - 2019-07-20 15:26:39,055 - logs… - INFO - -----college results is successful-----
-report.py - report - 2019-07-20 15:26:39,056 - logs… - INFO - test report is successful
+report.py - report - 2019-07-23 17:44:50,125 - logs… - INFO - 测试报告准备中~~~
+report.py - report - 2019-07-23 17:44:50,126 - logs… - INFO - case执行开始 ~~~
+Test_main.py - login - 2019-07-23 17:44:50,296 - logs… - ERROR - login url error : None
+Test_main.py - tearDown - 2019-07-23 17:44:50,296 - logs… - ERROR - error information is : [AssertionError('Lists differ: [] != [SSLError(MaxRetryError("HTTPSConnectionPo[265 chars])"))]\n\nSecond list contains 1 additional elements.\nFirst extra element 0:\nSSLError(MaxRetryError("HTTPSConnectionPool(host=\'api.app.aixiangdao.tech\', port=443): Max retries exceeded with url: /develop/mms/user/login (Caused by SSLError(SSLCertVerificationError(1, \'[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1051)\')))"))\n\n- []\n+ [SSLError(MaxRetryError("HTTPSConnectionPool(host=\'api.app.aixiangdao.tech\', port=443): Max retries exceeded with url: /develop/mms/user/login (Caused by SSLError(SSLCertVerificationError(1, \'[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1051)\')))"))]')]
+Test_main.py - tearDown - 2019-07-23 17:44:50,296 - logs… - ERROR - 执行Case错误！测试报告生成中断~~~

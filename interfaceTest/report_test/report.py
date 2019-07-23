@@ -4,13 +4,17 @@ import time
 import interfaceTest.getpathInfo
 from HTMLTestRunner import HTMLTestRunner
 from interfaceTest.log_and_logresult_package import Log
+# import xmlrunner
 
 logger = Log.logger
 
 
 def report(perform_class, perform_num):
+
     suite = unittest.TestSuite()
     suite.addTests(map(perform_class, perform_num))
+    logger.info("测试报告准备中~~~")
+    logger.info("case执行开始 ~~~")
     date = time.strftime('%Y-%m-%d-%H-%M-%S')
     path = interfaceTest.getpathInfo.get_Path()
     config_path = os.path.join(path, 'result\\report-'+date+'.html')
@@ -22,6 +26,6 @@ def report(perform_class, perform_num):
         # runner = xmlrunner.XMLTestRunner(output=config_path)  # jenkins report
         runner.run(suite)
         fp.close()
-        logger.info("test report is successful")
+        logger.info("测试报告已完成~~~")
     else:
-        logger.error("Have no case to test")
+        logger.error("没有可执行的Case~~~")

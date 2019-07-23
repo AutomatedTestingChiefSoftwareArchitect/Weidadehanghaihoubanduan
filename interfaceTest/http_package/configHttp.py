@@ -8,13 +8,13 @@ class RunMain(object):
 
     def send_post(self, url, data, headers, cookies):  # 定义一个方法，传入需要的参数url和data
         # 参数必须按照url、data顺序传入
-        result = requests.post(url=url, data=data, headers=headers, cookies=cookies)
+        result = requests.post(url=url, data=data, headers=headers, cookies=cookies, timeout=2)
         # 因为这里要封装post方法，所以这里的url和data值不能写死
         # res = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)
         return result
 
     def send_get(self, url, data, headers, cookies):
-        result = requests.get(url=url, data=data, headers=headers, cookies=cookies)
+        result = requests.get(url=url, data=data, headers=headers, cookies=cookies, timeout=2)
         # res = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)
         return result
 

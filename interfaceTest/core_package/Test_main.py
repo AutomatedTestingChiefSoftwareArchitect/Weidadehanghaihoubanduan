@@ -5,7 +5,6 @@ from interfaceTest.log_and_logresult_package import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
 from interfaceTest.report_test import report
-# import xmlrunner
 # from interfaceTest.sql_package import My_sql
 
 logger = Log.logger
@@ -19,6 +18,7 @@ class Interface(unittest.TestCase):
                           "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"}
         self.cookie = None
         self.verificationErrors = []
+        self.results = None
 
     def tearDown(self):
         error_list = []
@@ -28,46 +28,65 @@ class Interface(unittest.TestCase):
             error_list.append(s)
             if error_list is not None:
                 logger.error("error information is : %s" % error_list)
+                logger.error("执行Case错误！测试报告生成中断~~~")
                 os._exit(1)
 
     def login(self):
+
         url = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][1]
         parameter = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][2]
-        results = requests.post(url, parameter, self.headers)
-        try:
-            self.assertEqual(results.status_code, 500)
-            logger.info("-----login is successful-----")
-            if results.json()["data"] is not None:
-                self.verificationErrors.append(results.json()["data"])
-                logger.error("-----login results is error-----")
-            else:
-                logger.info("-----login results is successful-----")
-                self.cookie = results.cookies
-                logger.info("login cookie is : %s" % self.cookie)
-                return self.cookie, print(results.json())
 
+        try:
+            try:
+                results = requests.post(url, parameter, self.headers, timeout=2)
+                self.results = results
+            except requests.exceptions.ConnectionError as a:
+                self.verificationErrors.append(a)
+                return logger.error("login url error : %s" % self.results)
+            except TimeoutError as b:
+                self.verificationErrors.append(b)
+                return logger.error("login timeout error~~~")
+            self.assertEqual(self.results.status_code, 500)
+            logger.info("-----login is successful")
+            if self.results.json()["data"] is not None:
+                self.verificationErrors.append(self.results.json()["data"])
+                return logger.error("-----login results is error")
+            else:
+                logger.info("-----login results is successful")
+                self.cookie = self.results.cookies
+                logger.info("login cookie is : %s" % self.cookie)
+                return self.cookie, print(self.results.json())
         except AssertionError as e:
-            logger.error("-----login is %s-----" % results.status_code)
             self.verificationErrors.append(e)
+            return logger.error("-----login is %s" % self.results.status_code)
 
     def college(self):
+
         url = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][1]
         parameter = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][2]
         methods = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][3]
-        results = configHttp.runmain.run_main(methods, url, parameter, self.headers, self.cookie)
-        try:
-            self.assertEqual(results.status_code, 200)
-            logger.info("-----college is successful-----")
-            if results.json()["result"] is not None:
-                self.verificationErrors.append(results.json()["result"])
-                logger.error("-----college results is error-----")
-            else:
-                logger.info("-----college results is successful-----")
-                return print(results.json())
 
+        try:
+            try:
+                results = configHttp.runmain.run_main(methods, url, parameter, self.headers, self.cookie)
+                self.results = results
+            except requests.exceptions.ConnectionError as a:
+                self.verificationErrors.append(a)
+                return logger.error("login url error : %s" % self.results)
+            except TimeoutError as b:
+                self.verificationErrors.append(b)
+                return logger.error("login timeout error~~~")
+            self.assertEqual(self.results.status_code, 200)
+            logger.info("-----college is successful")
+            if self.results.json()["result"] is not None:
+                self.verificationErrors.append(self.results.json()["result"])
+                return logger.error("-----college results is error")
+            else:
+                logger.info("-----college results is successful")
+                return print(self.results.json())
         except AssertionError as e:
-            logger.error("-----college is error-----")
             self.verificationErrors.append(e)
+            return logger.error("-----college is error")
 
 
 if __name__ == '__main__':
