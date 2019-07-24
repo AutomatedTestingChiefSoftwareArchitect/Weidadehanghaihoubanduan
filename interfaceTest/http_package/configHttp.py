@@ -26,7 +26,6 @@ class RunMain(object):
         elif method == 'get':
             result = self.send_get(url, data, headers, cookies)
         else:
-            print("method值错误！！！")
             logger.info("method值错误！！！")
         return result
 
