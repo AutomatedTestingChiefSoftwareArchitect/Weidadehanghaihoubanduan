@@ -18,8 +18,8 @@ class Logger(object):
         self.console_output_level = 'WARNING'
         self.file_output_level = 'DEBUG'
         # 日志输出格式
-        self.formatter = logging.Formatter('%(filename)s - %(funcName)s - %(asctime)s - %(name)s - %(levelname)s '
-                                           '- %(message)s')
+        self.formatter = logging.Formatter('%(filename)s - %(funcName)s - %(asctime)s - %(levelname)s '
+                                           '- %(lineno)d - %(message)s')
 
     def get_logger(self):
         """在logger中添加日志句柄并返回，如果logger已有句柄，则直接返回"""
