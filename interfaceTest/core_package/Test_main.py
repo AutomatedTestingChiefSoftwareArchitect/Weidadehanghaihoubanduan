@@ -1,6 +1,7 @@
 import os
 import unittest
 import requests
+from time import sleep
 from interfaceTest.log_and_logresult_package import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
@@ -17,8 +18,8 @@ class Interface(unittest.TestCase):
             "user-agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) "
                           "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"}
         self.cookie = None
-        self.verificationErrors = []
         self.results = None
+        self.verificationErrors = []
 
     def tearDown(self):
         error_list = []
@@ -30,6 +31,16 @@ class Interface(unittest.TestCase):
                 logger.error("error information is : %s" % error_list)
                 logger.error("执行Case错误！测试报告生成中断~~~")
                 os._exit(1)
+
+    @classmethod
+    def setUpClass(cls):
+        logger.info("mysql data init ~~~")
+        sleep(1)
+
+    @classmethod
+    def tearDownClass(cls):
+        logger.info("mysql data clean ~~~")
+        sleep(1)
 
     def login(self):
 
