@@ -1,17 +1,23 @@
-report.py - report - 2019-08-13 10:11:50,531 - INFO - 17 - 测试报告准备中~~~
-report.py - report - 2019-08-13 10:11:50,532 - INFO - 18 - case执行开始 ~~~
-Configure_even_code.py - setUpClass - 2019-08-13 10:11:50,532 - INFO - 42 - mysql data init ~~~
-Configure_even_code.py - login - 2019-08-13 10:11:51,574 - INFO - 59 - --------------------------------------------------
-Configure_even_code.py - login - 2019-08-13 10:11:51,575 - INFO - 60 - 请求方式:get
-Configure_even_code.py - login - 2019-08-13 10:11:51,575 - INFO - 61 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
-Configure_even_code.py - login - 2019-08-13 10:11:51,575 - INFO - 62 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
-Configure_even_code.py - login - 2019-08-13 10:11:51,748 - INFO - 73 - login is successful
-inheritance.py - enter - 2019-08-13 10:11:51,750 - INFO - 41 - json results is successful
-Configure_even_code.py - Configure_even_code - 2019-08-13 10:11:52,760 - INFO - 99 - --------------------------------------------------
-Configure_even_code.py - Configure_even_code - 2019-08-13 10:11:52,761 - INFO - 100 - 请求方式:get
-Configure_even_code.py - Configure_even_code - 2019-08-13 10:11:52,761 - INFO - 101 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
-Configure_even_code.py - Configure_even_code - 2019-08-13 10:11:52,761 - INFO - 102 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
-Configure_even_code.py - Configure_even_code - 2019-08-13 10:11:52,952 - INFO - 113 - url is successful
-inheritance.py - enter - 2019-08-13 10:11:52,953 - INFO - 41 - json results is successful
-Configure_even_code.py - tearDownClass - 2019-08-13 10:11:53,953 - INFO - 47 - mysql data clean ~~~
-report.py - report - 2019-08-13 10:11:54,955 - INFO - 30 - 测试报告已完成~~~
+report.py - report - 2019-08-13 11:00:55,871 - INFO - 16 - 测试报告准备中~~~
+report.py - report - 2019-08-13 11:00:55,872 - INFO - 17 - case执行开始 ~~~
+Configure_even_code.py - setUpClass - 2019-08-13 11:00:55,873 - INFO - 42 - mysql data init ~~~
+Configure_even_code.py - login - 2019-08-13 11:00:56,923 - INFO - 59 - --------------------------------------------------
+Configure_even_code.py - login - 2019-08-13 11:00:56,923 - INFO - 60 - 请求方式:get
+Configure_even_code.py - login - 2019-08-13 11:00:56,924 - INFO - 61 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
+Configure_even_code.py - login - 2019-08-13 11:00:56,924 - INFO - 62 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
+Configure_even_code.py - login - 2019-08-13 11:00:57,144 - INFO - 72 - login is successful
+inheritance.py - enter - 2019-08-13 11:00:57,144 - INFO - 41 - json results is successful
+Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:58,156 - INFO - 94 - --------------------------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:58,158 - INFO - 95 - 请求方式:get
+Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:58,158 - INFO - 96 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
+Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:58,158 - INFO - 97 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
+Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:58,328 - INFO - 107 - assert url is successful
+inheritance.py - enter - 2019-08-13 11:00:58,328 - INFO - 41 - json results is successful
+Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:59,328 - INFO - 94 - --------------------------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:59,328 - INFO - 95 - 请求方式:get
+Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:59,328 - INFO - 96 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
+Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:59,329 - INFO - 97 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
+Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:59,504 - INFO - 107 - assert url is successful
+inheritance.py - enter - 2019-08-13 11:00:59,504 - INFO - 41 - json results is successful
+Configure_even_code.py - tearDownClass - 2019-08-13 11:01:00,504 - INFO - 48 - mysql data clean ~~~
+report.py - report - 2019-08-13 11:01:01,505 - INFO - 29 - 测试报告已完成~~~

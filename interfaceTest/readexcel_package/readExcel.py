@@ -15,6 +15,8 @@ class readExcel():
         sheet = file.sheet_by_name(sheet_name)
         nrows = sheet.nrows
         for i in range(nrows):
+            if i == 0:
+                continue
             cls.append(sheet.row_values(i))
         return cls
 

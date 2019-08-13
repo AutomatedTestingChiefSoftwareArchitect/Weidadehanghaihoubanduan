@@ -29,7 +29,6 @@ class Interface(unittest.TestCase):
         error_list = []
         try:
             self.assertEqual([], self.verificationErrors)
-
         except AssertionError as s:
             error_list.append(s)
             if error_list is not None:
@@ -39,20 +38,21 @@ class Interface(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+
         logger.info("mysql data init ~~~")
         sleep(1)
 
     @classmethod
     def tearDownClass(cls):
+
         logger.info("mysql data clean ~~~")
         sleep(1)
 
     def login(self):
 
-        method = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][0]
-        url = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][1]
-        parameter = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][2]
-
+        method = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][0]
+        url = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][1]
+        parameter = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][2]
         if url and parameter is not None:
             try:
                 try:
@@ -68,21 +68,17 @@ class Interface(unittest.TestCase):
                 except TimeoutError as b:
                     self.verificationErrors.append(b)
                     return logger.error("login timeout error")
-
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("login is successful")
-                r = inheritance.ret.enter(self.results.json())
-                if r is None:
-                    return self.verificationErrors.append(r)
+                ret = inheritance.ret.enter(self.results.json())
+                if ret is None:
+                    return self.verificationErrors.append(ret)
                 self.cookies = self.results.cookies
                 return self.cookies
-
             except AssertionError as e:
-
                 self.verificationErrors.append(e)
                 return logger.error("login is %s" % self.results.status_code)
         else:
-
             return logger.info("您未输入登陆和登陆参数，直接运行sheet Interface ~~~")
 
     def Configure_even_code(self):
@@ -94,7 +90,6 @@ class Interface(unittest.TestCase):
                 return logger.error("sheet Interface is %s" % dates)
 
             for method, url, data in dates:
-
                 try:
                     logger.info("-" * 50)
                     logger.info("请求方式:%s" % method)
@@ -108,16 +103,12 @@ class Interface(unittest.TestCase):
                 except TimeoutError as b:
                     self.verificationErrors.append(b)
                     return logger.error("timeout error")
-
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("assert url is successful")
-
                 ret = inheritance.ret.enter(self.results.json())
                 if ret is None:
                     return self.verificationErrors.append(ret)
-
         except AssertionError as e:
-
             self.verificationErrors.append(e)
             return logger.error("%s assert is error" % self.results.status_code)
 

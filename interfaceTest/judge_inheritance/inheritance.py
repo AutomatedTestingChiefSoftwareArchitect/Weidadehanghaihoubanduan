@@ -8,7 +8,7 @@ class FirstClass(object):
 
     def first(self, r):
 
-        return logger.info("assert json is not "), r
+        return logger.info("此条消息为select未匹配, 后返回~"), r
 
     def second(self, r):
 
