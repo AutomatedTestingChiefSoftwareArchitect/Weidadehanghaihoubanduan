@@ -30,3 +30,23 @@ Configure_even_code.py - login - 2019-08-13 17:22:27,644 - INFO - 76 - login is 
 inheritance.py - second - 2019-08-13 17:22:27,644 - INFO - 22 - json data is successful
 Configure_even_code.py - tearDownClass - 2019-08-13 17:22:28,644 - INFO - 51 - mysql data clean ~~~
 report.py - report - 2019-08-13 17:22:29,646 - INFO - 29 - 测试报告已完成~~~
+
+
+report.py - report - 2019-08-13 17:28:11,690 - INFO - 16 - 测试报告准备中~~~
+report.py - report - 2019-08-13 17:28:11,691 - INFO - 17 - case执行开始 ~~~
+Configure_even_code.py - setUpClass - 2019-08-13 17:28:11,691 - INFO - 45 - mysql data init ~~~
+Configure_even_code.py - login - 2019-08-13 17:28:12,753 - INFO - 62 - --------------------------------------------------
+Configure_even_code.py - login - 2019-08-13 17:28:12,753 - INFO - 63 - 请求方式:post
+Configure_even_code.py - login - 2019-08-13 17:28:12,753 - INFO - 64 - 请求链接:https://api.aixiangdao.com/user/getUserInfo
+Configure_even_code.py - login - 2019-08-13 17:28:12,753 - INFO - 65 - 请求参数:
+Configure_even_code.py - login - 2019-08-13 17:28:12,753 - INFO - 66 - token :5e395837-8d56-488b-ba21-2e1359e3e0e5
+Configure_even_code.py - login - 2019-08-13 17:28:13,020 - INFO - 76 - login is successful
+inheritance.py - second - 2019-08-13 17:28:13,020 - INFO - 22 - json data is successful
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:28:14,046 - INFO - 101 - --------------------------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:28:14,047 - INFO - 102 - 请求方式:post
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:28:14,047 - INFO - 103 - 请求链接:https://api.aixiangdao.com/merchant/voucherPackage/getDiscountCouponExpireList
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:28:14,047 - INFO - 104 - 请求参数:"pageIndex":0,"pageSize":10
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:28:14,047 - INFO - 105 - token :5e395837-8d56-488b-ba21-2e1359e3e0e5
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:28:14,353 - ERROR - 121 - 500 assert is error
+Configure_even_code.py - tearDown - 2019-08-13 17:28:14,355 - ERROR - 38 - error information is : [AssertionError("Lists differ: [] != [AssertionError('500 != 200')]\n\nSecond list contains 1 additional elements.\nFirst extra element 0:\nAssertionError('500 != 200')\n\n- []\n+ [AssertionError('500 != 200')]")]
+Configure_even_code.py - tearDown - 2019-08-13 17:28:14,355 - ERROR - 39 - 执行Case错误！测试报告生成中断~~~

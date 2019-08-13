@@ -17,7 +17,7 @@ class FirstClass(object):
 
             if r["data"]["id"] is None:
                 logger.error("json data is error"), print(r), sleep(1)
-                return r
+                return r["data"]["id"]
             else:
                 logger.info("json data is successful"), print(r), sleep(1)
                 return r
@@ -31,7 +31,7 @@ class FirstClass(object):
 
             if r["data"]["response"] is None:
                 logger.error("json data is error"), print(r), sleep(1)
-                return r
+                return r["data"]["response"]
             else:
                 logger.info("json data is successful"), print(r), sleep(1)
                 return r
@@ -44,7 +44,7 @@ class FirstClass(object):
 
             if r["data"]["result"] is None:
                 logger.error("json data is error"), print(r), sleep(1)
-                return r
+                return r["data"]["result"]
             else:
                 logger.info("json data is successful"), print(r), sleep(1)
                 return r
