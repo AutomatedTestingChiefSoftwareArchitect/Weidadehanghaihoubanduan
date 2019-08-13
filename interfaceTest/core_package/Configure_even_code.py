@@ -2,6 +2,7 @@ import os
 import unittest
 import requests
 from time import sleep
+from interfaceTest.judge_inheritance import inheritance
 from interfaceTest.log_and_logresult_package import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
@@ -28,6 +29,7 @@ class Interface(unittest.TestCase):
         error_list = []
         try:
             self.assertEqual([], self.verificationErrors)
+
         except AssertionError as s:
             error_list.append(s)
             if error_list is not None:
@@ -47,56 +49,38 @@ class Interface(unittest.TestCase):
 
     def login(self):
 
+        method = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][0]
         url = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][1]
         parameter = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][2]
 
         if url and parameter is not None:
             try:
                 try:
-                    results = requests.get(url, parameter, headers=self.headers, timeout=2)
+                    logger.info("-" * 50)
+                    logger.info("请求方式:%s" % method)
+                    logger.info("请求链接:%s" % url)
+                    logger.info("请求参数:%s" % parameter)
+                    results = configHttp.runmain.run_main(method, url, parameter, headers=self.headers)
                     self.results = results
                 except requests.exceptions.ConnectionError as a:
                     self.verificationErrors.append(a)
                     return logger.error("login url error : %s" % self.results)
                 except TimeoutError as b:
                     self.verificationErrors.append(b)
-                    return logger.error("login timeout error~~~")
+                    return logger.error("login timeout error")
 
                 self.assertEqual(self.results.status_code, requests.codes.OK)
-                logger.info("-----login is successful")
-
-                if "result" in self.results.json():
-
-                    if self.results.json()["result"] is None:
-                        self.verificationErrors.append(self.results.json())
-                        return logger.error("-----login results is error")
-                    else:
-                        logger.info("-----login results is successful")
-                        self.cookies = self.results.cookies
-                        logger.info("login cookie is : %s" % self.cookies)
-                        return self.cookies, print(self.results.json()), sleep(1)
-
-                elif "response" in self.results.json():
-
-                    if self.results.json()["response"] is None:
-                        self.verificationErrors.append(self.results.json())
-                        return logger.error("-----login results is error")
-                    else:
-                        logger.info("-----login results is successful")
-                        self.cookies = self.results.cookies
-                        logger.info("login cookie is : %s" % self.cookies)
-                        return self.cookies, print(self.results.json()), sleep(1)
-                else:
-
-                    logger.info("-----login results is successful")
-                    self.cookies = self.results.cookies
-                    logger.info("login cookie is : %s" % self.cookies)
-                    return self.cookies, print(self.results.json()), sleep(1)
+                logger.info("login is successful")
+                r = inheritance.ret.enter(self.results.json())
+                if r is None:
+                    return self.verificationErrors.append(r)
+                self.cookies = self.results.cookies
+                return self.cookies
 
             except AssertionError as e:
 
                 self.verificationErrors.append(e)
-                return logger.error("-----login is %s" % self.results.status_code)
+                return logger.error("login is %s" % self.results.status_code)
         else:
 
             return logger.info("您未输入登陆和登陆参数，直接运行sheet Interface ~~~")
@@ -107,11 +91,12 @@ class Interface(unittest.TestCase):
             dates = readExcel.reds.get_xls('userCase.xlsx', 'Interface')
             if dates is None:
                 self.verificationErrors.append(dates)
-                return logger.error("date is %s" % dates)
+                return logger.error("sheet Interface is %s" % dates)
 
             for method, url, data in dates:
 
                 try:
+                    logger.info("-" * 50)
                     logger.info("请求方式:%s" % method)
                     logger.info("请求链接:%s" % url)
                     logger.info("请求参数:%s" % data)
@@ -122,39 +107,21 @@ class Interface(unittest.TestCase):
                     return logger.error("url error : %s" % self.results)
                 except TimeoutError as b:
                     self.verificationErrors.append(b)
-                    return logger.error("timeout error~~~")
+                    return logger.error("timeout error")
 
                 self.assertEqual(self.results.status_code, requests.codes.OK)
-                logger.info("-----%s is successful" % url)
+                logger.info("assert url is successful")
 
-                if "result" in self.results.json():
-
-                    if self.results.json()["result"] is None:
-                        self.verificationErrors.append(self.results.json())
-                        return logger.error("-----%s.json is error" % url)
-                    else:
-                        logger.info("-----%s.json is successful" % url)
-                        print(self.results.json()), sleep(1)
-
-                elif "response" in self.results.json():
-
-                    if self.results.json()["response"] is None:
-                        self.verificationErrors.append(self.results.json())
-                        return logger.error("-----%s.json is error" % url)
-                    else:
-                        logger.info("-----%s.json is successful" % url)
-                        print(self.results.json()), sleep(1)
-                else:
-
-                    logger.info("-----%s.json is successful" % url)
-                    print(self.results.json()), sleep(1)
+                ret = inheritance.ret.enter(self.results.json())
+                if ret is None:
+                    return self.verificationErrors.append(ret)
 
         except AssertionError as e:
 
             self.verificationErrors.append(e)
-            return logger.error("-----%s assert is error" % self.results.status_code)
+            return logger.error("%s assert is error" % self.results.status_code)
 
 
 if __name__ == '__main__':
 
-    report.report(Interface, ["login", 'Configure_even_code'])
+    report.report(Interface, ['login', 'Configure_even_code'])

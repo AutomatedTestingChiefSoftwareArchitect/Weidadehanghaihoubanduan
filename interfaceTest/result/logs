@@ -1,42 +1,17 @@
-report.py - report - 2019-08-09 15:05:14,630 - INFO - 17 - 测试报告准备中~~~
-report.py - report - 2019-08-09 15:05:14,631 - INFO - 18 - case执行开始 ~~~
-Configure_even_code.py - setUpClass - 2019-08-09 15:05:14,631 - INFO - 40 - mysql data init ~~~
-Configure_even_code.py - login - 2019-08-09 15:05:15,827 - INFO - 66 - -----login is successful
-Configure_even_code.py - login - 2019-08-09 15:05:15,827 - INFO - 74 - -----login results is successful
-Configure_even_code.py - login - 2019-08-09 15:05:15,828 - INFO - 76 - login cookie is : <RequestsCookieJar[<Cookie aliyungf_tc=AQAAAK1QyEIVKA4AA45UcgO2rdO9qSTG for zuowen.api.juhe.cn/>]>
-Configure_even_code.py - Configure_even_code - 2019-08-09 15:05:16,835 - INFO - 115 - 请求方式:get
-Configure_even_code.py - Configure_even_code - 2019-08-09 15:05:16,835 - INFO - 116 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
-Configure_even_code.py - Configure_even_code - 2019-08-09 15:05:16,835 - INFO - 117 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
-Configure_even_code.py - Configure_even_code - 2019-08-09 15:05:17,043 - INFO - 128 - -----http://zuowen.api.juhe.cn/zuowen/typeList is successful
-Configure_even_code.py - Configure_even_code - 2019-08-09 15:05:17,043 - INFO - 136 - -----http://zuowen.api.juhe.cn/zuowen/typeList.json is successful
-Configure_even_code.py - Configure_even_code - 2019-08-09 15:05:18,044 - INFO - 115 - 请求方式:get
-Configure_even_code.py - Configure_even_code - 2019-08-09 15:05:18,044 - INFO - 116 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
-Configure_even_code.py - Configure_even_code - 2019-08-09 15:05:18,044 - INFO - 117 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
-Configure_even_code.py - Configure_even_code - 2019-08-09 15:05:18,204 - INFO - 128 - -----http://zuowen.api.juhe.cn/zuowen/typeList is successful
-Configure_even_code.py - Configure_even_code - 2019-08-09 15:05:18,206 - INFO - 136 - -----http://zuowen.api.juhe.cn/zuowen/typeList.json is successful
-Configure_even_code.py - tearDownClass - 2019-08-09 15:05:19,206 - INFO - 45 - mysql data clean ~~~
-report.py - report - 2019-08-09 15:05:20,207 - INFO - 30 - 测试报告已完成~~~
-
-
-
-
-
-
-
-report.py - report - 2019-08-09 16:35:10,023 - INFO - 17 - 测试报告准备中~~~
-report.py - report - 2019-08-09 16:35:10,023 - INFO - 18 - case执行开始 ~~~
-Configure_even_code.py - setUpClass - 2019-08-09 16:35:10,023 - INFO - 40 - mysql data init ~~~
-Configure_even_code.py - login - 2019-08-09 16:35:11,393 - INFO - 66 - -----login is successful
-Configure_even_code.py - login - 2019-08-09 16:35:11,393 - INFO - 74 - -----login results is successful
-Configure_even_code.py - login - 2019-08-09 16:35:11,394 - INFO - 76 - login cookie is : <RequestsCookieJar[<Cookie aliyungf_tc=AQAAAKmf3SwpdQQAA45Uciw0bgpphUvq for zuowen.api.juhe.cn/>]>
-Configure_even_code.py - Configure_even_code - 2019-08-09 16:35:12,401 - INFO - 115 - 请求方式:get
-Configure_even_code.py - Configure_even_code - 2019-08-09 16:35:12,403 - INFO - 116 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
-Configure_even_code.py - Configure_even_code - 2019-08-09 16:35:12,403 - INFO - 117 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
-Configure_even_code.py - Configure_even_code - 2019-08-09 16:35:12,616 - INFO - 128 - -----http://zuowen.api.juhe.cn/zuowen/typeList is successful
-Configure_even_code.py - Configure_even_code - 2019-08-09 16:35:12,617 - INFO - 136 - -----http://zuowen.api.juhe.cn/zuowen/typeList.json is successful
-Configure_even_code.py - Configure_even_code - 2019-08-09 16:35:13,617 - INFO - 115 - 请求方式:get
-Configure_even_code.py - Configure_even_code - 2019-08-09 16:35:13,617 - INFO - 116 - 请求链接:https://api.app.aixiangdao.tech/getAppNewestVersion
-Configure_even_code.py - Configure_even_code - 2019-08-09 16:35:13,617 - INFO - 117 - 请求参数:"platform":2
-Configure_even_code.py - Configure_even_code - 2019-08-09 16:35:13,800 - ERROR - 155 - -----404 assert is error
-Configure_even_code.py - tearDown - 2019-08-09 16:35:13,801 - ERROR - 34 - error information is : [AssertionError("Lists differ: [] != [AssertionError('404 != 200')]\n\nSecond list contains 1 additional elements.\nFirst extra element 0:\nAssertionError('404 != 200')\n\n- []\n+ [AssertionError('404 != 200')]")]
-Configure_even_code.py - tearDown - 2019-08-09 16:35:13,801 - ERROR - 35 - 执行Case错误！测试报告生成中断~~~
+report.py - report - 2019-08-13 10:11:50,531 - INFO - 17 - 测试报告准备中~~~
+report.py - report - 2019-08-13 10:11:50,532 - INFO - 18 - case执行开始 ~~~
+Configure_even_code.py - setUpClass - 2019-08-13 10:11:50,532 - INFO - 42 - mysql data init ~~~
+Configure_even_code.py - login - 2019-08-13 10:11:51,574 - INFO - 59 - --------------------------------------------------
+Configure_even_code.py - login - 2019-08-13 10:11:51,575 - INFO - 60 - 请求方式:get
+Configure_even_code.py - login - 2019-08-13 10:11:51,575 - INFO - 61 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
+Configure_even_code.py - login - 2019-08-13 10:11:51,575 - INFO - 62 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
+Configure_even_code.py - login - 2019-08-13 10:11:51,748 - INFO - 73 - login is successful
+inheritance.py - enter - 2019-08-13 10:11:51,750 - INFO - 41 - json results is successful
+Configure_even_code.py - Configure_even_code - 2019-08-13 10:11:52,760 - INFO - 99 - --------------------------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-13 10:11:52,761 - INFO - 100 - 请求方式:get
+Configure_even_code.py - Configure_even_code - 2019-08-13 10:11:52,761 - INFO - 101 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
+Configure_even_code.py - Configure_even_code - 2019-08-13 10:11:52,761 - INFO - 102 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
+Configure_even_code.py - Configure_even_code - 2019-08-13 10:11:52,952 - INFO - 113 - url is successful
+inheritance.py - enter - 2019-08-13 10:11:52,953 - INFO - 41 - json results is successful
+Configure_even_code.py - tearDownClass - 2019-08-13 10:11:53,953 - INFO - 47 - mysql data clean ~~~
+report.py - report - 2019-08-13 10:11:54,955 - INFO - 30 - 测试报告已完成~~~
