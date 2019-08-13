@@ -8,40 +8,48 @@ class FirstClass(object):
 
     def first(self, r):
 
-        return logger.info("此条消息为select未匹配, 后返回~"), r
+        logger.info("此条消息为select未匹配, 后返回~"), print(r), sleep(1)
+        return r
 
     def second(self, r):
 
-        if "data" in r:
-            if r["data"] is None:
-                return logger.error("json data is error")
+        if "id" in r["data"]:
+
+            if r["data"]["id"] is None:
+                logger.error("json data is error"), print(r), sleep(1)
+                return r
             else:
-                logger.info("json data is successful")
-                return print(r), sleep(1)
+                logger.info("json data is successful"), print(r), sleep(1)
+                return r
+
         else:
-            self.first(r)
+            return self.first(r)
 
     def three(self, r):
 
-        if "response" in r:
-            if r["response"] is None:
-                return logger.error("json response is error")
+        if "response" in r["data"]:
+
+            if r["data"]["response"] is None:
+                logger.error("json data is error"), print(r), sleep(1)
+                return r
             else:
-                logger.info("json response is successful")
-                return print(r), sleep(1)
+                logger.info("json data is successful"), print(r), sleep(1)
+                return r
         else:
-            self.second(r)
+            return self.second(r)
 
     def enter(self, r):
 
-        if "result" in r:
-            if r["result"] is None:
-                return logger.error("json results is error")
+        if "result" in r["data"]:
+
+            if r["data"]["result"] is None:
+                logger.error("json data is error"), print(r), sleep(1)
+                return r
             else:
-                logger.info("json results is successful")
-                return print(r), sleep(1)
+                logger.info("json data is successful"), print(r), sleep(1)
+                return r
         else:
-            self.three(r)
+            return self.three(r)
 
 
 ret = FirstClass()

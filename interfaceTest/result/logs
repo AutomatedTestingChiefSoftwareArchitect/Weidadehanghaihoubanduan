@@ -1,23 +1,32 @@
-report.py - report - 2019-08-13 11:00:55,871 - INFO - 16 - 测试报告准备中~~~
-report.py - report - 2019-08-13 11:00:55,872 - INFO - 17 - case执行开始 ~~~
-Configure_even_code.py - setUpClass - 2019-08-13 11:00:55,873 - INFO - 42 - mysql data init ~~~
-Configure_even_code.py - login - 2019-08-13 11:00:56,923 - INFO - 59 - --------------------------------------------------
-Configure_even_code.py - login - 2019-08-13 11:00:56,923 - INFO - 60 - 请求方式:get
-Configure_even_code.py - login - 2019-08-13 11:00:56,924 - INFO - 61 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
-Configure_even_code.py - login - 2019-08-13 11:00:56,924 - INFO - 62 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
-Configure_even_code.py - login - 2019-08-13 11:00:57,144 - INFO - 72 - login is successful
-inheritance.py - enter - 2019-08-13 11:00:57,144 - INFO - 41 - json results is successful
-Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:58,156 - INFO - 94 - --------------------------------------------------
-Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:58,158 - INFO - 95 - 请求方式:get
-Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:58,158 - INFO - 96 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
-Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:58,158 - INFO - 97 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
-Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:58,328 - INFO - 107 - assert url is successful
-inheritance.py - enter - 2019-08-13 11:00:58,328 - INFO - 41 - json results is successful
-Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:59,328 - INFO - 94 - --------------------------------------------------
-Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:59,328 - INFO - 95 - 请求方式:get
-Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:59,328 - INFO - 96 - 请求链接:http://zuowen.api.juhe.cn/zuowen/typeList
-Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:59,329 - INFO - 97 - 请求参数:id=1&key=0c944f30362f75d1566e16ffefe27256
-Configure_even_code.py - Configure_even_code - 2019-08-13 11:00:59,504 - INFO - 107 - assert url is successful
-inheritance.py - enter - 2019-08-13 11:00:59,504 - INFO - 41 - json results is successful
-Configure_even_code.py - tearDownClass - 2019-08-13 11:01:00,504 - INFO - 48 - mysql data clean ~~~
-report.py - report - 2019-08-13 11:01:01,505 - INFO - 29 - 测试报告已完成~~~
+report.py - report - 2019-08-13 17:19:16,542 - INFO - 16 - 测试报告准备中~~~
+report.py - report - 2019-08-13 17:19:16,542 - INFO - 17 - case执行开始 ~~~
+Configure_even_code.py - setUpClass - 2019-08-13 17:19:16,543 - INFO - 45 - mysql data init ~~~
+Configure_even_code.py - login - 2019-08-13 17:19:17,598 - INFO - 62 - --------------------------------------------------
+Configure_even_code.py - login - 2019-08-13 17:19:17,598 - INFO - 63 - 请求方式:post
+Configure_even_code.py - login - 2019-08-13 17:19:17,598 - INFO - 64 - 请求链接:https://api.aixiangdao.com/user/getUserInfo
+Configure_even_code.py - login - 2019-08-13 17:19:17,598 - INFO - 65 - 请求参数:
+Configure_even_code.py - login - 2019-08-13 17:19:17,598 - INFO - 66 - token :5e395837-8d56-488b-ba21-2e1359e3e0e5
+Configure_even_code.py - login - 2019-08-13 17:19:18,049 - INFO - 76 - login is successful
+inheritance.py - second - 2019-08-13 17:19:18,051 - INFO - 22 - json data is successful
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:19:19,075 - INFO - 101 - --------------------------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:19:19,075 - INFO - 102 - 请求方式:post
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:19:19,075 - INFO - 103 - 请求链接:https://api.aixiangdao.com/merchant/voucherPackage/getDiscountCouponExpireList
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:19:19,075 - INFO - 104 - 请求参数:"pageIndex":0,"pageSize":10
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:19:19,076 - INFO - 105 - token :5e395837-8d56-488b-ba21-2e1359e3e0e5
+Configure_even_code.py - Configure_even_code - 2019-08-13 17:19:19,312 - ERROR - 121 - 500 assert is error
+Configure_even_code.py - tearDown - 2019-08-13 17:19:19,313 - ERROR - 38 - error information is : [AssertionError("Lists differ: [] != [AssertionError('500 != 200')]\n\nSecond list contains 1 additional elements.\nFirst extra element 0:\nAssertionError('500 != 200')\n\n- []\n+ [AssertionError('500 != 200')]")]
+Configure_even_code.py - tearDown - 2019-08-13 17:19:19,313 - ERROR - 39 - 执行Case错误！测试报告生成中断~~~
+
+
+report.py - report - 2019-08-13 17:22:26,144 - INFO - 16 - 测试报告准备中~~~
+report.py - report - 2019-08-13 17:22:26,145 - INFO - 17 - case执行开始 ~~~
+Configure_even_code.py - setUpClass - 2019-08-13 17:22:26,148 - INFO - 45 - mysql data init ~~~
+Configure_even_code.py - login - 2019-08-13 17:22:27,190 - INFO - 62 - --------------------------------------------------
+Configure_even_code.py - login - 2019-08-13 17:22:27,190 - INFO - 63 - 请求方式:post
+Configure_even_code.py - login - 2019-08-13 17:22:27,190 - INFO - 64 - 请求链接:https://api.aixiangdao.com/user/getUserInfo
+Configure_even_code.py - login - 2019-08-13 17:22:27,190 - INFO - 65 - 请求参数:
+Configure_even_code.py - login - 2019-08-13 17:22:27,190 - INFO - 66 - token :5e395837-8d56-488b-ba21-2e1359e3e0e5
+Configure_even_code.py - login - 2019-08-13 17:22:27,644 - INFO - 76 - login is successful
+inheritance.py - second - 2019-08-13 17:22:27,644 - INFO - 22 - json data is successful
+Configure_even_code.py - tearDownClass - 2019-08-13 17:22:28,644 - INFO - 51 - mysql data clean ~~~
+report.py - report - 2019-08-13 17:22:29,646 - INFO - 29 - 测试报告已完成~~~

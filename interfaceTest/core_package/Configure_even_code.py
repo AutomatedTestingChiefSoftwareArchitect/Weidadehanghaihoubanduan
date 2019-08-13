@@ -16,13 +16,16 @@ class Interface(unittest.TestCase):
 
     def setUp(self):
 
-        self.cookies = None
+        # self.cookies = None
         self.results = None
         self.verificationErrors = []
+        token = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][3]
         self.headers = {
             "user-agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) "
-                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"
+                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
+            "userToken": token
         }
+        self.token = token
 
     def tearDown(self):
 
@@ -60,6 +63,7 @@ class Interface(unittest.TestCase):
                     logger.info("请求方式:%s" % method)
                     logger.info("请求链接:%s" % url)
                     logger.info("请求参数:%s" % parameter)
+                    logger.info("token :%s" % self.token)
                     results = configHttp.runmain.run_main(method, url, parameter, headers=self.headers)
                     self.results = results
                 except requests.exceptions.ConnectionError as a:
@@ -70,11 +74,14 @@ class Interface(unittest.TestCase):
                     return logger.error("login timeout error")
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("login is successful")
-                ret = inheritance.ret.enter(self.results.json())
-                if ret is None:
-                    return self.verificationErrors.append(ret)
+                r = inheritance.ret.enter(self.results.json())
+                if r is None:
+                    return self.verificationErrors.append(r)
+                """
                 self.cookies = self.results.cookies
                 return self.cookies
+                """
+                return
             except AssertionError as e:
                 self.verificationErrors.append(e)
                 return logger.error("login is %s" % self.results.status_code)
@@ -95,7 +102,8 @@ class Interface(unittest.TestCase):
                     logger.info("请求方式:%s" % method)
                     logger.info("请求链接:%s" % url)
                     logger.info("请求参数:%s" % data)
-                    results = configHttp.runmain.run_main(method, url, data, headers=self.headers, cookies=self.cookies)
+                    logger.info("token :%s" % self.token)
+                    results = configHttp.runmain.run_main(method, url, data, headers=self.headers)
                     self.results = results
                 except requests.exceptions.ConnectionError as a:
                     self.verificationErrors.append(a)
@@ -105,9 +113,9 @@ class Interface(unittest.TestCase):
                     return logger.error("timeout error")
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("assert url is successful")
-                ret = inheritance.ret.enter(self.results.json())
-                if ret is None:
-                    return self.verificationErrors.append(ret)
+                r = inheritance.ret.enter(self.results.json())
+                if r is None:
+                    return self.verificationErrors.append(r)
         except AssertionError as e:
             self.verificationErrors.append(e)
             return logger.error("%s assert is error" % self.results.status_code)
