@@ -7,6 +7,7 @@ from interfaceTest.log_and_logresult_package import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
 from interfaceTest.report_test import report
+
 # from interfaceTest.sql_package import My_sql
 
 logger = Log.logger
@@ -47,16 +48,19 @@ class Interface(unittest.TestCase):
 
         date = readExcel.reds.get_xls('userCase.xlsx', 'login')
 
-        for method, url, data, content_type, user_agent, user_token in date:
+        for method, url, data, content_type, user_agent, user_token, case_name in date:
             self.method = method
             self.url = url
             self.data = data
             self.content_type = content_type
             self.user_agent = user_agent
             self.user_token = user_token
+            self.case_name = case_name
 
-        self.headers = {"User-Agent": self.user_agent, "Content-Type": self.content_type,
-                        "userToken": self.user_token, "Connection": 'close'}
+        global headers
+
+        headers = {"User-Agent": self.user_agent, "Content-Type": self.content_type,
+                   "userToken": self.user_token, "Connection": 'close'}
 
         if self.url and self.data is not None:
             try:
@@ -65,10 +69,10 @@ class Interface(unittest.TestCase):
                     logger.info("请求方式:%s" % self.method)
                     logger.info("请求链接:%s" % self.url)
                     logger.info("请求参数:%s" % self.data)
-                    logger.info("Content_type:%s" % self.content_type)
-                    logger.info("User_Agent:%s" % self.user_agent)
-                    logger.info("User_Token :%s" % self.user_token)
-                    results = configHttp.runmain.run_main(self.method, self.url, self.data, self.headers)
+                    logger.info("Content_type: %s" % self.content_type)
+                    logger.info("User_Agent: %s" % self.user_agent)
+                    logger.info("User_Token: %s" % self.user_token)
+                    results = configHttp.runmain.run_main(self.method, self.url, self.data, headers)
                     self.results = results
                 except requests.exceptions.ConnectionError as a:
                     self.verificationErrors.append(a)
@@ -78,7 +82,7 @@ class Interface(unittest.TestCase):
                     return logger.error("login timeout error")
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("login is successful")
-                r = inheritance.ret.enter(self.results.json(), None)
+                r = inheritance.ret.enter(self.results.json(), self.case_name)
                 if r is None:
                     return self.verificationErrors.append(r)
                 return
@@ -92,6 +96,7 @@ class Interface(unittest.TestCase):
 
         try:
             dates = readExcel.reds.get_xls('userCase.xlsx', 'Interface')
+            header = headers
 
             if dates is None:
                 self.verificationErrors.append(dates)
@@ -103,7 +108,7 @@ class Interface(unittest.TestCase):
                     logger.info("请求方式:%s" % method)
                     logger.info("请求链接:%s" % url)
                     logger.info("请求参数:%s" % data)
-                    results = configHttp.runmain.run_main(method, url, data, self.headers)
+                    results = configHttp.runmain.run_main(method, url, data, header)
                     self.results = results
                 except requests.exceptions.ConnectionError as a:
                     self.verificationErrors.append(a)
@@ -123,5 +128,4 @@ class Interface(unittest.TestCase):
 
 
 if __name__ == '__main__':
-
     report.report(Interface, ['login', 'Configure_even_code'])

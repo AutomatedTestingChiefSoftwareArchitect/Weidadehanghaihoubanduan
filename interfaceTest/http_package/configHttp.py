@@ -8,12 +8,12 @@ class RunMain(object):
 
     def send_post(self, url, data, headers):
 
-        result = requests.post(url=url, data=data, headers=headers)
+        result = requests.post(url=url, data=data, headers=headers, verify=False)
         return result
 
     def send_get(self, url, data, headers):
 
-        result = requests.get(url=url, data=data, headers=headers)
+        result = requests.get(url=url, data=data, headers=headers, verify=False)
         return result
 
     def run_main(self, method, url=None, data=None, headers=None):
