@@ -16,16 +16,19 @@ class Interface(unittest.TestCase):
 
     def setUp(self):
 
-        # self.cookies = None
         self.results = None
         self.verificationErrors = []
-        token = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][3]
+        content_type = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][3]
+        user_agent = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][4]
+        user_token = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][5]
         self.headers = {
-            "user-agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) "
-                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
-            "userToken": token
+            "User-Agent": user_agent,
+            "Content-Type": content_type,
+            "userToken": user_token,
         }
-        self.token = token
+        self.content_type = content_type
+        self.user_agent = user_agent
+        self.token = user_token
 
     def tearDown(self):
 
@@ -55,16 +58,18 @@ class Interface(unittest.TestCase):
 
         method = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][0]
         url = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][1]
-        parameter = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][2]
-        if url and parameter is not None:
+        data = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][2]
+        if url and data is not None:
             try:
                 try:
-                    logger.info("-" * 50)
+                    logger.info("-" * 49)
                     logger.info("请求方式:%s" % method)
                     logger.info("请求链接:%s" % url)
-                    logger.info("请求参数:%s" % parameter)
-                    logger.info("token :%s" % self.token)
-                    results = configHttp.runmain.run_main(method, url, parameter, headers=self.headers)
+                    logger.info("请求参数:%s" % data)
+                    logger.info("Content_type:%s" % self.content_type)
+                    logger.info("User_Agent:%s" % self.user_agent)
+                    logger.info("User_Token :%s" % self.token)
+                    results = configHttp.runmain.run_main(method, url=url, data=data, headers=self.headers)
                     self.results = results
                 except requests.exceptions.ConnectionError as a:
                     self.verificationErrors.append(a)
@@ -77,10 +82,6 @@ class Interface(unittest.TestCase):
                 r = inheritance.ret.enter(self.results.json())
                 if r is None:
                     return self.verificationErrors.append(r)
-                """
-                self.cookies = self.results.cookies
-                return self.cookies
-                """
                 return
             except AssertionError as e:
                 self.verificationErrors.append(e)
@@ -98,12 +99,11 @@ class Interface(unittest.TestCase):
 
             for method, url, data in dates:
                 try:
-                    logger.info("-" * 50)
+                    logger.info("-" * 34)
                     logger.info("请求方式:%s" % method)
                     logger.info("请求链接:%s" % url)
                     logger.info("请求参数:%s" % data)
-                    logger.info("token :%s" % self.token)
-                    results = configHttp.runmain.run_main(method, url, data, headers=self.headers)
+                    results = configHttp.runmain.run_main(method, url=url, data=data, headers=self.headers)
                     self.results = results
                 except requests.exceptions.ConnectionError as a:
                     self.verificationErrors.append(a)
