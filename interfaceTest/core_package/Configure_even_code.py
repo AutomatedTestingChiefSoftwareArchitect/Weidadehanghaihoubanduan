@@ -18,17 +18,6 @@ class Interface(unittest.TestCase):
 
         self.results = None
         self.verificationErrors = []
-        content_type = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][3]
-        user_agent = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][4]
-        user_token = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][5]
-        self.headers = {
-            "User-Agent": user_agent,
-            "Content-Type": content_type,
-            "userToken": user_token,
-        }
-        self.content_type = content_type
-        self.user_agent = user_agent
-        self.token = user_token
 
     def tearDown(self):
 
@@ -56,20 +45,30 @@ class Interface(unittest.TestCase):
 
     def login(self):
 
-        method = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][0]
-        url = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][1]
-        data = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][2]
-        if url and data is not None:
+        date = readExcel.reds.get_xls('userCase.xlsx', 'login')
+
+        for method, url, data, content_type, user_agent, user_token in date:
+            self.method = method
+            self.url = url
+            self.data = data
+            self.content_type = content_type
+            self.user_agent = user_agent
+            self.user_token = user_token
+
+        self.headers = {"User-Agent": self.user_agent, "Content-Type": self.content_type,
+                        "userToken": self.user_token, "Connection": 'close'}
+
+        if self.url and self.data is not None:
             try:
                 try:
                     logger.info("-" * 49)
-                    logger.info("请求方式:%s" % method)
-                    logger.info("请求链接:%s" % url)
-                    logger.info("请求参数:%s" % data)
+                    logger.info("请求方式:%s" % self.method)
+                    logger.info("请求链接:%s" % self.url)
+                    logger.info("请求参数:%s" % self.data)
                     logger.info("Content_type:%s" % self.content_type)
                     logger.info("User_Agent:%s" % self.user_agent)
-                    logger.info("User_Token :%s" % self.token)
-                    results = configHttp.runmain.run_main(method, url=url, data=data, headers=self.headers)
+                    logger.info("User_Token :%s" % self.user_token)
+                    results = configHttp.runmain.run_main(self.method, self.url, self.data, self.headers)
                     self.results = results
                 except requests.exceptions.ConnectionError as a:
                     self.verificationErrors.append(a)
@@ -79,7 +78,7 @@ class Interface(unittest.TestCase):
                     return logger.error("login timeout error")
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("login is successful")
-                r = inheritance.ret.enter(self.results.json())
+                r = inheritance.ret.enter(self.results.json(), None)
                 if r is None:
                     return self.verificationErrors.append(r)
                 return
@@ -93,17 +92,18 @@ class Interface(unittest.TestCase):
 
         try:
             dates = readExcel.reds.get_xls('userCase.xlsx', 'Interface')
+
             if dates is None:
                 self.verificationErrors.append(dates)
                 return logger.error("sheet Interface is %s" % dates)
 
-            for method, url, data in dates:
+            for method, url, data, case_name in dates:
                 try:
                     logger.info("-" * 34)
                     logger.info("请求方式:%s" % method)
                     logger.info("请求链接:%s" % url)
                     logger.info("请求参数:%s" % data)
-                    results = configHttp.runmain.run_main(method, url=url, data=data, headers=self.headers)
+                    results = configHttp.runmain.run_main(method, url, data, self.headers)
                     self.results = results
                 except requests.exceptions.ConnectionError as a:
                     self.verificationErrors.append(a)
@@ -113,9 +113,10 @@ class Interface(unittest.TestCase):
                     return logger.error("timeout error")
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("assert url is successful")
-                r = inheritance.ret.enter(self.results.json())
+                r = inheritance.ret.enter(self.results.json(), case_name)
                 if r is None:
                     return self.verificationErrors.append(r)
+
         except AssertionError as e:
             self.verificationErrors.append(e)
             return logger.error("%s assert is error" % self.results.status_code)
