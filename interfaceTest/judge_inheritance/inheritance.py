@@ -57,7 +57,7 @@ class FirstClass(object):
                 return self.three(r, case_name)
         else:
 
-            logger.info("        现阶段程序不支持json int type~~~"), print(case_name + " : " + str(r)), sleep(1)
+            logger.info("        现阶段程序不支持json value is int type~~~"), print(case_name + " : " + str(r)), sleep(1)
             return r
 
 

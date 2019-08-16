@@ -48,7 +48,13 @@ class Interface(unittest.TestCase):
 
         date = readExcel.reds.get_xls('userCase.xlsx', 'login')
 
-        for method, url, data, content_type, user_agent, user_token, case_name in date:
+        global headers
+        global xls_name
+        global sheet_name
+
+        for method, url, data, content_type, user_agent, user_token, case_name, \
+                interface_xls_name, interface_sheet_name in date:
+
             self.method = method
             self.url = url
             self.data = data
@@ -56,13 +62,14 @@ class Interface(unittest.TestCase):
             self.user_agent = user_agent
             self.user_token = user_token
             self.case_name = case_name
-
-        global headers
+            xls_name = interface_xls_name
+            sheet_name = interface_sheet_name
 
         headers = {"User-Agent": self.user_agent, "Content-Type": self.content_type,
                    "userToken": self.user_token}
 
         if self.url and self.data is not None:
+
             try:
                 try:
                     logger.info("-" * 49)
@@ -95,7 +102,10 @@ class Interface(unittest.TestCase):
     def Configure_even_code(self):
 
         try:
-            dates = readExcel.reds.get_xls('userCase.xlsx', 'Interface')
+
+            name = xls_name
+            sheet = sheet_name
+            dates = readExcel.reds.get_xls(name, sheet)
             header = headers
 
             if dates is None:
@@ -128,5 +138,4 @@ class Interface(unittest.TestCase):
 
 
 if __name__ == '__main__':
-
     report.report(Interface, ['login', 'Configure_even_code'])
