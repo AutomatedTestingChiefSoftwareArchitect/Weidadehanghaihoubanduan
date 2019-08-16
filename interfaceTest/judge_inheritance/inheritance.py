@@ -40,25 +40,27 @@ class FirstClass(object):
 
     def enter(self, r, case_name):
 
-        if type(r["data"]) is not int:
+        for k in r:
 
-            if "id" in r["data"]:
+            if type(r[k]) is dict:
 
-                if r["data"]["id"] is None:
+                if "id" in r["data"]:
 
-                    logger.error("       json data is error"), print(case_name + " : " + str(r)), sleep(1)
-                    return r["data"]["id"]
+                    if r["data"]["id"] is None:
 
+                        logger.error("       json data is error"), print(case_name + " : " + str(r)), sleep(1)
+                        return r["data"]["id"]
+
+                    else:
+
+                        logger.info("        json data is successful"), print(case_name + " : " + str(r)), sleep(1)
+                        return r
                 else:
-
-                    logger.info("        json data is successful"), print(case_name + " : " + str(r)), sleep(1)
-                    return r
+                    return self.three(r, case_name)
             else:
-                return self.three(r, case_name)
-        else:
 
-            logger.info("        现阶段程序不支持json value is int type~~~"), print(case_name + " : " + str(r)), sleep(1)
-            return r
+                logger.info("        现阶段程序不支持json int and str type~~~"), print(case_name + " : " + str(r)), sleep(1)
+                return r
 
 
 ret = FirstClass()

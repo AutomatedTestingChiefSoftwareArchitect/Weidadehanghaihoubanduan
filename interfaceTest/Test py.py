@@ -37,6 +37,8 @@ print(name)
 
 results = configHttp.runmain.run_main(method, url, data, headers)
 # results = requests.get(url, params=data, headers=headers)
-print(results.json())
+# print(results.json())
 # ret = inheritance.ret.enter(results.json(), name)
-print(results)
+# print(results)
+result = {'data': {"2": 2}}
+r = inheritance.ret.enter(result, name)
