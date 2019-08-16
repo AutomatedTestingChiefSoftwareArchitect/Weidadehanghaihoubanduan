@@ -60,7 +60,7 @@ class Interface(unittest.TestCase):
         global headers
 
         headers = {"User-Agent": self.user_agent, "Content-Type": self.content_type,
-                   "userToken": self.user_token, "Connection": 'close'}
+                   "userToken": self.user_token}
 
         if self.url and self.data is not None:
             try:
@@ -128,4 +128,5 @@ class Interface(unittest.TestCase):
 
 
 if __name__ == '__main__':
+
     report.report(Interface, ['login', 'Configure_even_code'])

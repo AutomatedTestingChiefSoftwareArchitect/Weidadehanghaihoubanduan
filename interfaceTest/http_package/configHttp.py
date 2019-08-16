@@ -13,7 +13,7 @@ class RunMain(object):
 
     def send_get(self, url, data, headers):
 
-        result = requests.get(url=url, data=data, headers=headers, verify=False)
+        result = requests.get(url=url, params=data, headers=headers, verify=False)
         return result
 
     def run_main(self, method, url=None, data=None, headers=None):

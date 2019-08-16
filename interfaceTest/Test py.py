@@ -7,15 +7,15 @@ urls = "https://www.baidu.com/"
 data = {"cityId":29}
 dates = {}
 """
-
+import requests
 from interfaceTest.http_package import configHttp
 from interfaceTest.readexcel_package import readExcel
+from interfaceTest.judge_inheritance import inheritance
 
-
-method = readExcel.reds.get_xls('userCase.xlsx', 'Interface')[1][0]
-url = readExcel.reds.get_xls('userCase.xlsx', 'Interface')[1][1]
-data = readExcel.reds.get_xls('userCase.xlsx', 'Interface')[1][2]
-name = readExcel.reds.get_xls('userCase.xlsx', 'Interface')[1][3]
+method = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][0]
+url = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][1]
+data = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][2]
+name = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][6]
 # content_type = readExcel.reds.get_xls('userCase.xlsx', 'Interface')[0][3]
 # user_agent = readExcel.reds.get_xls('userCase.xlsx', 'Interface')[0][4]
 # user_token = readExcel.reds.get_xls('userCase.xlsx', 'Interface')[0][5]
@@ -36,5 +36,7 @@ print(name)
 # print(user_token)
 
 results = configHttp.runmain.run_main(method, url, data, headers)
-# results = requests.get(url, data, headers=headers)
+# results = requests.get(url, params=data, headers=headers)
 print(results.json())
+# ret = inheritance.ret.enter(results.json(), name)
+print(results)

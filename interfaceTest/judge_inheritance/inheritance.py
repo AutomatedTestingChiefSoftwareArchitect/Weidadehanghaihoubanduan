@@ -13,11 +13,11 @@ class FirstClass(object):
 
     def second(self, r, case_name):
 
-        if "result" in r["data"]:
+        if "result" in r:
 
-            if r["data"]["result"] is None:
+            if r["result"] is None:
                 logger.error("       json data is error"), print(case_name + " : " + str(r)), sleep(1)
-                return r["data"]["result"]
+                return r["result"]
             else:
                 logger.info("       json data is successful"), print(case_name + " : " + str(r)), sleep(1)
                 return r
@@ -40,16 +40,25 @@ class FirstClass(object):
 
     def enter(self, r, case_name):
 
-        if "id" in r["data"]:
+        if type(r["data"]) is not int:
 
-            if r["data"]["id"] is None:
-                logger.error("       json data is error"), print(case_name + " : " + str(r)), sleep(1)
-                return r["data"]["id"]
+            if "id" in r["data"]:
+
+                if r["data"]["id"] is None:
+
+                    logger.error("       json data is error"), print(case_name + " : " + str(r)), sleep(1)
+                    return r["data"]["id"]
+
+                else:
+
+                    logger.info("        json data is successful"), print(case_name + " : " + str(r)), sleep(1)
+                    return r
             else:
-                logger.info("       json data is successful"), print(case_name + " : " + str(r)), sleep(1)
-                return r
+                return self.three(r, case_name)
         else:
-            return self.three(r, case_name)
+
+            logger.info("        现阶段程序不支持json int type~~~"), print(case_name + " : " + str(r)), sleep(1)
+            return r
 
 
 ret = FirstClass()
