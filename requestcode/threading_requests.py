@@ -6,6 +6,7 @@ import datetime
 class Requests(object):
 
     def __init__(self, page, url):
+
         self.page = page
         self.url = url
         self.header = {
@@ -20,6 +21,7 @@ class Requests(object):
         }
 
     def page_get(self):
+
         print("---开始访问抽奖详情页---")
         page = requests.get(self.page, headers=self.header, cookies=self.cookie, timeout=1)
         page.raise_for_status()
@@ -33,6 +35,7 @@ class Requests(object):
             raise Exception("http error info: %s" % page.status_code)
 
     def interface_get(self):
+
         r = requests.get(self.url, headers=self.header, cookies=self.cookie, timeout=1)
         r.raise_for_status()  # 检查是否链接成功
         # r.encoding = 'utf-8'
