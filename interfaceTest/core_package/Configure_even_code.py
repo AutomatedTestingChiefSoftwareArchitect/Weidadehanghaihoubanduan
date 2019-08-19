@@ -1,4 +1,5 @@
 import os
+import urllib3
 import unittest
 import requests
 from time import sleep
@@ -80,6 +81,7 @@ class Interface(unittest.TestCase):
                     logger.info("Content_type: %s" % self.content_type)
                     logger.info("User_Agent: %s" % self.user_agent)
                     logger.info("User_Token: %s" % self.user_token)
+                    urllib3.disable_warnings()
                     results = configHttp.runmain.run_main(self.method, self.url, self.data, headers)
                     self.results = results
 
@@ -129,6 +131,7 @@ class Interface(unittest.TestCase):
                     logger.info("请求方式:%s" % method)
                     logger.info("请求链接:%s" % url)
                     logger.info("请求参数:%s" % data)
+                    urllib3.disable_warnings()
                     results = configHttp.runmain.run_main(method, url, data, header)
                     self.results = results
 
