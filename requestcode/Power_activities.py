@@ -14,7 +14,7 @@ def test():
     global nums
     dates = readExcel.reds.get_xls('Power_activities.xlsx', 'activities')
 
-    for user_mobile, user_token in dates:
+    for user_name, user_mobile, user_token in dates:
 
         headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, "
                                  "like Gecko) Mobile/14G60 MicroMessenger/7.0.2(0x17000222) "
@@ -23,13 +23,12 @@ def test():
                    "userToken": user_token}
         url = "https://api.aixiangdao.com/user/getUserInfo"
         data = {}
-
         urllib3.disable_warnings()
         r = requests.post(url=url, data=data, headers=headers)
         if r.status_code == requests.codes.OK:
-            print("%s : 助力成功~~~" % user_mobile)
+            print("%s: 助力成功~~~" % user_name)
         else:
-            print("%s : 助力失败~~~" % user_mobile)
+            print("%s : 助力失败~~~" % user_name)
         nums += 1
 
 
