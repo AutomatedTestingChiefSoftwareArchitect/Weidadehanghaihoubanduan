@@ -10,6 +10,7 @@ ONE_WORKER_NUM = 1
 
 
 def test():
+
     global nums
     dates = readExcel.reds.get_xls('Power_activities.xlsx', 'activities')
 
