@@ -23,6 +23,7 @@ class DateBaseHandle(object):
         self.list_mysql_name = []
         self.num = None
         self.key = None
+        self.list = []
 
     def select_mysql(self, sql):
 
@@ -32,15 +33,22 @@ class DateBaseHandle(object):
             cursor.execute(sql)
             data = cursor.fetchall()
             for rows, table in data:
+
                 self.sid.append(rows)
                 self.name.append(table)
                 self.list_mysql_sid.append(self.sid)
                 self.list_mysql_name.append(self.name)
+
             for topic in self.list_mysql_sid:
                 self.num = random.choice(topic)
+
             for topics in self.list_mysql_name:
                 self.key = random.choice(topics)
-            return self.num, self.key
+
+            self.list.append(self.num)
+            self.list.append(self.key)
+
+            return self.list
 
         except:
 
