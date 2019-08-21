@@ -99,16 +99,18 @@ class Interface(unittest.TestCase):
                 logger.info("login is successful")
 
                 r = inheritance.ret.enter(self.results.json(), self.case_name)
+
                 if r is None:
                     return self.verificationErrors.append(r)
 
-                return
+                return None
 
             except AssertionError as e:
 
                 self.verificationErrors.append(e)
                 return logger.error("login is %s" % self.results.status_code)
         else:
+
             return logger.info("您未输入登陆和登陆参数，直接运行sheet Interface ~~~")
 
     def Configure_even_code(self):
@@ -121,6 +123,7 @@ class Interface(unittest.TestCase):
             dates = readExcel.reds.get_xls(name, sheet)
 
             if dates is None:
+
                 self.verificationErrors.append(dates)
                 return logger.error("sheet Interface is %s" % dates)
 
@@ -149,7 +152,9 @@ class Interface(unittest.TestCase):
                 logger.info("assert url is successful")
 
                 r = inheritance.ret.enter(self.results.json(), case_name)
+
                 if r is None:
+
                     return self.verificationErrors.append(r)
 
         except AssertionError as e:
