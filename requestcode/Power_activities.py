@@ -10,7 +10,6 @@ ONE_WORKER_NUM = 1
 
 
 def test():
-
     global nums
     dates = readExcel.reds.get_xls('Power_activities.xlsx', 'activities')
 
@@ -26,10 +25,22 @@ def test():
         urllib3.disable_warnings()
         r = requests.post(url=url, data=data, headers=headers)
         if r.status_code == requests.codes.OK:
-            print("%s: 助力成功~~~" % user_name)
-        else:
-            print("%s : 助力失败~~~" % user_name)
-        nums += 1
+
+            if r.json()["data"]["id"] == "1":
+
+                print("%s: 助力成功~~~" % user_name)
+
+            elif r.json()["data"]["id"] == "2":
+
+                print("%s : 已助力过~~~" % user_name)
+
+            else:
+
+                print("%s : 助力失败~~~  \n        "
+                      "失败原因：%s" % (user_name, r.json()["data"]["id"]))
+                print()
+
+            nums += 1
 
 
 def working():
