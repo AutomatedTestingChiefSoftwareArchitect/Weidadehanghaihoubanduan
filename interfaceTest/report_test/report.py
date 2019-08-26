@@ -14,7 +14,7 @@ logger = Log.logger
 def report(perform_class, perform_num):
     suite = unittest.TestSuite()
     suite.addTests(map(perform_class, perform_num))
-    logger.info("测试报告准备中~~~")
+    logger.info("测试报告准备中 ~~~")
     logger.info("case执行开始 ~~~")
     date = time.strftime('%Y-%m-%d-%H-%M-%S')
     path = interfaceTest.getpathInfo.get_Path()
@@ -28,6 +28,6 @@ def report(perform_class, perform_num):
         # runner = xmlrunner.XMLTestRunner(output=config_path)  # jenkins report
         runner.run(suite)
         fp.close()
-        logger.info("测试报告已完成~~~")
+        logger.info("测试报告已完成 ~~~")
     else:
-        logger.error("没有可执行的Case~~~")
+        logger.error("没有可执行的Case ~~~")

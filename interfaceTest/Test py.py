@@ -7,7 +7,7 @@ urls = "https://www.baidu.com/"
 data = {"cityId":29}
 dates = {}
 """
-import requests
+# import requests
 from interfaceTest.http_package import configHttp
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.judge_inheritance import inheritance
