@@ -21,7 +21,6 @@ def report(perform_class, perform_num):
     date = time.strftime('%Y-%m-%d-%H-%M-%S')
     path = interfaceTest.getpathInfo.get_Path()
     config_path = os.path.join(path, 'result\\report-' + date + '.html')
-    logger.info(config_path)
     if suite is not None:
         fp = open(config_path, 'wb')
         runner = HTMLTestRunnerCN.HTMLTestReportCN(stream=fp,
@@ -37,7 +36,6 @@ def report(perform_class, perform_num):
         try:
             time.sleep(10)
             robot_report.new_report()
-            time.sleep(5)
             logger.info("测试报告已发送至钉钉群 ~~~")
 
         except:

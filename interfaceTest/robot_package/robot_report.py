@@ -19,9 +19,10 @@ def test_report():
 
 
 def new_report():
+
     sleep(10)
-    hook_token = "https://oapi.dingtalk.com/robot/send?access_token=" \
-                 "08b8a15e755cc50cceb4ec2b5dc5110e8a73d78b36e01f50bfa9bf74a298c28d"
+    hook_token = "https://oapi.dingtalk.com/robot/send?access_token" \
+                 "=fd6ed0a8d8b8fe335dea97ac3b850c73c26363251948463c45b182bf9ca99eb1 "
     headers = {'content-type': 'application/json'}
     date = {
 
@@ -30,9 +31,9 @@ def new_report():
             "text": "This is test report",
             "title": u"测试报告",
             "picUrl": "",
-            "messageUrl":r"file:///C:/Program%20Files%20(x86)/Jenkins/workspace/axd/interfaceTest/result/"+test_report()
+            "messageUrl": r"http://localhost:63342/PyrequestCode/interfaceTest/result/" + test_report()
         }
     }
+
     urllib3.disable_warnings()
-    r = requests.post(hook_token, headers=headers, data=json.dumps(date))
-    r.encoding = 'utf-8'
+    requests.post(hook_token, headers=headers, data=json.dumps(date), verify=False)
