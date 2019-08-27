@@ -2,6 +2,7 @@ import os
 import json
 import urllib3
 import requests
+from time import sleep
 from interfaceTest import getpathInfo
 
 path = getpathInfo.get_Path()
@@ -9,7 +10,6 @@ xlsPath = os.path.join(path, "result")
 
 
 def test_report():
-
     lists = os.listdir(xlsPath)
     lists.sort(key=lambda fn: os.path.getmtime(xlsPath + "\\" + fn))
     file_new = os.path.join(xlsPath, lists[-2])
@@ -19,7 +19,7 @@ def test_report():
 
 
 def new_report():
-
+    sleep(10)
     hook_token = "https://oapi.dingtalk.com/robot/send?access_token=" \
                  "08b8a15e755cc50cceb4ec2b5dc5110e8a73d78b36e01f50bfa9bf74a298c28d"
     headers = {'content-type': 'application/json'}
@@ -30,9 +30,9 @@ def new_report():
             "text": "This is test report",
             "title": u"测试报告",
             "picUrl": "",
-            "messageUrl": r"file:///C:/Program%20Files%20(x86)"
-                          r"/Jenkins/workspace/axd/interfaceTest/result/"+test_report()
-            # r"http://localhost:63342/PyrequestCode/interfaceTest/result/" + test_report()  本地报告地址
+            # "messageUrl": r"file:///C:/Program%20Files%20(x86)"
+            # r"/Jenkins/workspace/axd/interfaceTest/result/" + test_report()
+            "messageUrl": r"http://localhost:63342/PyrequestCode/interfaceTest/result/" + test_report()
         }
     }
     urllib3.disable_warnings()
