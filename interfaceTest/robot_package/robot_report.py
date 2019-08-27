@@ -31,7 +31,8 @@ def new_report():
             "text": "This is test report",
             "title": u"测试报告",
             "picUrl": "",
-            "messageUrl": r"http://localhost:63342/PyrequestCode/interfaceTest/result/" + test_report()
+            "messageUrl": r"http://localhost:63342/PyrequestCode/interfaceTest/result/"
+                          + test_report() + "?_ijt=21u7gfuboj5o7q8g0jqqtpopue"
         }
     }
 
