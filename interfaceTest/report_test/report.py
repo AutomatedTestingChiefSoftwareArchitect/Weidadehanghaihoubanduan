@@ -3,6 +3,7 @@ import unittest
 import time
 import HTMLTestRunnerCN
 import interfaceTest.getpathInfo
+from interfaceTest.robot_package import robot_report
 from interfaceTest.log_and_logresult_package import Log
 
 # import xmlrunner
@@ -12,6 +13,7 @@ logger = Log.logger
 
 
 def report(perform_class, perform_num):
+
     suite = unittest.TestSuite()
     suite.addTests(map(perform_class, perform_num))
     logger.info("测试报告准备中 ~~~")
@@ -29,5 +31,15 @@ def report(perform_class, perform_num):
         runner.run(suite)
         fp.close()
         logger.info("测试报告已完成 ~~~")
+        time.sleep(5)
+
+        try:
+            robot_report.new_report()
+            time.sleep(1)
+            logger.info("测试报告已发送至钉钉群 ~~~")
+
+        except:
+
+            raise Exception(logger.error("测试报告发送失败 ~~~"))
     else:
         logger.error("没有可执行的Case ~~~")
