@@ -197,3 +197,71 @@ inheritance.py - enter - 2019-08-27 16:03:35,278 - INFO - 77 -         现阶段
 Configure_even_code.py - tearDownClass - 2019-08-27 16:03:36,278 - INFO - 46 - mysql data clean ~~~
 report.py - report - 2019-08-27 16:03:47,279 - INFO - 35 - 测试报告已完成 ~~~
 report.py - report - 2019-08-27 16:04:07,470 - ERROR - 45 - 测试报告发送失败 ~~~
+report.py - report - 2019-08-27 16:06:33,337 - INFO - 19 - 测试报告准备中 ~~~
+report.py - report - 2019-08-27 16:06:33,338 - INFO - 20 - case执行开始 ~~~
+report.py - report - 2019-08-27 16:06:33,338 - INFO - 24 - C:\Users\Administrator\PycharmProjects\untitled\PyrequestCode\interfaceTest\result\report-2019-08-27-16-06-33.html
+Configure_even_code.py - setUpClass - 2019-08-27 16:06:33,340 - INFO - 40 - mysql data init ~~~
+Configure_even_code.py - login - 2019-08-27 16:06:34,369 - INFO - 78 - -------------------------------------------------
+Configure_even_code.py - login - 2019-08-27 16:06:34,369 - INFO - 79 - 请求方式:post
+Configure_even_code.py - login - 2019-08-27 16:06:34,371 - INFO - 80 - 请求链接:https://api.aixiangdao.com/user/getUserInfo
+Configure_even_code.py - login - 2019-08-27 16:06:34,371 - INFO - 81 - 请求参数:
+Configure_even_code.py - login - 2019-08-27 16:06:34,371 - INFO - 82 - Content_type: application/json
+Configure_even_code.py - login - 2019-08-27 16:06:34,371 - INFO - 83 - User_Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/7.0.2(0x17000222) NetType/WIFI Language/zh_CN
+Configure_even_code.py - login - 2019-08-27 16:06:34,371 - INFO - 84 - User_Token: 51321b4f-c0bb-4474-8981-fbed65a01fb6
+Configure_even_code.py - login - 2019-08-27 16:06:34,759 - INFO - 100 - login is successful
+inheritance.py - enter - 2019-08-27 16:06:34,759 - INFO - 69 -         json data is successful
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:35,775 - INFO - 134 - ----------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:35,775 - INFO - 135 - 请求方式:post
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:35,775 - INFO - 136 - 请求链接:https://api.aixiangdao.com/user/app/coupon/getCount
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:35,776 - INFO - 137 - 请求参数:
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:36,132 - INFO - 153 - assert url is successful
+inheritance.py - three - 2019-08-27 16:06:36,132 - INFO - 45 -         json data is successful
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:37,132 - INFO - 134 - ----------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:37,132 - INFO - 135 - 请求方式:post
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:37,132 - INFO - 136 - 请求链接:https://api.aixiangdao.com/order/voucherPackage/getCashCouponList
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:37,132 - INFO - 137 - 请求参数:{"pageIndex":0,"pageSize":10}
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:37,438 - INFO - 153 - assert url is successful
+inheritance.py - additional - 2019-08-27 16:06:37,439 - INFO - 9 -     匹配不到对应的response, 请联系管理进行手动添加 ~~~
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:38,440 - INFO - 134 - ----------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:38,440 - INFO - 135 - 请求方式:get
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:38,440 - INFO - 136 - 请求链接:https://api.aixiangdao.com/message/app/message/countUnRead
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:38,440 - INFO - 137 - 请求参数:
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:06:38,681 - INFO - 153 - assert url is successful
+inheritance.py - enter - 2019-08-27 16:06:38,683 - INFO - 77 -         现阶段程序不支持json int and str type ~~~
+Configure_even_code.py - tearDownClass - 2019-08-27 16:06:39,683 - INFO - 46 - mysql data clean ~~~
+report.py - report - 2019-08-27 16:06:50,683 - INFO - 35 - 测试报告已完成 ~~~
+report.py - report - 2019-08-27 16:07:10,859 - ERROR - 45 - 测试报告发送失败 ~~~
+report.py - report - 2019-08-27 16:08:25,177 - INFO - 19 - 测试报告准备中 ~~~
+report.py - report - 2019-08-27 16:08:25,177 - INFO - 20 - case执行开始 ~~~
+report.py - report - 2019-08-27 16:08:25,177 - INFO - 24 - C:\Users\Administrator\PycharmProjects\untitled\PyrequestCode\interfaceTest\result\report-2019-08-27-16-08-25.html
+Configure_even_code.py - setUpClass - 2019-08-27 16:08:25,177 - INFO - 40 - mysql data init ~~~
+Configure_even_code.py - login - 2019-08-27 16:08:26,210 - INFO - 78 - -------------------------------------------------
+Configure_even_code.py - login - 2019-08-27 16:08:26,210 - INFO - 79 - 请求方式:post
+Configure_even_code.py - login - 2019-08-27 16:08:26,211 - INFO - 80 - 请求链接:https://api.aixiangdao.com/user/getUserInfo
+Configure_even_code.py - login - 2019-08-27 16:08:26,211 - INFO - 81 - 请求参数:
+Configure_even_code.py - login - 2019-08-27 16:08:26,211 - INFO - 82 - Content_type: application/json
+Configure_even_code.py - login - 2019-08-27 16:08:26,211 - INFO - 83 - User_Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/7.0.2(0x17000222) NetType/WIFI Language/zh_CN
+Configure_even_code.py - login - 2019-08-27 16:08:26,211 - INFO - 84 - User_Token: 51321b4f-c0bb-4474-8981-fbed65a01fb6
+Configure_even_code.py - login - 2019-08-27 16:08:26,702 - INFO - 100 - login is successful
+inheritance.py - enter - 2019-08-27 16:08:26,702 - INFO - 69 -         json data is successful
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:27,717 - INFO - 134 - ----------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:27,717 - INFO - 135 - 请求方式:post
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:27,718 - INFO - 136 - 请求链接:https://api.aixiangdao.com/user/app/coupon/getCount
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:27,718 - INFO - 137 - 请求参数:
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:28,188 - INFO - 153 - assert url is successful
+inheritance.py - three - 2019-08-27 16:08:28,190 - INFO - 45 -         json data is successful
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:29,190 - INFO - 134 - ----------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:29,190 - INFO - 135 - 请求方式:post
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:29,190 - INFO - 136 - 请求链接:https://api.aixiangdao.com/order/voucherPackage/getCashCouponList
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:29,190 - INFO - 137 - 请求参数:{"pageIndex":0,"pageSize":10}
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:29,463 - INFO - 153 - assert url is successful
+inheritance.py - additional - 2019-08-27 16:08:29,464 - INFO - 9 -     匹配不到对应的response, 请联系管理进行手动添加 ~~~
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:30,464 - INFO - 134 - ----------------------------------
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:30,464 - INFO - 135 - 请求方式:get
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:30,464 - INFO - 136 - 请求链接:https://api.aixiangdao.com/message/app/message/countUnRead
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:30,464 - INFO - 137 - 请求参数:
+Configure_even_code.py - Configure_even_code - 2019-08-27 16:08:30,736 - INFO - 153 - assert url is successful
+inheritance.py - enter - 2019-08-27 16:08:30,737 - INFO - 77 -         现阶段程序不支持json int and str type ~~~
+Configure_even_code.py - tearDownClass - 2019-08-27 16:08:31,737 - INFO - 46 - mysql data clean ~~~
+report.py - report - 2019-08-27 16:08:42,739 - INFO - 35 - 测试报告已完成 ~~~
+report.py - report - 2019-08-27 16:09:02,942 - ERROR - 45 - 测试报告发送失败 ~~~
