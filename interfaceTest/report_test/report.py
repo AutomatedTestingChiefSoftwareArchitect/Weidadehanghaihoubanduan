@@ -31,11 +31,11 @@ def report(perform_class, perform_num):
         runner.run(suite)
         fp.close()
         logger.info("测试报告已完成 ~~~")
-        time.sleep(5)
+        time.sleep(10)
 
         try:
             robot_report.new_report()
-            time.sleep(1)
+            time.sleep(5)
             logger.info("测试报告已发送至钉钉群 ~~~")
 
         except:
