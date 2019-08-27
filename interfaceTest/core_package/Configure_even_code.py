@@ -117,7 +117,7 @@ class Interface(unittest.TestCase):
     def Configure_even_code(self):
 
         try:
-            self.num = 7
+
             name = xls_name
             header = headers
             sheet = sheet_name
@@ -157,8 +157,6 @@ class Interface(unittest.TestCase):
                 if r is None:
 
                     return self.verificationErrors.append(r)
-
-                self.num += 1
 
         except AssertionError as e:
 

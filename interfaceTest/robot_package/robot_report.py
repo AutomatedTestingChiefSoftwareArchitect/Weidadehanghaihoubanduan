@@ -32,7 +32,7 @@ def new_report():
             "picUrl": "",
             "messageUrl": r"file:///C:/Program%20Files%20(x86)"
                           r"/Jenkins/workspace/axd/interfaceTest/result/"+test_report()
-            # r"http://localhost:63342/PyrequestCode/interfaceTest/result/" + test_report()
+            # r"http://localhost:63342/PyrequestCode/interfaceTest/result/" + test_report()  本地报告地址
         }
     }
     urllib3.disable_warnings()
