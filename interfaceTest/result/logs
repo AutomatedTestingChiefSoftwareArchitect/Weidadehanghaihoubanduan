@@ -138,3 +138,5 @@ inheritance.py - enter - 2019-08-27 16:58:19,155 - INFO - 77 -         现阶段
 Configure_even_code.py - tearDownClass - 2019-08-27 16:58:20,155 - INFO - 46 - mysql data clean ~~~
 report.py - report - 2019-08-27 16:58:31,155 - INFO - 34 - 测试报告已完成 ~~~
 report.py - report - 2019-08-27 16:58:51,457 - INFO - 39 - 测试报告已发送至钉钉群 ~~~
+
+
