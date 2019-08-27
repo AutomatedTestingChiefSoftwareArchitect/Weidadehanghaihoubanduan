@@ -30,7 +30,9 @@ def new_report():
             "text": "This is test report",
             "title": u"测试报告",
             "picUrl": "",
-            "messageUrl": r"http://localhost:63342/PyrequestCode/interfaceTest/result/" + test_report()
+            "messageUrl": r"file:///C:/Program%20Files%20(x86)"
+                          r"/Jenkins/workspace/axd/interfaceTest/result/"+test_report()
+            # r"http://localhost:63342/PyrequestCode/interfaceTest/result/" + test_report()
         }
     }
     urllib3.disable_warnings()
