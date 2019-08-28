@@ -25,6 +25,7 @@ def new_report():
     hook_token = "https://oapi.dingtalk.com/robot/send?access_token" \
                  "=fd6ed0a8d8b8fe335dea97ac3b850c73c26363251948463c45b182bf9ca99eb1 "
     headers = {'content-type': 'application/json'}
+
     date = {
 
         "msgtype": "link",
@@ -35,6 +36,7 @@ def new_report():
             "messageUrl": r"http://localhost:63342/PyrequestCode/interfaceTest/result/" + test_report()
         }
     }
+
     urllib3.disable_warnings()
     r = requests.post(hook_token, headers=headers, data=json.dumps(date))
     r.encoding = 'utf-8'

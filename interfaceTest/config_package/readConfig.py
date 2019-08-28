@@ -3,8 +3,7 @@ import configparser
 import interfaceTest.getpathInfo
 
 path = interfaceTest.getpathInfo.get_Path()
-config_path = os.path.join(path,
-                           './config_package/config.ini')
+config_path = os.path.join(path, 'config_package/config.ini')
 config = configparser.ConfigParser()
 config.read(config_path, encoding='utf-8')
 

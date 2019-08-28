@@ -21,6 +21,7 @@ def report(perform_class, perform_num):
     date = time.strftime('%Y-%m-%d-%H-%M-%S')
     path = interfaceTest.getpathInfo.get_Path()
     config_path = os.path.join(path, 'result\\report-' + date + '.html')
+
     if suite is not None:
         fp = open(config_path, 'wb')
         runner = HTMLTestRunnerCN.HTMLTestReportCN(stream=fp,

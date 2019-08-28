@@ -9,6 +9,7 @@ log_path = os.path.join(path, 'result')
 
 
 class Logger(object):
+
     def __init__(self, logger_name='logs…'):
         self.logger = logging.getLogger(logger_name)
         logging.root.setLevel(logging.NOTSET)
@@ -33,6 +34,7 @@ class Logger(object):
             file_handler.setFormatter(self.formatter)
             file_handler.setLevel(self.file_output_level)
             self.logger.addHandler(file_handler)
+
         return self.logger
 
 
