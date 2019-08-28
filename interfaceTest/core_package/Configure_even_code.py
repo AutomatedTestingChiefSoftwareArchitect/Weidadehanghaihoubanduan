@@ -1,5 +1,6 @@
 # encoding: utf-8
 import os
+import sys
 import urllib3
 import unittest
 import requests
@@ -12,6 +13,8 @@ from interfaceTest.report_test import report
 
 # from interfaceTest.sql_package import My_sql
 
+o_path = os.getcwd()
+sys.path.append(o_path)
 logger = Log.logger
 
 

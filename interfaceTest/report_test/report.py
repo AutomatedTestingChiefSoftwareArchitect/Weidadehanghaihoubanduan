@@ -1,14 +1,17 @@
 import os
-import unittest
+import sys
 import time
-from interfaceTest.report_test.report_tools import HTMLTestRunnerCN
+import unittest
 import interfaceTest.getpathInfo
 from interfaceTest.robot_package import robot_report
 from interfaceTest.log_and_logresult_package import Log
+from interfaceTest.report_test.report_tools import HTMLTestRunnerCN
 
 # import xmlrunner
 # from HTMLTestRunner import HTMLTestRunner
 
+o_path = os.getcwd()
+sys.path.append(o_path)
 logger = Log.logger
 
 
@@ -20,7 +23,7 @@ def report(perform_class, perform_num):
     logger.info("case执行开始 ~~~")
     date = time.strftime('%Y-%m-%d-%H-%M-%S')
     path = interfaceTest.getpathInfo.get_Path()
-    config_path = os.path.join(path, 'result\\report-' + date + '.html')
+    config_path = os.path.join(path, 'report-' + date + '.html')
 
     if suite is not None:
         fp = open(config_path, 'wb')
