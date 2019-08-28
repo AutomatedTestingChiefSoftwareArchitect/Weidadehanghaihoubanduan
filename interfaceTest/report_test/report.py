@@ -1,7 +1,7 @@
 import os
 import unittest
 import time
-import HTMLTestRunnerCN
+from interfaceTest.report_test.report_tools import HTMLTestRunnerCN
 import interfaceTest.getpathInfo
 from interfaceTest.robot_package import robot_report
 from interfaceTest.log_and_logresult_package import Log
