@@ -1,5 +1,4 @@
-#!/usr/bin/python
-# -*- coding: <utf-8> -*-
+# encoding: utf-8
 import os
 import urllib3
 import unittest
