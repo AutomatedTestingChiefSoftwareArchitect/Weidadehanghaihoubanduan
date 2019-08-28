@@ -30,12 +30,12 @@ def report(perform_class, perform_num):
         # runner = xmlrunner.XMLTestRunner(output=config_path)  # jenkins report
         runner.run(suite)
         fp.close()
-        logger.info("测试报告已完成 ~~~")
         time.sleep(10)
+        logger.info("测试报告已完成 ~~~")
 
         try:
+            time.sleep(10)
             robot_report.new_report()
-            time.sleep(5)
             logger.info("测试报告已发送至钉钉群 ~~~")
 
         except:
