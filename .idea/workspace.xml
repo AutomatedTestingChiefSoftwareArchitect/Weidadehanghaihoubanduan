@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf5e9c91-1d7f-46f5-a2f3-4cd375411af8" name="Default Changelist" comment="fix jenkins run path error6">
+    <list default="true" id="cf5e9c91-1d7f-46f5-a2f3-4cd375411af8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/getpathInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/getpathInfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +30,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/getpathInfo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
               <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="747">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,7 +117,6 @@
         <option value="C:/Program Files/Python37/Lib/urllib/__init__.py" />
         <option value="$PROJECT_DIR$/interfaceTest/email_package/configEmail.py" />
         <option value="C:/Program Files/Python37/Lib/site-packages/HTMLTestRunnerCN.py" />
-        <option value="$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py" />
         <option value="C:/Program Files (x86)/Jenkins/workspace/axd/interfaceTest/report_test/report.py" />
         <option value="$PROJECT_DIR$/interfaceTest/config_package/readConfig.py" />
         <option value="$PROJECT_DIR$/interfaceTest/readexcel_package/readExcel.py" />
@@ -104,6 +127,7 @@
         <option value="$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py" />
         <option value="$PROJECT_DIR$/interfaceTest/log_and_logresult_package/logs" />
         <option value="$PROJECT_DIR$/interfaceTest/getpathInfo.py" />
+        <option value="$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py" />
       </list>
     </option>
   </component>
@@ -454,14 +478,7 @@
       <workItem from="1566901213407" duration="227000" />
       <workItem from="1566901457108" duration="16000" />
       <workItem from="1566902909447" duration="135000" />
-      <workItem from="1566962689288" duration="18170000" />
-    </task>
-    <task id="LOCAL-00012" summary="add judge inheritance">
-      <created>1565662466467</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1565662466467</updated>
+      <workItem from="1566962689288" duration="19041000" />
     </task>
     <task id="LOCAL-00013" summary="add skip excel">
       <created>1565665407603</created>
@@ -799,7 +816,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566983252964</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="fix jenkins run path error9">
+      <created>1566983883675</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1566983883675</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -835,7 +859,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314992000" />
+    <option name="totallyTimeSpent" value="315863000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -950,7 +974,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix return error is None" />
     <MESSAGE value="fix requests post data is dict" />
     <MESSAGE value="fix matching response" />
     <MESSAGE value="Optimize the code" />
@@ -975,7 +998,8 @@
     <MESSAGE value="fix jenkins run path error" />
     <MESSAGE value="fix jenkins run path error2" />
     <MESSAGE value="fix jenkins run path error6" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix jenkins run path error6" />
+    <MESSAGE value="fix jenkins run path error9" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix jenkins run path error9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -992,7 +1016,7 @@
     <SUITE FILE_PATH="coverage/PyrequestCode$configEmail.coverage" NAME="configEmail Coverage Results" MODIFIED="1566872330995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/email_package" />
     <SUITE FILE_PATH="coverage/PyrequestCode$Configure_even_code__1_.coverage" NAME="Configure_even_code (1) Coverage Results" MODIFIED="1566893304906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Program Files (x86)/Jenkins/workspace/axd/interfaceTest/core_package" />
     <SUITE FILE_PATH="coverage/PyrequestCode$Test_main.coverage" NAME="Test_main Coverage Results" MODIFIED="1565068863844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/core_package" />
-    <SUITE FILE_PATH="coverage/PyrequestCode$getpathInfo.coverage" NAME="getpathInfo Coverage Results" MODIFIED="1566982527776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest" />
+    <SUITE FILE_PATH="coverage/PyrequestCode$getpathInfo.coverage" NAME="getpathInfo Coverage Results" MODIFIED="1566983907429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest" />
     <SUITE FILE_PATH="coverage/PyrequestCode$Test_py__1_.coverage" NAME="Test py (1) Coverage Results" MODIFIED="1565326297354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PyrequestCode$report.coverage" NAME="report Coverage Results" MODIFIED="1566892328312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Program Files (x86)/Jenkins/workspace/axd/interfaceTest/report_test" />
     <SUITE FILE_PATH="coverage/PyrequestCode$Test.coverage" NAME="Test Coverage Results" MODIFIED="1563945842621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest" />
@@ -1198,16 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -1238,20 +1252,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/getpathInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="747">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/getpathInfo.py">
+    <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="399">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
