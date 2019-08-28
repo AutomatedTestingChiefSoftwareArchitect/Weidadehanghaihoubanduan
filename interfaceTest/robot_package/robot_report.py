@@ -2,6 +2,7 @@ import os
 import json
 import urllib3
 import requests
+from time import sleep
 from interfaceTest import getpathInfo
 
 path = getpathInfo.get_Path()
@@ -20,8 +21,9 @@ def test_report():
 
 def new_report():
 
-    hook_token = "https://oapi.dingtalk.com/robot/send?access_token=" \
-                 "08b8a15e755cc50cceb4ec2b5dc5110e8a73d78b36e01f50bfa9bf74a298c28d"
+    sleep(10)
+    hook_token = "https://oapi.dingtalk.com/robot/send?access_token" \
+                 "=fd6ed0a8d8b8fe335dea97ac3b850c73c26363251948463c45b182bf9ca99eb1 "
     headers = {'content-type': 'application/json'}
     date = {
 
