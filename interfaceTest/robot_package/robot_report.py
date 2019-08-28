@@ -38,3 +38,5 @@ def new_report():
     urllib3.disable_warnings()
     r = requests.post(hook_token, headers=headers, data=json.dumps(date))
     r.encoding = 'utf-8'
+
+

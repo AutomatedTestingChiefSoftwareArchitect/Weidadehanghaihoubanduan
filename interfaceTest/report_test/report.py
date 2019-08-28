@@ -43,3 +43,4 @@ def report(perform_class, perform_num):
             raise Exception(logger.error("测试报告发送失败 ~~~"))
     else:
         logger.error("没有可执行的Case ~~~")
+
