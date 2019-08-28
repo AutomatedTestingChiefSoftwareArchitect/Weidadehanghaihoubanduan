@@ -5,7 +5,7 @@ import interfaceTest.getpathInfo
 
 
 path = interfaceTest.getpathInfo.get_Path()
-log_path = os.path.join(path, 'result')
+log_path = os.path.join(path, 'log_and_logresult_package')
 
 
 class Logger(object):

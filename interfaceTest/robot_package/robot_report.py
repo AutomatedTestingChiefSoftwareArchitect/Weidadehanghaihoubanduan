@@ -6,15 +6,14 @@ from time import sleep
 from interfaceTest import getpathInfo
 
 path = getpathInfo.get_Path()
-xlsPath = os.path.join(path, "result")
+xlsPath = os.path.join(path, 'result')
 
 
 def test_report():
 
     lists = os.listdir(xlsPath)
-    lists.sort(key=lambda fn: os.path.getmtime(xlsPath + "\\" + fn))
-    file_new = os.path.join(xlsPath, lists[-2])
-    # as = os.system(r'%s' % file_new)  # 打开网页
+    lists.sort(key=lambda fn: os.path.getmtime(xlsPath + "/" + fn))
+    file_new = os.path.join(xlsPath, lists[-1])
     cs = os.path.basename(file_new)
     return cs
 

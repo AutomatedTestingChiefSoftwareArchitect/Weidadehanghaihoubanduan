@@ -3,7 +3,7 @@ import os
 
 def get_Path():
 
-    # path1 = '%s' % os.path.split(os.path.realpath(__file__))[0]
+    # path = '%s' % os.path.split(os.path.realpath(__file__))[0]
     """
     // TODO # 指定输出路径 :
                     1.切勿随意乱push
