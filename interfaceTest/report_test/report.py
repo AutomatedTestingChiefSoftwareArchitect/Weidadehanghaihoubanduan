@@ -24,7 +24,7 @@ def report(perform_class, perform_num):
     logger.info("case执行开始 ~~~")
     date = time.strftime('%Y-%m-%d-%H-%M-%S')
     path = interfaceTest.getpathInfo.get_Path()
-    config_path = os.path.join(path, 'report-' + date + '.html')
+    config_path = os.path.join(path, 'result\\report-' + date + '.html')
 
     if suite is not None:
         fp = open(config_path, 'wb')
@@ -39,7 +39,7 @@ def report(perform_class, perform_num):
         logger.info("测试报告已完成 ~~~")
 
         try:
-            if platform.system() != "Windows":
+            if platform.system() == "Windows":
                 time.sleep(10)
                 robot_report.new_report()
                 logger.info("测试报告已发送至钉钉群 ~~~")
