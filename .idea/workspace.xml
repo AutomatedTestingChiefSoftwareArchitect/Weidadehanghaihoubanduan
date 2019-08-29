@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf5e9c91-1d7f-46f5-a2f3-4cd375411af8" name="Default Changelist" comment="fix report path10">
+    <list default="true" id="cf5e9c91-1d7f-46f5-a2f3-4cd375411af8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaceTest/config_package/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/config_package/config.ini" afterDir="false" />
     </list>
@@ -60,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/config.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            <state relative-caret-position="102">
+              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -441,14 +441,7 @@
       <workItem from="1566962689288" duration="22468000" />
       <workItem from="1566989182507" duration="3571000" />
       <workItem from="1567048645826" duration="3733000" />
-      <workItem from="1567067006036" duration="124000" />
-    </task>
-    <task id="LOCAL-00026" summary="Configure execution interface">
-      <created>1566212485787</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1566212485787</updated>
+      <workItem from="1567067006036" duration="856000" />
     </task>
     <task id="LOCAL-00027" summary="Configure execution interface">
       <created>1566212645545</created>
@@ -786,7 +779,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567050162241</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="add config num">
+      <created>1567067159424</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1567067159424</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -822,7 +822,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326718000" />
+    <option name="totallyTimeSpent" value="327450000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -937,7 +937,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add main" />
     <MESSAGE value="add kong" />
     <MESSAGE value="add TODO main code" />
     <MESSAGE value="add robot send test report" />
@@ -962,7 +961,8 @@
     <MESSAGE value="fix report path" />
     <MESSAGE value="fix report path9" />
     <MESSAGE value="fix report path10" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix report path10" />
+    <MESSAGE value="add config num" />
+    <option name="LAST_COMMIT_MESSAGE" value="add config num" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1195,8 +1195,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
