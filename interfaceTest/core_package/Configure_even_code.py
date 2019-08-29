@@ -4,6 +4,7 @@ import urllib3
 import unittest
 import requests
 import getpathInfo
+getpathInfo.append_Path()
 from time import sleep
 from judge_inheritance import inheritance
 from log_and_logresult_package import Log
@@ -12,7 +13,7 @@ from http_package import configHttp
 from report_test import report
 
 # from interfaceTest.sql_package import My_sql
-path = getpathInfo.get_Path()
+
 logger = Log.logger
 
 
@@ -57,8 +58,7 @@ class Interface(unittest.TestCase):
         global sheet_name
 
         for method, url, data, content_type, user_agent, user_token, case_name, \
-                interface_xls_name, interface_sheet_name in date:
-
+            interface_xls_name, interface_sheet_name in date:
             self.method = method
             self.url = url
             self.data = data
@@ -126,7 +126,6 @@ class Interface(unittest.TestCase):
             dates = readExcel.reds.get_xls(name, sheet)
 
             if dates is None:
-
                 self.verificationErrors.append(dates)
                 return logger.error("sheet Interface is %s" % dates)
 
@@ -157,7 +156,6 @@ class Interface(unittest.TestCase):
                 r = inheritance.ret.enter(self.results.json(), case_name)
 
                 if r is None:
-
                     return self.verificationErrors.append(r)
 
         except AssertionError as e:
@@ -167,5 +165,4 @@ class Interface(unittest.TestCase):
 
 
 if __name__ == '__main__':
-
     report.report(Interface, ['login', 'Configure_even_code'])
