@@ -22,7 +22,7 @@ def report(perform_class, perform_num):
     logger.info("case执行开始 ~~~")
     date = time.strftime('%Y-%m-%d-%H-%M-%S')
     path = interfaceTest.getpathInfo.get_Path()
-    config_path = os.path.join(path, 'result\\report-' + date + '.html')
+    config_path = os.path.join(path, 'result/report-' + date + '.html')
     titles = readConfig.ret.get_http("title")
     testers = readConfig.ret.get_http("tester")
 
