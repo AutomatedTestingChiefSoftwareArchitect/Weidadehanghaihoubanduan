@@ -8,10 +8,10 @@ config = configparser.ConfigParser()
 config.read(config_path, encoding='utf-8')
 
 
-class ReadConfig():
+class ReadConfig(object):
 
     def get_http(self, name):
-        value = config.get('HTTP', name)
+        value = config.get('REPORT', name)
         return value
 
     def get_email(self, name):
@@ -24,5 +24,3 @@ class ReadConfig():
 
 
 ret = ReadConfig()
-
-

@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 import os
 import sys
 import urllib3
@@ -18,7 +18,7 @@ from interfaceTest.report_test import report
 logger = Log.logger
 
 
-# this is main code
+# This is main code
 class Interface(unittest.TestCase):
 
     def setUp(self):
