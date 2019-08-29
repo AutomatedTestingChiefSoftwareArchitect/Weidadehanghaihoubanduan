@@ -1,9 +1,9 @@
 # encoding: utf-8
 import os
-import sys
 import urllib3
 import unittest
 import requests
+import getpathInfo
 from time import sleep
 from interfaceTest.judge_inheritance import inheritance
 from interfaceTest.log_and_logresult_package import Log
@@ -13,8 +13,7 @@ from interfaceTest.report_test import report
 
 # from interfaceTest.sql_package import My_sql
 
-o_path = os.getcwd()
-sys.path.append(o_path)
+path = getpathInfo
 logger = Log.logger
 
 
