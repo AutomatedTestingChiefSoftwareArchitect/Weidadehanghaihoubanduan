@@ -4,10 +4,6 @@
     <list default="true" id="cf5e9c91-1d7f-46f5-a2f3-4cd375411af8" name="Default Changelist" comment="fix report path10">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaceTest/config_package/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/config_package/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/config_package/readConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/config_package/readConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/log_and_logresult_package/logs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/log_and_logresult_package/logs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/report_test/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/report_test/report.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+            <state relative-caret-position="51">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -46,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/log_and_logresult_package/logs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="757">
-              <caret line="544" lean-forward="true" selection-start-line="544" selection-end-line="544" />
+            <state relative-caret-position="9248">
+              <caret line="544" selection-start-line="544" selection-end-line="544" />
             </state>
           </provider>
         </entry>
@@ -55,26 +51,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/config.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            <state relative-caret-position="323">
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/readConfig.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="425">
+              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -143,18 +139,18 @@
         <option value="$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py" />
         <option value="$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py" />
         <option value="$PROJECT_DIR$/interfaceTest/config_package/readConfig.py" />
-        <option value="$PROJECT_DIR$/interfaceTest/config_package/config.ini" />
         <option value="$PROJECT_DIR$/interfaceTest/report_test/report.py" />
         <option value="$PROJECT_DIR$/interfaceTest/log_and_logresult_package/logs" />
         <option value="$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py" />
+        <option value="$PROJECT_DIR$/interfaceTest/config_package/config.ini" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -166,85 +162,35 @@
         <subPane>
           <expand>
             <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Automated_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automated_Testing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Automated_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automated_Testing" type="462c0819:PsiDirectoryNode" />
               <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Automated_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automated_Testing" type="462c0819:PsiDirectoryNode" />
               <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
               <item name="config_package" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
-              <item name="core_package" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
-              <item name="http_package" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
-              <item name="judge_inheritance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
-              <item name="log_and_logresult_package" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
-              <item name="readexcel_package" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
-              <item name="report_test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
-              <item name="requestcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
-              <item name="result" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Automated_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automated_Testing" type="462c0819:PsiDirectoryNode" />
               <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
               <item name="robot_package" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Automated_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automated_Testing" type="462c0819:PsiDirectoryNode" />
               <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
               <item name="sql_package" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="PyrequestCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyrequestCode" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
-              <item name="testFile" type="462c0819:PsiDirectoryNode" />
+              <item name="Automated_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -444,8 +390,8 @@
     </configuration>
     <list>
       <item itemvalue="Python.Configure_even_code" />
-      <item itemvalue="Python.Test py" />
       <item itemvalue="Python.Test_main" />
+      <item itemvalue="Python.Test py" />
       <item itemvalue="Python.getpathInfo (1)" />
       <item itemvalue="Python.getpathInfo" />
       <item itemvalue="Python.readConfig" />
@@ -495,6 +441,7 @@
       <workItem from="1566962689288" duration="22468000" />
       <workItem from="1566989182507" duration="3571000" />
       <workItem from="1567048645826" duration="3733000" />
+      <workItem from="1567067006036" duration="124000" />
     </task>
     <task id="LOCAL-00026" summary="Configure execution interface">
       <created>1566212485787</created>
@@ -875,7 +822,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326594000" />
+    <option name="totallyTimeSpent" value="326718000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -890,7 +837,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.16577825" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.1673774" />
       <window_info id="Structure" order="1" sideWeight="0.5016251" side_tool="true" weight="0.15938166" />
       <window_info id="Favorites" order="2" sideWeight="0.5016251" side_tool="true" weight="0.15938166" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1098,15 +1045,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-28-15-46-19.html" />
-    <entry file="file://C:/Program Files (x86)/Jenkins/workspace/AutomatedTest/interfaceTest/core_package/Configure_even_code.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files (x86)/Jenkins/workspace/AutomatedTest/interfaceTest/core_package/Configure_even_code.py" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-28-16-12-33.html" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/readme">
       <provider selected="true" editor-type-id="text-editor">
@@ -1126,18 +1065,8 @@
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-28-17-04-34.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://D:/Downloads/Configure_even_code (1).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Downloads/Configure_even_code (2).py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://D:/Downloads/Configure_even_code (1).py" />
+    <entry file="file://D:/Downloads/Configure_even_code (2).py" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/robot_package/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1148,15 +1077,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Downloads/Configure_even_code.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#18#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Downloads/Configure_even_code.py" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Test_main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1217,13 +1138,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-11-22-45.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="87" lean-forward="true" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-11-22-45.html" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1244,62 +1159,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-13-28-39.html">
+    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-13-28-39.html" />
+    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-13-31-24.html" />
+    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-13-35-49.html" />
+    <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-13-31-24.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-13-35-49.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="51">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/log_and_logresult_package/logs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="544" lean-forward="true" selection-start-line="544" selection-end-line="544" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        <state relative-caret-position="9248">
+          <caret line="544" selection-start-line="544" selection-end-line="544" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="323">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/readConfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="425">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
