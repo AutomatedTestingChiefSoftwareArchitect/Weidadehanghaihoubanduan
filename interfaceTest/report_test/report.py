@@ -1,10 +1,7 @@
 import os
-import sys
 import time
 import platform
 import unittest
-o_path = os.getcwd()
-sys.path.append(o_path)
 import interfaceTest.getpathInfo
 from interfaceTest.robot_package import robot_report
 from interfaceTest.log_and_logresult_package import Log

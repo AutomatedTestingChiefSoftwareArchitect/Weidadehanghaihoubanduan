@@ -4,8 +4,6 @@ import json
 import urllib3
 import requests
 from time import sleep
-o_path = os.getcwd()
-sys.path.append(o_path)
 from interfaceTest import getpathInfo
 
 path = getpathInfo.get_Path()
