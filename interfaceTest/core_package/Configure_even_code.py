@@ -1,11 +1,12 @@
 # encoding: utf-8
 import os
+import sys
 import urllib3
 import unittest
 import requests
-import getpathInfo
-getpathInfo.append_Path()
 from time import sleep
+o_path = os.getcwd()
+sys.path.append(o_path)
 from judge_inheritance import inheritance
 from log_and_logresult_package import Log
 from readexcel_package import readExcel

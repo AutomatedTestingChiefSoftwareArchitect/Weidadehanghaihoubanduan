@@ -1,9 +1,11 @@
 import os
+import sys
 import time
 import platform
 import unittest
+o_path = os.getcwd()
+sys.path.append(o_path)
 import getpathInfo
-getpathInfo.append_Path()
 from robot_package import robot_report
 from log_and_logresult_package import Log
 from report_test.report_tools import HTMLTestRunnerCN
