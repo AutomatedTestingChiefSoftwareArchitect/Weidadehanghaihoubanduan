@@ -1,6 +1,6 @@
-import pymysql
-from interfaceTest.log_and_logresult_package import Log
 import random
+import pymysql
+from log_and_logresult_package import Log
 
 
 class DateBaseHandle(object):

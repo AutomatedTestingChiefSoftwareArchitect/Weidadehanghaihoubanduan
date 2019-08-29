@@ -1,4 +1,4 @@
-from interfaceTest.log_and_logresult_package import Log
+from log_and_logresult_package import Log
 from time import sleep
 
 logger = Log.logger

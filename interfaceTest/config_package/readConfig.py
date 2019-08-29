@@ -1,8 +1,8 @@
 import os
 import configparser
-import interfaceTest.getpathInfo
+import getpathInfo
 
-path = interfaceTest.getpathInfo.get_Path()
+path = getpathInfo.get_Path()
 config_path = os.path.join(path, 'config_package/config.ini')
 config = configparser.ConfigParser()
 config.read(config_path, encoding='utf-8')
