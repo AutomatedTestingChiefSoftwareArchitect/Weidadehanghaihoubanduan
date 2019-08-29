@@ -2,10 +2,10 @@ import os
 import unittest
 import requests
 from time import sleep
-from log_and_logresult_package import Log
-from readexcel_package import readExcel
-from http_package import configHttp
-from report_test import report
+from interfaceTest.log_and_logresult_package import Log
+from interfaceTest.readexcel_package import readExcel
+from interfaceTest.http_package import configHttp
+from interfaceTest.report_test import report
 # from interfaceTest.sql_package import My_sql
 
 logger = Log.logger

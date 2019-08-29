@@ -4,14 +4,14 @@ import sys
 import urllib3
 import unittest
 import requests
-from time import sleep
 o_path = os.getcwd()
 sys.path.append(o_path)
-from judge_inheritance import inheritance
-from log_and_logresult_package import Log
-from readexcel_package import readExcel
-from http_package import configHttp
-from report_test import report
+from time import sleep
+from interfaceTest.judge_inheritance import inheritance
+from interfaceTest.log_and_logresult_package import Log
+from interfaceTest.readexcel_package import readExcel
+from interfaceTest.http_package import configHttp
+from interfaceTest.report_test import report
 
 # from interfaceTest.sql_package import My_sql
 

@@ -1,10 +1,10 @@
 import os
 import logging
-import getpathInfo
+import interfaceTest.getpathInfo
 from logging.handlers import TimedRotatingFileHandler
 
 
-path = getpathInfo.get_Path()
+path = interfaceTest.getpathInfo.get_Path()
 log_path = os.path.join(path, 'log_and_logresult_package')
 
 

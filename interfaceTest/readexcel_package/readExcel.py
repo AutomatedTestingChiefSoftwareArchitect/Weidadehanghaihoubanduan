@@ -1,9 +1,9 @@
 import os
-import getpathInfo
+import interfaceTest.getpathInfo
 from xlrd import open_workbook
 
 
-path = getpathInfo.get_Path()
+path = interfaceTest.getpathInfo.get_Path()
 
 
 class readExcel():

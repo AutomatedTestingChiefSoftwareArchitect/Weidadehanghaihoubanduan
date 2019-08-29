@@ -1,5 +1,5 @@
-from log_and_logresult_package import Log
 from time import sleep
+from interfaceTest.log_and_logresult_package import Log
 
 logger = Log.logger
 
