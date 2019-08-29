@@ -444,12 +444,12 @@
     </configuration>
     <list>
       <item itemvalue="Python.Configure_even_code" />
-      <item itemvalue="Python.Test_main" />
-      <item itemvalue="Python.getpathInfo" />
-      <item itemvalue="Python.getpathInfo (1)" />
       <item itemvalue="Python.Test py" />
-      <item itemvalue="Python.robot_report" />
+      <item itemvalue="Python.Test_main" />
+      <item itemvalue="Python.getpathInfo (1)" />
+      <item itemvalue="Python.getpathInfo" />
       <item itemvalue="Python.readConfig" />
+      <item itemvalue="Python.robot_report" />
     </list>
     <recent_temporary>
       <list>
