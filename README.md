@@ -1,2 +1,1 @@
-# Automated_Testing
-Thsi is Automated Testing
+This is written in python based on automated tests
