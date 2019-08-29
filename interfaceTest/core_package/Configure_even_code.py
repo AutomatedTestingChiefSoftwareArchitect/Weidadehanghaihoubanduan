@@ -3,6 +3,7 @@ import os
 import urllib3
 import unittest
 import requests
+import getpathInfo
 from time import sleep
 from judge_inheritance import inheritance
 from log_and_logresult_package import Log
@@ -11,7 +12,7 @@ from http_package import configHttp
 from report_test import report
 
 # from interfaceTest.sql_package import My_sql
-
+path = getpathInfo.get_Path()
 logger = Log.logger
 
 
