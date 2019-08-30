@@ -31,8 +31,7 @@ def test_report():
 def new_report():
 
     sleep(10)
-    hook_token = "https://oapi.dingtalk.com/robot/send?access_token" \
-                 "=fd6ed0a8d8b8fe335dea97ac3b850c73c26363251948463c45b182bf9ca99eb1 "
+    hook_token = r"%s" % rc.ret.get_http("hook_token")
     headers = {'content-type': 'application/json'}
 
     date = {
