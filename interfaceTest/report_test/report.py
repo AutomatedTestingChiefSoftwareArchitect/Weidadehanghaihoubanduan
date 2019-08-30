@@ -48,7 +48,7 @@ def report(perform_class, perform_num):
 
         except Exception as e:
 
-            raise logger.info("DingTalk: %s " % e)
+            logger.error("DingTalk: %s " % e)
     else:
         logger.error("没有可执行的Case ~~~")
 

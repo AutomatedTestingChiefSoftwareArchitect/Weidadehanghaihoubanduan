@@ -23,7 +23,7 @@ def environment_path():
         raise logger.info("DingTalk: %s " % a)
 
 def test_report():
-    global xlsPaths
+
     xlsPaths = environment_path()
     lists = os.listdir(xlsPaths)
     if lists is not None:
@@ -39,7 +39,6 @@ def test_report():
 def new_report():
 
     sleep(10)
-    xlspath = xlsPaths
     hook_token = "https://oapi.dingtalk.com/robot/send?access_token" \
                  "=fd6ed0a8d8b8fe335dea97ac3b850c73c26363251948463c45b182bf9ca99eb1 "
     headers = {'content-type': 'application/json'}
@@ -51,7 +50,7 @@ def new_report():
             "text": "This is test report",
             "title": u"测试报告",
             "picUrl": "",
-            "messageUrl": xlspath + test_report()
+            "messageUrl": environment_path() + test_report()
         }
     }
 
