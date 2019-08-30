@@ -2,7 +2,6 @@ import os
 import json
 import urllib3
 import requests
-import platform
 from time import sleep
 from interfaceTest import getpathInfo
 from interfaceTest.log_and_logresult_package import Log
@@ -10,28 +9,21 @@ from interfaceTest.config_package import readConfig as rc
 
 logger = Log.logger
 path = getpathInfo.get_Path()
-
-def environment_path():
-
-    try:
-        if platform.system() == "Windows":
-            xlsPath = os.path.join(path, 'result')
-        else:
-            xlsPath = rc.ret.get_http("environment_path")
-        return xlsPath
-    except Exception as a:
-        raise logger.info("DingTalk: %s " % a)
+xlsPath = os.path.join(path, 'result')
 
 def test_report():
 
-    xlsPaths = environment_path()
-    lists = os.listdir(xlsPaths)
+    lists = os.listdir(xlsPath)
+
     if lists is not None:
-        lists.sort(key=lambda fn: os.path.getmtime(xlsPaths + "/" + fn))
-        file_new = os.path.join(xlsPaths, lists[-1])
+
+        lists.sort(key=lambda fn: os.path.getmtime(xlsPath + "/" + fn))
+        file_new = os.path.join(xlsPath, lists[-1])
         cs = os.path.basename(file_new)
         return cs
+
     else:
+
         logger.error("result report is : %s" % lists)
         return str(lists)
 
@@ -50,7 +42,7 @@ def new_report():
             "text": "This is test report",
             "title": u"测试报告",
             "picUrl": "",
-            "messageUrl": environment_path() + test_report()
+            "messageUrl": r"%s" %(rc.ret.get_http("environment_path")) + test_report()
         }
     }
 

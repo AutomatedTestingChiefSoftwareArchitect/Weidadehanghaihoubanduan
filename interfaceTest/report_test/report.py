@@ -38,16 +38,13 @@ def report(perform_class, perform_num):
         time.sleep(10)
         logger.info("        ~~~ 测试报告已完成 ~~~")
         try:
-
             if platform.system() != "Windows":
                 time.sleep(10)
                 robot_report.new_report()
                 logger.info("测试报告已发送至钉钉群 ~~~")
             else:
                 logger.info("%s 运行环境下，无法调用DingTalk !!!" % platform.system())
-
         except Exception as e:
-
             logger.error("DingTalk: %s " % e)
     else:
         logger.error("没有可执行的Case ~~~")
