@@ -15,17 +15,11 @@ def environment_path():
 
     try:
         if platform.system() == "Windows":
-
             xlsPath = os.path.join(path, 'result')
-
         else:
-
             xlsPath = rc.ret.get_http("environment_path")
-
         return xlsPath
-
     except Exception as a:
-
         raise logger.info("DingTalk: %s " % a)
 
 def test_report():
