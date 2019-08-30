@@ -1,11 +1,15 @@
 import os
+import sys
 import unittest
 import requests
+o_path = os.getcwd()
+sys.path.append(o_path)
 from time import sleep
 from interfaceTest.log_and_logresult_package import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
-from interfaceTest.report_test import report
+
+# from interfaceTest.report_test import report
 # from interfaceTest.sql_package import My_sql
 
 logger = Log.logger
@@ -99,7 +103,10 @@ class Interface(unittest.TestCase):
             self.verificationErrors.append(e)
             return logger.error("-----college is error")
 
+"""
+// 此版本暂不做修改及执行
 
 if __name__ == '__main__':
 
     report.report(Interface, ['login', 'college'])
+"""
