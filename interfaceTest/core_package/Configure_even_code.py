@@ -12,7 +12,7 @@ from interfaceTest.log_and_logresult_package import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
 from interfaceTest.report_test import report
-from interfaceTest.sql_package import My_sql as sqls
+from interfaceTest.sql_package import My_sql as sql
 
 # from interfaceTest.sql_package import My_sql
 
@@ -49,7 +49,7 @@ class Interface(unittest.TestCase):
     def tearDownClass(cls):
 
         mysql_list = \
-            sqls.results.select_mysql("select name,mobile FROM axd_user WHERE id=1541682410768827427")
+            sql.results.select_mysql("select name,mobile FROM axd_user WHERE id=1541682410768827427")
         logger.info("user name is: %s" % mysql_list[0])
         logger.info("user mobile is: %s" % mysql_list[1])
         sleep(1)
