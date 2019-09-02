@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaceTest/config_package/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/config_package/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaceTest/log_and_logresult_package/logs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/log_and_logresult_package/logs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,22 +32,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="14" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="63">
               <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -461,14 +448,7 @@
       <workItem from="1567048645826" duration="3733000" />
       <workItem from="1567067006036" duration="1431000" />
       <workItem from="1567134960431" duration="7332000" />
-      <workItem from="1567153392459" duration="12492000" />
-    </task>
-    <task id="LOCAL-00039" summary="add main">
-      <created>1566800170698</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1566800170698</updated>
+      <workItem from="1567153392459" duration="12527000" />
     </task>
     <task id="LOCAL-00040" summary="add kong">
       <created>1566809269838</created>
@@ -806,7 +786,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567394027865</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="add run path config10">
+      <created>1567394255543</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1567394255543</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -842,7 +829,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347849000" />
+    <option name="totallyTimeSpent" value="347884000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -957,7 +944,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix jenkins run path error2" />
     <MESSAGE value="fix jenkins run path error6" />
     <MESSAGE value="fix jenkins run path error9" />
     <MESSAGE value="fix coding error" />
@@ -982,7 +968,8 @@
     <MESSAGE value="fix mysql linux timeout error" />
     <MESSAGE value="add run path config" />
     <MESSAGE value="add run path config6" />
-    <option name="LAST_COMMIT_MESSAGE" value="add run path config6" />
+    <MESSAGE value="add run path config10" />
+    <option name="LAST_COMMIT_MESSAGE" value="add run path config10" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1252,20 +1239,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="19" selection-start-column="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
         </state>
       </provider>
     </entry>
