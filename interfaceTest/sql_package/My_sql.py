@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import random
 import pymysql
 from interfaceTest.log_and_logresult_package import Log
@@ -16,14 +15,15 @@ class DateBaseHandle(object):
             db=rc.ret.get_mysql("db"),
             charset=rc.ret.get_mysql("charset"),
             connect_timeout=int(rc.ret.get_mysql("connect_timeout")))
+
         self.logger = Log.logger
         self.sid = []
+        self.list = []
         self.name = []
-        self.list_mysql_sid = []
-        self.list_mysql_name = []
         self.num = None
         self.key = None
-        self.list = []
+        self.list_mysql_sid = []
+        self.list_mysql_name = []
 
 
     def select_mysql(self, sql):
