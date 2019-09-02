@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import random
 import pymysql
 from interfaceTest.log_and_logresult_package import Log
