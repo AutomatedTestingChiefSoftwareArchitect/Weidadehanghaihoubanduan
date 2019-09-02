@@ -1,4 +1,3 @@
-import time
 import random
 import pymysql
 from interfaceTest.log_and_logresult_package import Log
@@ -8,7 +7,14 @@ class DateBaseHandle(object):
 
     def __init__(self):
 
-        self.conn = None
+        self.conn = \
+            pymysql.connect(host=rc.ret.get_mysql("host"),
+            port=int(rc.ret.get_mysql("port")),
+            user=rc.ret.get_mysql("user"),
+            password=rc.ret.get_mysql("password"),
+            db=rc.ret.get_mysql("db"),
+            charset=rc.ret.get_mysql("charset"),
+            connect_timeout=int(rc.ret.get_mysql("connect_timeout")))
         self.logger = Log.logger
         self.sid = []
         self.name = []
@@ -18,32 +24,9 @@ class DateBaseHandle(object):
         self.key = None
         self.list = []
 
-    def conn_timeout(self):
-
-        conn_status = True
-        max_count = 10
-        conn_count = 0
-        conn_timeout = 3
-        while conn_status and conn_count <= max_count:
-
-            try:
-                self.conn = pymysql.connect(host=rc.ret.get_mysql("host"),
-                                        port=int(rc.ret.get_mysql("port")),
-                                        user=rc.ret.get_mysql("user"),
-                                        password=rc.ret.get_mysql("password"),
-                                        db=rc.ret.get_mysql("db"),
-                                        charset=rc.ret.get_mysql("charset"),
-                                        connect_timeout=conn_timeout)
-                conn_status = False
-                return self.conn
-            except:
-                conn_count += 1
-            time.sleep(3)
-            continue
 
     def select_mysql(self, sql):
 
-        self.conn_timeout()
         cursor = self.conn.cursor()
         try:
             cursor.execute(sql)
@@ -64,9 +47,9 @@ class DateBaseHandle(object):
             self.logger.error("select date error")
         finally:
             cursor.close()
+
     def delete_mysql(self, sql):
 
-        self.conn_timeout()
         cursor = self.conn.cursor()
         try:
             cursor.execute(sql)
