@@ -19,11 +19,13 @@ class DateBaseHandle(object):
         self.list = []
 
     def conn_timeout(self):
+
         conn_status = True
-        max_count = 10  # 设置最大重试次数
-        conn_count = 0  # 初始重试次数
-        conn_timeout = 3  # 连接超时时间为3秒
+        max_count = 10
+        conn_count = 0
+        conn_timeout = 3
         while conn_status and conn_count <= max_count:
+
             try:
                 self.conn = pymysql.connect(host=rc.ret.get_mysql("host"),
                                         port=int(rc.ret.get_mysql("port")),
@@ -34,11 +36,8 @@ class DateBaseHandle(object):
                                         connect_timeout=conn_timeout)
                 conn_status = False
                 return self.conn
-
             except:
-
                 conn_count += 1
-                print(conn_count)
             time.sleep(3)
             continue
 

@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            <state relative-caret-position="567">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#0#6#0" expanded="true" />
               </folding>
@@ -442,14 +442,7 @@
       <workItem from="1567048645826" duration="3733000" />
       <workItem from="1567067006036" duration="1431000" />
       <workItem from="1567134960431" duration="7332000" />
-      <workItem from="1567153392459" duration="10703000" />
-    </task>
-    <task id="LOCAL-00036" summary="add report HTML">
-      <created>1566788002426</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1566788002426</updated>
+      <workItem from="1567153392459" duration="11269000" />
     </task>
     <task id="LOCAL-00037" summary="Increase the optimization">
       <created>1566796286831</created>
@@ -787,7 +780,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567391152321</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="fix mysql linux timeout error">
+      <created>1567392494176</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1567392494176</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -823,7 +823,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346060000" />
+    <option name="totallyTimeSpent" value="346626000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -838,7 +838,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.1705757" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.1705757" />
       <window_info id="Structure" order="1" sideWeight="0.5016251" side_tool="true" weight="0.15938166" />
       <window_info id="Favorites" order="2" sideWeight="0.5016251" side_tool="true" weight="0.15938166" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -938,7 +938,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rollback code" />
     <MESSAGE value="fix jenkins run path error" />
     <MESSAGE value="fix jenkins run path error2" />
     <MESSAGE value="fix jenkins run path error6" />
@@ -963,7 +962,8 @@
     <MESSAGE value="add run path config" />
     <MESSAGE value="add mysql is init and clean" />
     <MESSAGE value="fix mysql as sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix mysql as sql" />
+    <MESSAGE value="fix mysql linux timeout error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix mysql linux timeout error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1063,16 +1063,6 @@
       </provider>
     </entry>
     <entry file="file://D:/Downloads/Configure_even_code.py" />
-    <entry file="file://$PROJECT_DIR$/interfaceTest/readexcel_package/readExcel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-11-22-45.html" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-13-28-39.html" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-29-13-31-24.html" />
@@ -1103,16 +1093,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-08-30-14-28-22.html" />
-    <entry file="file://$PROJECT_DIR$/interfaceTest/http_package/configHttp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/judge_inheritance/inheritance.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-681">
@@ -1231,10 +1211,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/readexcel_package/readExcel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/http_package/configHttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+        <state relative-caret-position="567">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
           </folding>
