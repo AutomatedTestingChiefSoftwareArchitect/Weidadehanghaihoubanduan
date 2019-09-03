@@ -6,7 +6,6 @@ from interfaceTest.config_package import readConfig as rc
 class DateBaseHandle(object):
 
     def __init__(self):
-
         self.conn = \
             pymysql.connect(host=rc.ret.get_mysql("host"),
             port=int(rc.ret.get_mysql("port")),
@@ -15,7 +14,6 @@ class DateBaseHandle(object):
             db=rc.ret.get_mysql("db"),
             charset=rc.ret.get_mysql("charset"),
             connect_timeout=int(rc.ret.get_mysql("connect_timeout")))
-
         self.logger = Log.logger
         self.sid = []
         self.list = []
@@ -25,9 +23,7 @@ class DateBaseHandle(object):
         self.list_mysql_sid = []
         self.list_mysql_name = []
 
-
     def select_mysql(self, sql):
-
         cursor = self.conn.cursor()
         try:
             cursor.execute(sql)
@@ -50,7 +46,6 @@ class DateBaseHandle(object):
             cursor.close()
 
     def delete_mysql(self, sql):
-
         cursor = self.conn.cursor()
         try:
             cursor.execute(sql)
@@ -61,6 +56,5 @@ class DateBaseHandle(object):
             self.logger.info("···数据回滚成功···")
         finally:
             cursor.close()
-
 # "select name,mobile FROM axd_user WHERE id=1541682410768827427"
 results = DateBaseHandle()

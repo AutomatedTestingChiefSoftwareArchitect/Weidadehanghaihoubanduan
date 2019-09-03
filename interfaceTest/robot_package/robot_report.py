@@ -12,30 +12,21 @@ path = getpathInfo.get_Path()
 xlsPath = os.path.join(path, 'result')
 
 def test_report():
-
     lists = os.listdir(xlsPath)
-
     if lists is not None:
-
         lists.sort(key=lambda fn: os.path.getmtime(xlsPath + "/" + fn))
         file_new = os.path.join(xlsPath, lists[-1])
         cs = os.path.basename(file_new)
         return cs
-
     else:
-
         logger.error("result report is : %s" % lists)
         return str(lists)
 
-
 def new_report():
-
     sleep(10)
     hook_token = r"%s" % rc.ret.get_http("hook_token")
     headers = {'content-type': 'application/json'}
-
     date = {
-
         "msgtype": "link",
         "link": {
             "text": "This is test report",
@@ -44,7 +35,6 @@ def new_report():
             "messageUrl": r"%s" %(rc.ret.get_http("environment_path")) + test_report()
         }
     }
-
     urllib3.disable_warnings()
     r = requests.post(hook_token, headers=headers, data=json.dumps(date))
     r.encoding = 'utf-8'

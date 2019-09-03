@@ -7,15 +7,12 @@ from interfaceTest.config_package import readConfig
 from interfaceTest.robot_package import robot_report
 from interfaceTest.log_and_logresult_package import Log
 from interfaceTest.report_test.report_tools import HTMLTestRunnerCN
-
 # import xmlrunner
 # from HTMLTestRunner import HTMLTestRunner
 
 logger = Log.logger
 
-
 def report(perform_class, perform_num):
-
     suite = unittest.TestSuite()
     suite.addTests(map(perform_class, perform_num))
     logger.info("~~~ 测试报告准备中 ~~~")
@@ -25,7 +22,6 @@ def report(perform_class, perform_num):
     config_path = os.path.join(path, 'result/report-' + date + '.html')
     titles = readConfig.ret.get_http("title")
     testers = readConfig.ret.get_http("tester")
-
     if suite is not None:
         fp = open(config_path, 'wb')
         runner = HTMLTestRunnerCN.HTMLTestReportCN(stream=fp,

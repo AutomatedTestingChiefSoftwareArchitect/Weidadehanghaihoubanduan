@@ -7,7 +7,6 @@ config_path = os.path.join(path, 'config_package/config.ini')
 config = configparser.ConfigParser()
 config.read(config_path, encoding='utf-8')
 
-
 class ReadConfig(object):
 
     def get_http(self, name):
@@ -21,6 +20,5 @@ class ReadConfig(object):
     def get_mysql(self, name):
         value = config.get('DATABASE', name)
         return value
-
 
 ret = ReadConfig()

@@ -47,10 +47,8 @@ class Interface(unittest.TestCase):
         sleep(1)
 
     def login(self):
-
         url = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][1]
         parameter = readExcel.reds.get_xls('userCase.xlsx', 'login')[0][2]
-
         try:
             try:
                 results = requests.post(url, parameter, self.headers, timeout=2)
@@ -76,11 +74,9 @@ class Interface(unittest.TestCase):
             return logger.error("-----login is %s" % self.results.status_code)
 
     def college(self):
-
         url = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][1]
         parameter = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][2]
         methods = readExcel.reds.get_xls('userCase.xlsx', 'login')[1][3]
-
         try:
             try:
                 results = configHttp.runmain.run_main(methods, url, parameter, self.headers, self.cookie)
@@ -102,7 +98,6 @@ class Interface(unittest.TestCase):
         except AssertionError as e:
             self.verificationErrors.append(e)
             return logger.error("-----college is error")
-
 """
 // 此版本暂不做修改及执行
 

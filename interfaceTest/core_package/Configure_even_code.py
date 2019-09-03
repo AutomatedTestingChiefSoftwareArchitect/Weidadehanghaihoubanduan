@@ -13,22 +13,16 @@ from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
 from interfaceTest.report_test import report
 from interfaceTest.sql_package import My_sql as sql
-
 # from interfaceTest.sql_package import My_sql
-
 logger = Log.logger
-
-
 # This is main code
 class Interface(unittest.TestCase):
 
     def setUp(self):
-
         self.results = None
         self.verificationErrors = []
 
     def tearDown(self):
-
         error_list = []
         try:
             self.assertEqual([], self.verificationErrors)
@@ -41,13 +35,11 @@ class Interface(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-
         logger.info("mysql data clean ~~~")
         sleep(1)
 
     @classmethod
     def tearDownClass(cls):
-
         mysql_list = \
             sql.results.select_mysql("select name,mobile FROM axd_user WHERE id=1541682410768827427")
         logger.info("user name is: %s" % mysql_list[0])
@@ -55,13 +47,10 @@ class Interface(unittest.TestCase):
         sleep(1)
 
     def login(self):
-
         date = readExcel.reds.get_xls('userCase.xlsx', 'login')
-
         global headers
         global xls_name
         global sheet_name
-
         for method, url, data, content_type, user_agent, user_token, case_name, \
             interface_xls_name, interface_sheet_name in date:
             self.method = method
@@ -73,14 +62,10 @@ class Interface(unittest.TestCase):
             self.case_name = case_name
             xls_name = interface_xls_name
             sheet_name = interface_sheet_name
-
         headers = {"User-Agent": self.user_agent, "Content-Type": self.content_type,
                    "userToken": self.user_token}
-
         if self.url and self.data is not None:
-
             try:
-
                 try:
                     logger.info("-" * 49)
                     logger.info("请求方式:%s" % self.method)
@@ -92,50 +77,34 @@ class Interface(unittest.TestCase):
                     urllib3.disable_warnings()
                     results = configHttp.runmain.run_main(self.method, self.url, self.data, headers)
                     self.results = results
-
                 except requests.exceptions.ConnectionError as a:
-
                     self.verificationErrors.append(a)
                     return logger.error("login url error : %s" % self.results)
-
                 except TimeoutError as b:
-
                     self.verificationErrors.append(b)
                     return logger.error("login timeout error")
-
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("login is successful")
-
                 r = inheritance.ret.enter(self.results.json(), self.case_name)
-
                 if r is None:
                     return self.verificationErrors.append(r)
-
                 return None
-
             except AssertionError as e:
-
                 self.verificationErrors.append(e)
                 return logger.error("login is %s" % self.results.status_code)
         else:
-
             return logger.info("您未输入登陆和登陆参数，直接运行sheet Interface ~~~")
 
     def Configure_even_code(self):
-
         try:
-
             name = xls_name
             header = headers
             sheet = sheet_name
             dates = readExcel.reds.get_xls(name, sheet)
-
             if dates is None:
                 self.verificationErrors.append(dates)
                 return logger.error("sheet Interface is %s" % dates)
-
             for method, url, data, case_name in dates:
-
                 try:
                     logger.info("-" * 34)
                     logger.info("请求方式:%s" % method)
@@ -144,31 +113,20 @@ class Interface(unittest.TestCase):
                     urllib3.disable_warnings()
                     results = configHttp.runmain.run_main(method, url, data, header)
                     self.results = results
-
                 except requests.exceptions.ConnectionError as a:
-
                     self.verificationErrors.append(a)
                     return logger.error("url error : %s" % self.results)
-
                 except TimeoutError as b:
-
                     self.verificationErrors.append(b)
                     return logger.error("timeout error")
-
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("assert url is successful")
-
                 r = inheritance.ret.enter(self.results.json(), case_name)
-
                 if r is None:
                     return self.verificationErrors.append(r)
-
         except AssertionError as e:
-
             self.verificationErrors.append(e)
             return logger.error("%s assert is error" % self.results.status_code)
 
-
 if __name__ == '__main__':
-
     report.report(Interface, ['login', 'Configure_even_code'])
