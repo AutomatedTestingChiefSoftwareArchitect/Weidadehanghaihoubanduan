@@ -14,7 +14,7 @@ from interfaceTest.http_package import configHttp
 
 logger = Log.logger
 
-
+# 此版本暂不做修改及执行
 class Interface(unittest.TestCase):
 
     def setUp(self):

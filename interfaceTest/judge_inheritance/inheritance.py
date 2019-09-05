@@ -3,65 +3,71 @@ from interfaceTest.log_and_logresult_package import Log
 
 logger = Log.logger
 
-def additional(r, case_name):
-
+def additional(response_json, case_name):
+    # 如果在FirstClass遍历为找到, 就执行此此程序
     logger.info("    匹配不到对应的response, 请联系管理进行手动添加 ~~~")
-    print(case_name + " : " + str(r))
+    print(case_name + " : " + str(response_json))
     print(), sleep(1)
-    return r
+    return response_json
 
 class FirstClass(object):
 
-    def second(self, r, case_name):
-        if "result" in r:
-            if r["result"] is None:
+    def second(self, response_json, case_name):
+        if "result" in response_json:
+            if response_json["result"] is None:
                 logger.error("       json data is error")
-                print(case_name + " : " + str(r))
+                print(case_name + " : " + str(response_json))
                 print(), sleep(1)
-                return r["result"]
+                return response_json["result"]
             else:
                 logger.info("       json data is successful")
-                print(case_name + " : " + str(r))
+                print(case_name + " : " + str(response_json))
                 print(), sleep(1)
-                return r
+                return response_json
         else:
-            return additional(r, case_name)
+            return additional(response_json, case_name)
 
-    def three(self, r, case_name):
-        if "cashCouponTotalCount" in r["data"]:
-            if r["data"]["cashCouponTotalCount"] is None:
+    def three(self, response_json, case_name):
+        if "cashCouponTotalCount" in response_json["data"]:
+            if response_json["data"]["cashCouponTotalCount"] is None:
                 logger.error("       json data is error")
-                print(case_name + " : " + str(r))
+                print(case_name + " : " + str(response_json))
                 print(), sleep(1)
-                return r["data"]["cashCouponTotalCount"]
+                return response_json["data"]["cashCouponTotalCount"]
             else:
                 logger.info("        json data is successful")
-                print(case_name + " : " + str(r))
+                print(case_name + " : " + str(response_json))
                 print(), sleep(1)
-                return r
+                return response_json
         else:
-            return self.second(r, case_name)
+            return self.second(response_json, case_name)
 
-    def enter(self, r, case_name):
-        for k in r:
-            if type(r[k]) is dict:
-                if "id" in r["data"]:
-                    if r["data"]["id"] is None:
+    def enter(self, response_json, case_name):
+        # 遍历response_json, 获取keys
+        for keys in response_json:
+            # 判断r 的值是否是一个字典
+            if type(response_json[keys]) is dict:
+                # 判断id 是否在这个字典中
+                if "id" in response_json["data"]:
+                    # 判断id的值是否为空
+                    if response_json["data"]["id"] is None:
                         logger.error("       json data is error")
-                        print(case_name + " : " + str(r))
+                        print(case_name + " : " + str(response_json))
                         print(), sleep(1)
-                        return r["data"]["id"]
+                        return response_json["data"]["id"]
                     else:
                         logger.info("        json data is successful")
-                        print(case_name + " : " + str(r))
+                        print(case_name + " : " + str(response_json))
                         print(), sleep(1)
-                        return r
+                        return response_json
                 else:
-                    return self.three(r, case_name)
+                    # 如果id不在keys内,调用three,second方法, 类似于继承, 但是py只能继承方法 ！！！
+                    return self.three(response_json, case_name)
             else:
+                # 此处预留, 后续编写keys value is not dict
                 logger.info("        现阶段程序不支持json int and str type ~~~")
-                print(case_name + " : " + str(r))
+                print(case_name + " : " + str(response_json))
                 print(), sleep(1)
-                return r
+                return response_json
 
 ret = FirstClass()
