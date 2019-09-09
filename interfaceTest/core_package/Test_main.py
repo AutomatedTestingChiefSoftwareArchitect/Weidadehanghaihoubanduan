@@ -5,7 +5,7 @@ import requests
 o_path = os.getcwd()
 sys.path.append(o_path)
 from time import sleep
-from interfaceTest.log_and_logresult_package import Log
+from interfaceTest.logs_result import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
 

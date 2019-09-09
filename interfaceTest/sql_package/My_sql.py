@@ -1,6 +1,6 @@
 import random
 import pymysql
-from interfaceTest.log_and_logresult_package import Log
+from interfaceTest.logs_result import Log
 from interfaceTest.config_package import readConfig as rc
 
 class DateBaseHandle(object):

@@ -5,7 +5,7 @@ import unittest
 import interfaceTest.getpathInfo
 from interfaceTest.config_package import readConfig
 from interfaceTest.robot_package import robot_report
-from interfaceTest.log_and_logresult_package import Log
+from interfaceTest.logs_result import Log
 from interfaceTest.report_test.report_tools import HTMLTestRunnerCN
 # import xmlrunner
 # from HTMLTestRunner import HTMLTestRunner

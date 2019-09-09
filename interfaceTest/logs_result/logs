@@ -505,3 +505,74 @@ Configure_even_code.py - tearDownClass - 2019-09-05 15:45:40,351 - INFO - 58 - u
 Configure_even_code.py - tearDownClass - 2019-09-05 15:45:40,351 - INFO - 59 - user mobile is: 15721484677
 report.py - report - 2019-09-05 15:45:51,351 - INFO - 48 -         ~~~ 测试报告已完成 ~~~
 report.py - report - 2019-09-05 15:45:51,353 - INFO - 57 - Windows 运行环境下，无法调用DingTalk !!!
+
+
+report.py - report - 2019-09-09 18:08:24,280 - INFO - 21 - ~~~ 测试报告准备中 ~~~
+report.py - report - 2019-09-09 18:08:24,283 - INFO - 22 - case执行开始 ~~~
+Automated_Interfaces.py - setUpClass - 2019-09-09 18:08:24,289 - INFO - 44 - mysql data clean ~~~
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:08:25,351 - INFO - 93 - -------------------------------------------------
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:08:25,351 - INFO - 94 - 请求方式:post
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:08:25,351 - INFO - 95 - 请求链接:https://api.aixiangdao.com/user/getUserInfo
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:08:25,351 - INFO - 96 - 请求参数:
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:08:25,351 - INFO - 97 - Content_type: application/json
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:08:25,351 - INFO - 98 - User_Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/7.0.2(0x17000222) NetType/WIFI Language/zh_CN
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:08:25,351 - INFO - 99 - User_Token: 51321b4f-c0bb-4474-8981-fbed65a01fb6
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:08:25,791 - INFO - 117 - login is successful
+inheritance.py - enter - 2019-09-09 18:08:25,792 - INFO - 65 -         json data is successful
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:26,807 - INFO - 150 - ----------------------------------
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:26,807 - INFO - 151 - 请求方式:post
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:26,807 - INFO - 152 - 请求链接:https://api.aixiangdao.com/user/app/coupon/getCount
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:26,808 - INFO - 153 - 请求参数:
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:27,059 - INFO - 171 - assert url is successful
+inheritance.py - three - 2019-09-09 18:08:27,059 - INFO - 42 -         json data is successful
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:28,059 - INFO - 150 - ----------------------------------
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:28,059 - INFO - 151 - 请求方式:post
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:28,059 - INFO - 152 - 请求链接:https://api.aixiangdao.com/order/voucherPackage/getCashCouponList
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:28,059 - INFO - 153 - 请求参数:{"pageIndex":0,"pageSize":10}
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:28,271 - INFO - 171 - assert url is successful
+inheritance.py - additional - 2019-09-09 18:08:28,271 - INFO - 8 -     匹配不到对应的response, 请联系管理进行手动添加 ~~~
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:29,272 - INFO - 150 - ----------------------------------
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:29,272 - INFO - 151 - 请求方式:get
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:29,272 - INFO - 152 - 请求链接:https://api.aixiangdao.com/message/app/message/countUnRead
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:29,272 - INFO - 153 - 请求参数:
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:08:29,489 - INFO - 171 - assert url is successful
+inheritance.py - enter - 2019-09-09 18:08:29,489 - INFO - 74 -         现阶段程序不支持json int and str type ~~~
+Automated_Interfaces.py - tearDownClass - 2019-09-09 18:08:30,521 - INFO - 53 - user name is: 伟大的航海后半段、
+Automated_Interfaces.py - tearDownClass - 2019-09-09 18:08:30,523 - INFO - 54 - user mobile is: 15721484677
+report.py - report - 2019-09-09 18:08:41,523 - INFO - 48 -         ~~~ 测试报告已完成 ~~~
+report.py - report - 2019-09-09 18:08:41,526 - INFO - 57 - Windows 运行环境下，无法调用DingTalk !!!
+
+report.py - report - 2019-09-09 18:43:19,337 - INFO - 21 - ~~~ 测试报告准备中 ~~~
+report.py - report - 2019-09-09 18:43:19,339 - INFO - 22 - case执行开始 ~~~
+Automated_Interfaces.py - setUpClass - 2019-09-09 18:43:19,340 - INFO - 44 - mysql data clean ~~~
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:43:20,395 - INFO - 93 - -------------------------------------------------
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:43:20,396 - INFO - 94 - 请求方式:post
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:43:20,396 - INFO - 95 - 请求链接:https://api.aixiangdao.com/user/getUserInfo
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:43:20,396 - INFO - 96 - 请求参数:
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:43:20,396 - INFO - 97 - Content_type: application/json
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:43:20,396 - INFO - 98 - User_Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/7.0.2(0x17000222) NetType/WIFI Language/zh_CN
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:43:20,396 - INFO - 99 - User_Token: 51321b4f-c0bb-4474-8981-fbed65a01fb6
+Automated_Interfaces.py - Landing_even - 2019-09-09 18:43:20,684 - INFO - 117 - login is successful
+inheritance.py - enter - 2019-09-09 18:43:20,684 - INFO - 65 -         json data is successful
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:21,689 - INFO - 150 - ----------------------------------
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:21,689 - INFO - 151 - 请求方式:post
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:21,689 - INFO - 152 - 请求链接:https://api.aixiangdao.com/user/app/coupon/getCount
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:21,689 - INFO - 153 - 请求参数:
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:21,995 - INFO - 171 - assert url is successful
+inheritance.py - three - 2019-09-09 18:43:21,996 - INFO - 42 -         json data is successful
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:22,996 - INFO - 150 - ----------------------------------
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:22,996 - INFO - 151 - 请求方式:post
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:22,996 - INFO - 152 - 请求链接:https://api.aixiangdao.com/order/voucherPackage/getCashCouponList
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:22,996 - INFO - 153 - 请求参数:{"pageIndex":0,"pageSize":10}
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:23,230 - INFO - 171 - assert url is successful
+inheritance.py - additional - 2019-09-09 18:43:23,230 - INFO - 8 -     匹配不到对应的response, 请联系管理进行手动添加 ~~~
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:24,232 - INFO - 150 - ----------------------------------
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:24,232 - INFO - 151 - 请求方式:get
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:24,232 - INFO - 152 - 请求链接:https://api.aixiangdao.com/message/app/message/countUnRead
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:24,232 - INFO - 153 - 请求参数:
+Automated_Interfaces.py - Configure_even - 2019-09-09 18:43:24,494 - INFO - 171 - assert url is successful
+inheritance.py - enter - 2019-09-09 18:43:24,494 - INFO - 74 -         现阶段程序不支持json int and str type ~~~
+Automated_Interfaces.py - tearDownClass - 2019-09-09 18:43:25,529 - INFO - 53 - user name is: 伟大的航海后半段、
+Automated_Interfaces.py - tearDownClass - 2019-09-09 18:43:25,529 - INFO - 54 - user mobile is: 15721484677
+report.py - report - 2019-09-09 18:43:36,531 - INFO - 48 -         ~~~ 测试报告已完成 ~~~
+report.py - report - 2019-09-09 18:43:36,534 - INFO - 57 - Windows 运行环境下，无法调用DingTalk !!!

@@ -10,16 +10,16 @@ o_path = os.getcwd()
 sys.path.append(o_path)
 from time import sleep
 from interfaceTest.judge_inheritance import inheritance
-from interfaceTest.log_and_logresult_package import Log
+from interfaceTest.logs_result import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
 from interfaceTest.report_test import report
-# from interfaceTest.sql_package import My_sql as sql
+from interfaceTest.sql_package import My_sql as sql
 
 # 调用log方法
 logger = Log.logger
 
-class Interface(unittest.TestCase):
+class AutomatedInterfaces(unittest.TestCase):
     # 运行TestCase之前准备工作
     def setUp(self):
         # 全局变量来接收Case.json
@@ -47,9 +47,6 @@ class Interface(unittest.TestCase):
     # 运行TestCase之后数据查询工作
     @classmethod
     def tearDownClass(cls):
-        logger.info("mysql data select successful ~~~")
-        sleep(1)
-        """
         # 调用数据库封装方法,变量为sql语句
         mysql_list = \
             sql.results.select_mysql("select name,mobile FROM axd_user WHERE id=1541682410768827427")
@@ -57,14 +54,14 @@ class Interface(unittest.TestCase):
         logger.info("user mobile is: %s" % mysql_list[1])
         # 定义休眠时间
         sleep(1)
-        """
+
     """
     用于登陆模块接口的main方法：
         1.本程序有两个main方法,分别为login and Configure_even_code
         2.login模块用于返回cookie and session
         3.Configure_even_code 用来遍历excel 所有case
     """
-    def login(self):
+    def Landing_even(self):
         # 遍历userCase excel login shell数据
         date = readExcel.reds.get_xls('userCase.xlsx', 'login')
         # 定义全局变量,用于Configure_even_code调用
@@ -130,10 +127,10 @@ class Interface(unittest.TestCase):
                 self.verificationErrors.append(e)
                 return logger.error("login is %s" % self.results.status_code)
         else:
-            # 跳过login登陆模块  注：不能不执行login main方法,因为Configure_even_code 接口需要 headers
+            # 跳过login登陆模块  注：不能不执行login main方法,因为Configure_even 接口需要 headers
             return logger.info("您未输入登陆和登陆参数，直接运行sheet Interface ~~~")
 
-    def Configure_even_code(self):
+    def Configure_even(self):
         try:
             # global变量接收
             name = xls_name
@@ -184,4 +181,4 @@ class Interface(unittest.TestCase):
 
 if __name__ == '__main__':
     # 运行main方法
-    report.report(Interface, ['login', 'Configure_even_code'])
+    report.report(AutomatedInterfaces, ['Landing_even', 'Configure_even'])

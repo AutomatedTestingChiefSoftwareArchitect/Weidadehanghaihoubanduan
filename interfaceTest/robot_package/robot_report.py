@@ -4,7 +4,7 @@ import urllib3
 import requests
 from time import sleep
 from interfaceTest import getpathInfo
-from interfaceTest.log_and_logresult_package import Log
+from interfaceTest.logs_result import Log
 from interfaceTest.config_package import readConfig as rc
 
 # 调用日志及取测试报告路径

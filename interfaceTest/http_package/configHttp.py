@@ -1,5 +1,5 @@
 import requests
-from interfaceTest.log_and_logresult_package import Log
+from interfaceTest.logs_result import Log
 
 # 实例化log方法
 logger = Log.logger
