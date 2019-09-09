@@ -576,3 +576,5 @@ Automated_Interfaces.py - tearDownClass - 2019-09-09 18:43:25,529 - INFO - 53 - 
 Automated_Interfaces.py - tearDownClass - 2019-09-09 18:43:25,529 - INFO - 54 - user mobile is: 15721484677
 report.py - report - 2019-09-09 18:43:36,531 - INFO - 48 -         ~~~ 测试报告已完成 ~~~
 report.py - report - 2019-09-09 18:43:36,534 - INFO - 57 - Windows 运行环境下，无法调用DingTalk !!!
+
+

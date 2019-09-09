@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cf5e9c91-1d7f-46f5-a2f3-4cd375411af8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/core_package/Configure_even_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/core_package/Test_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/core_package/Test_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/http_package/configHttp.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/http_package/configHttp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/judge_inheritance/inheritance.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/judge_inheritance/inheritance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/log_and_logresult_package/Log.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/logs_result/Log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/log_and_logresult_package/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/logs_result/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/log_and_logresult_package/logs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/logs_result/logs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/report_test/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/report_test/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaceTest/logs_result/logs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/logs_result/logs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +33,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/logs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="544" selection-start-line="544" selection-end-line="544" />
+            <state relative-caret-position="783">
+              <caret line="579" selection-start-line="579" selection-end-line="579" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/readConfig.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -209,6 +212,13 @@
               <item name="Automated_Testing" type="462c0819:PsiDirectoryNode" />
               <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
               <item name="report_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automated_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automated_Testing" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaceTest" type="462c0819:PsiDirectoryNode" />
+              <item name="report_test" type="462c0819:PsiDirectoryNode" />
+              <item name="report_tools" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Automated_Testing" type="b2602c69:ProjectViewProjectNode" />
@@ -499,14 +509,7 @@
       <workItem from="1567134960431" duration="7332000" />
       <workItem from="1567153392459" duration="19420000" />
       <workItem from="1567421379882" duration="33342000" />
-      <workItem from="1567757316227" duration="19430000" />
-    </task>
-    <task id="LOCAL-00050" summary="add jenkins report path">
-      <created>1566891409187</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1566891409188</updated>
+      <workItem from="1567757316227" duration="19645000" />
     </task>
     <task id="LOCAL-00051" summary="add jenkins report path">
       <created>1566893077268</created>
@@ -844,7 +847,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568005528614</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="重构表名及变量名义修改">
+      <created>1568026524292</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1568026524292</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -880,7 +890,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="407549000" />
+    <option name="totallyTimeSpent" value="407764000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -893,13 +903,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.17377399" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.17377399" />
       <window_info id="Structure" order="1" sideWeight="0.5016251" side_tool="true" weight="0.15938166" />
       <window_info id="Favorites" order="2" sideWeight="0.5016251" side_tool="true" weight="0.15938166" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.17334779" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.17334779" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.36944744" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1000,7 +1011,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix report path" />
     <MESSAGE value="fix report path9" />
     <MESSAGE value="fix report path10" />
     <MESSAGE value="add config num" />
@@ -1025,7 +1035,8 @@
     <MESSAGE value="fix token call" />
     <MESSAGE value="fix jenkins checkout code" />
     <MESSAGE value="程序优化及注释mysql代码块" />
-    <option name="LAST_COMMIT_MESSAGE" value="程序优化及注释mysql代码块" />
+    <MESSAGE value="重构表名及变量名义修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构表名及变量名义修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1193,16 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="30" column="50" lean-forward="true" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/readConfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1378,10 +1379,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/readConfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/logs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="544" selection-start-line="544" selection-end-line="544" />
+        <state relative-caret-position="783">
+          <caret line="579" selection-start-line="579" selection-end-line="579" />
         </state>
       </provider>
     </entry>
