@@ -4,6 +4,7 @@ import sys
 import urllib3
 import unittest
 import requests
+import traceback
 # 添加工作路径至sys
 o_path = os.getcwd()
 sys.path.append(o_path)
@@ -13,7 +14,7 @@ from interfaceTest.log_and_logresult_package import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
 from interfaceTest.report_test import report
-from interfaceTest.sql_package import My_sql as sql
+# from interfaceTest.sql_package import My_sql as sql
 
 # 调用log方法
 logger = Log.logger
@@ -21,27 +22,21 @@ logger = Log.logger
 class Interface(unittest.TestCase):
     # 运行TestCase之前准备工作
     def setUp(self):
-        # 全局变量来接收case.json
+        # 全局变量来接收Case.json
         self.results = None
         # 创建全局变量list
         self.verificationErrors = []
 
     # 运行TestCase之后执行的方法
     def tearDown(self):
-        # 定义错误列表变量
-        error_list = []
         try:
-            # 运行case完收集报错,然后判断
+            # 收集报错,verificationErrors处理
             self.assertEqual([], self.verificationErrors)
         except AssertionError as s:
-            # 添加报错至error list
-            error_list.append(s)
-            # 多重判断, 当error list 不为空时
-            if error_list is not None:
-                logger.error("error information is : %s" % error_list)
-                logger.error("执行Case错误！测试报告生成中断~~~")
-                # os 强制退出程序
-                os._exit(1)
+            logger.error("error information is : %s" % s)
+            logger.error("执行Case错误！测试报告生成中断~~~")
+            # 强制退出程序
+            os._exit(1)
 
     # 运行TestCase之前数据清理工作 注：主要用于数据库连接操作
     @classmethod
@@ -52,6 +47,9 @@ class Interface(unittest.TestCase):
     # 运行TestCase之后数据查询工作
     @classmethod
     def tearDownClass(cls):
+        logger.info("mysql data select successful ~~~")
+        sleep(1)
+        """
         # 调用数据库封装方法,变量为sql语句
         mysql_list = \
             sql.results.select_mysql("select name,mobile FROM axd_user WHERE id=1541682410768827427")
@@ -59,7 +57,7 @@ class Interface(unittest.TestCase):
         logger.info("user mobile is: %s" % mysql_list[1])
         # 定义休眠时间
         sleep(1)
-
+        """
     """
     用于登陆模块接口的main方法：
         1.本程序有两个main方法,分别为login and Configure_even_code
