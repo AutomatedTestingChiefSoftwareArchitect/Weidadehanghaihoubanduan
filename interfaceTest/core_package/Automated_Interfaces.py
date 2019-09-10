@@ -57,17 +57,17 @@ class AutomatedInterfaces(unittest.TestCase):
 
     """
     用于登陆模块接口的main方法：
-        1.本程序有两个main方法,分别为login and Configure_even_code
+        1.本程序有两个main方法,分别为login and Configure_even
         2.login模块用于返回cookie and session
-        3.Configure_even_code 用来遍历excel 所有case
+        3.Configure_even 用来遍历excel 所有case
     """
     def Landing_even(self):
-        # 遍历userCase excel login shell数据
-        date = readExcel.reds.get_xls('userCase.xlsx', 'login')
-        # 定义全局变量,用于Configure_even_code调用
+        # 定义global全局变量,用于Configure_even调用
         global headers
         global xls_name
         global sheet_name
+        # 遍历userCase excel login shell数据
+        date = readExcel.reds.get_xls('userCase.xlsx', 'login')
         # 定义变量method···等等, 接收遍历excel数据
         for method, url, data, content_type, user_agent, user_token, case_name, \
             interface_xls_name, interface_sheet_name in date:
@@ -132,12 +132,8 @@ class AutomatedInterfaces(unittest.TestCase):
 
     def Configure_even(self):
         try:
-            # global变量接收
-            name = xls_name
-            header = headers
-            sheet = sheet_name
             # 根据login excel 配置读取对于的excel 和 shell
-            dates = readExcel.reds.get_xls(name, sheet)
+            dates = readExcel.reds.get_xls(xls_name, sheet_name)
             # 判断读取数据是否为空
             if dates is None:
                 # 数据为空时,抛出错误verificationErrors
@@ -154,7 +150,7 @@ class AutomatedInterfaces(unittest.TestCase):
                     # headers连接未关闭后,报出SSH错误
                     urllib3.disable_warnings()
                     # 调用封装的http requests方法
-                    results = configHttp.runmain.run_main(method, url, data, header)
+                    results = configHttp.runmain.run_main(method, url, data, headers)
                     # 全局变量 接收 返回的结果
                     self.results = results
                     # 判断url连接错误
