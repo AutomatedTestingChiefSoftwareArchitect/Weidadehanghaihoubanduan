@@ -16,7 +16,7 @@ from interfaceTest.http_package import configHttp
 from interfaceTest.report_test import report
 from interfaceTest.sql_package import My_sql as sql
 
-# 调用log方法
+# 实例化log方法
 logger = Log.logger
 
 class AutomatedInterfaces(unittest.TestCase):
