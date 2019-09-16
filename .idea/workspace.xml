@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5e9c91-1d7f-46f5-a2f3-4cd375411af8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/config_package/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/config_package/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/config_package/readConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/config_package/readConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaceTest/logs_result/logs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/logs_result/logs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaceTest/report_test/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/report_test/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/testFile/userCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/testFile/userCase.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +31,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
+        <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="53" column="71" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="71" />
+            <state relative-caret-position="460">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#24#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,50 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/readConfig.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/config.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/logs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="535" lean-forward="true" selection-start-line="535" selection-end-line="535" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/Log.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="39" column="69" lean-forward="true" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
+            <state relative-caret-position="160">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -103,12 +55,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py">
+        <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="340">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
               <folding>
-                <element signature="e#24#33#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -201,12 +153,12 @@
         <option value="$PROJECT_DIR$/interfaceTest/requestcode/Test2.py" />
         <option value="$PROJECT_DIR$/interfaceTest/requestcode/Test py.py" />
         <option value="$PROJECT_DIR$/interfaceTest/config_package/readConfig.py" />
-        <option value="$PROJECT_DIR$/interfaceTest/report_test/report.py" />
         <option value="$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py" />
         <option value="$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py" />
         <option value="$PROJECT_DIR$/interfaceTest/config_package/config.ini" />
         <option value="$PROJECT_DIR$/interfaceTest/logs_result/logs" />
         <option value="$PROJECT_DIR$/interfaceTest/logs_result/Log.py" />
+        <option value="$PROJECT_DIR$/interfaceTest/report_test/report.py" />
       </list>
     </option>
   </component>
@@ -578,14 +530,7 @@
       <workItem from="1567134960431" duration="7332000" />
       <workItem from="1567153392459" duration="19420000" />
       <workItem from="1567421379882" duration="33342000" />
-      <workItem from="1567757316227" duration="39163000" />
-    </task>
-    <task id="LOCAL-00054" summary="fix job path">
-      <created>1566896374479</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1566896374479</updated>
+      <workItem from="1567757316227" duration="39459000" />
     </task>
     <task id="LOCAL-00055" summary="fix chongfu shaungchuan wenti">
       <created>1566901379672</created>
@@ -923,7 +868,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568286152319</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="add code error is send logs">
+      <created>1568612614094</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1568612614094</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -959,7 +911,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427282000" />
+    <option name="totallyTimeSpent" value="427578000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1080,7 +1032,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add config num2" />
     <MESSAGE value="add config num6" />
     <MESSAGE value="add 去掉1" />
     <MESSAGE value="add test main file //TODO assert" />
@@ -1105,7 +1056,8 @@
     <MESSAGE value="增加占位符" />
     <MESSAGE value="优化代码" />
     <MESSAGE value="add TODO" />
-    <option name="LAST_COMMIT_MESSAGE" value="add TODO" />
+    <MESSAGE value="add code error is send logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add code error is send logs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1440,23 +1392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="53" column="71" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/Log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
@@ -1469,18 +1404,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/logs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
+        <state relative-caret-position="763">
           <caret line="535" lean-forward="true" selection-start-line="535" selection-end-line="535" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py">
+    <entry file="file://$PROJECT_DIR$/interfaceTest/config_package/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="400">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1496,10 +1428,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="460">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/robot_package/robot_report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
