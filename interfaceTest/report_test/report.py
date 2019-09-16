@@ -7,6 +7,7 @@ from interfaceTest.config_package import readConfig
 from interfaceTest.robot_package import robot_report
 from interfaceTest.logs_result import Log
 from interfaceTest.report_test.report_tools import HTMLTestRunnerCN
+from interfaceTest.config_package import readConfig as rc
 # import xmlrunner
 # from HTMLTestRunner import HTMLTestRunner
 
