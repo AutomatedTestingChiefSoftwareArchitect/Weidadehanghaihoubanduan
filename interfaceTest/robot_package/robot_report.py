@@ -10,9 +10,9 @@ from interfaceTest.config_package import readConfig as rc
 # 调用日志及取测试报告路径
 logger = Log.logger
 path = getpathInfo.get_Path()
-xlsPath = os.path.join(path, 'result')
 
-def test_report():
+def test_report(paths):
+    xlsPath = os.path.join(path, paths)
     # 获取result下所有的文件
     lists = os.listdir(xlsPath)
     # 判断文件是否为空
@@ -24,13 +24,14 @@ def test_report():
         file_new = os.path.join(xlsPath, lists[-1])
         # 截取文件名
         cs = os.path.basename(file_new)
+        logger.info("当前调用的文件： %s" % cs)
         return cs
     else:
         # 为空时返回str, 不会报错！！！
         logger.error("result report is : %s" % lists)
         return str(lists)
 
-def new_report():
+def new_report(paths, text, titles):
     sleep(10)
     # 调用get_http获取 DingTalk url
     hook_token = r"%s" % rc.ret.get_http("hook_token")
@@ -40,10 +41,10 @@ def new_report():
     date = {
         "msgtype": "link",
         "link": {
-            "text": "This is test report",
-            "title": u"测试报告",
+            "text": text,
+            "title": u"%s" % titles,
             "picUrl": "",
-            "messageUrl": r"%s" %(rc.ret.get_http("environment_path")) + test_report()
+            "messageUrl": r"%s" %(rc.ret.get_http("environment_path")) + test_report(paths)
         }
     }
     # 同Configure_even_code文件内一致

@@ -20,7 +20,7 @@ class ReadConfig(object):
 
     def get_email(self, name):
         # 读取EMAIL下变量name字段  注：name is str
-        value = config.get('EMAIL', name)
+        value = config.get('LOGS', name)
         return value
 
     def get_mysql(self, name):

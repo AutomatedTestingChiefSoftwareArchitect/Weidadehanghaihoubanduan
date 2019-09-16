@@ -51,7 +51,7 @@ def report(perform_class, perform_num):
             if platform.system() != "Windows":
                 time.sleep(10)
                 # 调用DingTalk发送报告方法
-                robot_report.new_report()
+                robot_report.new_report('result', rc.ret.get_http("text"), rc.ret.get_http("titles"))
                 logger.info("测试报告已发送至钉钉群 ~~~")
             else:
                 logger.info("%s 运行环境下，无法调用DingTalk !!!" % platform.system())

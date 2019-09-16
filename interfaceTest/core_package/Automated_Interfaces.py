@@ -4,17 +4,20 @@ import sys
 import urllib3
 import unittest
 import requests
+import platform
 import traceback
 # 添加工作路径至sys
 o_path = os.getcwd()
 sys.path.append(o_path)
 from time import sleep
+from interfaceTest.robot_package import robot_report
 from interfaceTest.judge_inheritance import inheritance
 from interfaceTest.logs_result import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
 from interfaceTest.report_test import report
 from interfaceTest.sql_package import My_sql as sql
+from interfaceTest.config_package import readConfig as rc
 
 # 实例化log方法
 logger = Log.logger
@@ -35,6 +38,18 @@ class AutomatedInterfaces(unittest.TestCase):
         except AssertionError as s:
             logger.error("error information is : %s" % s)
             logger.error("执行Case错误！测试报告生成中断~~~")
+            try:
+                # 判断运行环境
+                if platform.system() != "Windows":
+                    sleep(10)
+                    # 调用DingTalk发送错误日志方法
+                    robot_report.new_report('logs_result', rc.ret.get_email("text"), rc.ret.get_email("titles"))
+                    logger.info("error logs 已发送至钉钉群 ~~~")
+                else:
+                    logger.info("%s 运行环境下，无法调用DingTalk !!!" % platform.system())
+            except Exception as e:
+                # 捕捉运行报告产生的error
+                logger.error("DingTalk: %s " % e)
             # 强制退出程序
             os._exit(1)
 
