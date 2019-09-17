@@ -43,7 +43,7 @@ class AutomatedInterfaces(unittest.TestCase):
                 if platform.system() != "Windows":
                     sleep(10)
                     # 调用DingTalk发送错误日志方法
-                    robot_report.new_report('logs_result', rc.ret.get_email("text"), rc.ret.get_email("titles"))
+                    robot_report.new_report('logs_result/logs', rc.ret.get_email("text"), rc.ret.get_email("titles"))
                     logger.info("error logs 已发送至钉钉群 ~~~")
                 else:
                     logger.info("%s 运行环境下，无法调用DingTalk !!!" % platform.system())

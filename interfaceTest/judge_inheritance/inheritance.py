@@ -4,7 +4,7 @@ from interfaceTest.logs_result import Log
 logger = Log.logger
 
 def additional(response_json, case_name):
-    # 如果在FirstClass遍历为找到, 就执行此此程序
+    # 如果在FirstClass遍历为找到, 就执行此程序
     logger.info("    匹配不到对应的response, 请联系管理进行手动添加 ~~~")
     print(case_name + " : " + str(response_json))
     print(), sleep(1)

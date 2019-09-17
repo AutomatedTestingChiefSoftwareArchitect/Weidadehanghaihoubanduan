@@ -35,8 +35,8 @@ class Logger(object):
             # file_handler = logging.StreamHandler()
 
             # 每天重新创建一个日志文件，最多保留backup_count份
-            file_handler = TimedRotatingFileHandler(filename=os.path.join(log_path, self.log_file_name), when='midnight',
-                                                    interval=1, backupCount=self.backup_count, delay=True,
+            file_handler = TimedRotatingFileHandler(filename=os.path.join(log_path, self.log_file_name), when='W0',
+                                                    interval=0, backupCount=self.backup_count, delay=True,
                                                     encoding='utf-8')
             # 同下 ！！！ file_handler is not console_handler
             file_handler.setFormatter(self.formatter)
