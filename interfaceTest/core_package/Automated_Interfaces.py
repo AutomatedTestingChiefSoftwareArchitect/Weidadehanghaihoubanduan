@@ -73,7 +73,7 @@ class AutomatedInterfaces(unittest.TestCase):
     """
     用于登陆模块接口的main方法：
         1.本程序有两个main方法,分别为login and Configure_even
-        2.login模块用于返回cookie and session
+        2.login模块用于返回cookie and session and 提供Configure_even 参数
         3.Configure_even 用来遍历excel 所有case
     """
     def Landing_even(self):
@@ -127,6 +127,10 @@ class AutomatedInterfaces(unittest.TestCase):
                     # 同上 超时错误 ！！！
                     self.verificationErrors.append(b)
                     return logger.error("login timeout error")
+                except RuntimeError as c:
+                    # 同上 运行错误 ！！！
+                    self.verificationErrors.append(c)
+                    return logger.error(" RuntimeError error")
                 # 判断 接口http状态码是否为200
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("login is successful")
@@ -162,7 +166,6 @@ class AutomatedInterfaces(unittest.TestCase):
                     logger.info("请求方式:%s" % method)
                     logger.info("请求链接:%s" % url)
                     logger.info("请求参数:%s" % data)
-                    # headers连接未关闭后,报出SSH错误
                     urllib3.disable_warnings()
                     # 调用封装的http requests方法
                     results = configHttp.runmain.run_main(method, url, data, headers)
@@ -174,9 +177,11 @@ class AutomatedInterfaces(unittest.TestCase):
                     self.verificationErrors.append(a)
                     return logger.error("url error : %s" % self.results)
                 except TimeoutError as b:
-                    # 同上 超时错误 ！！！
                     self.verificationErrors.append(b)
                     return logger.error("timeout error")
+                except RuntimeError as c:
+                    self.verificationErrors.append(c)
+                    return logger.error(" RuntimeError error")
                 # 判断 接口http状态码是否为200
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("assert url is successful")
