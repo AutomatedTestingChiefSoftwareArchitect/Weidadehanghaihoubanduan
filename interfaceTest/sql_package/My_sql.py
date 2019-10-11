@@ -25,6 +25,15 @@ class DateBaseHandle(object):
         self.list_mysql_sid = []
         self.list_mysql_name = []
 
+    def select_num(self, sql):
+
+        cursor = self.conn.cursor()
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        for es in data:
+            for nums in es:
+                return int(nums)
+
     def select_mysql(self, sql):
         # 返回游标对象
         cursor = self.conn.cursor()

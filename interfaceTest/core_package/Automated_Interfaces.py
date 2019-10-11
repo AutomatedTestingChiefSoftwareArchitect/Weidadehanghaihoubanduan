@@ -53,22 +53,27 @@ class AutomatedInterfaces(unittest.TestCase):
             # 强制退出程序
             os._exit(1)
 
-    # 运行TestCase之前数据清理工作 注：主要用于数据库连接操作
+    # 运行TestCase之前数据清理工作 注：主要用于数据库操作
     @classmethod
     def setUpClass(cls):
-        logger.info("mysql data clean ~~~")
-        sleep(1)
-
-    # 运行TestCase之后数据查询工作
-    @classmethod
-    def tearDownClass(cls):
-        # 调用数据库封装方法,变量为sql语句
+        # select测试账户
         mysql_list = \
             sql.results.select_mysql("select name,mobile FROM axd_user WHERE id=1541682410768827427")
         logger.info("user name is: %s" % mysql_list[0])
         logger.info("user mobile is: %s" % mysql_list[1])
-        # 定义休眠时间
-        sleep(1)
+        # select测试前待支付订单数量
+        cls.before_nums = sql.results.select_num("select COUNT(*) FROM axd_user WHERE id=1541682410768827427")
+        logger.info("{开始测试前}-待支付订单数据总数: %s" % cls.before_nums)
+
+    # 运行TestCase之后数据查询工作
+    @classmethod
+    def tearDownClass(cls):
+        # select测试完后的待支付订单数量
+        cls.after_nums = sql.results.select_num("select COUNT(*) FROM axd_user WHERE id=1541682410768827427")
+        if cls.after_nums == cls.before_nums + 1:
+            logger.info("{开始测试后}-待支付订单数据总数: %s" % cls.after_nums)
+        else:
+            logger.error("待支付订单数量错误: %s" % (cls.after_nums-cls.before_nums))
 
     """
     用于登陆模块接口的main方法：
@@ -94,7 +99,7 @@ class AutomatedInterfaces(unittest.TestCase):
             self.user_agent = user_agent
             self.user_token = user_token
             self.case_name = case_name
-            # 定义变量接收变量
+            # 定义变量接收变量  //此处后续需要优化 同时运行多个xls_name and sheet_name
             xls_name = interface_xls_name
             sheet_name = interface_sheet_name
         # 参数化headers , 数据均为excel中的遍历
