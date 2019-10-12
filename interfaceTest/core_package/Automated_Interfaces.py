@@ -58,20 +58,22 @@ class AutomatedInterfaces(unittest.TestCase):
     def setUpClass(cls):
         # select测试账户
         mysql_list = \
-            sql.results.select_mysql("select name,mobile FROM axd_user WHERE id=1541682410768827427")
-        logger.info("user name is: %s" % mysql_list[0])
-        logger.info("user mobile is: %s" % mysql_list[1])
+            sql.results.select_mysql("select name,mobile FROM axd_user WHERE id=1657209832668004354")
+        logger.info("Test user name : %s" % mysql_list[0])
+        logger.info("Test user mobile : %s" % mysql_list[1])
         # select测试前待支付订单数量
-        cls.before_nums = sql.results.select_num("select COUNT(*) FROM axd_user WHERE id=1541682410768827427")
-        logger.info("{开始测试前}-待支付订单数据总数: %s" % cls.before_nums)
+        cls.before_nums = sql.results.select_num(
+            "Select COUNT(*) FROM axd_user WHERE id=1657209832668004354 AND status=1")
+        logger.info("{开始测试前} — 待支付订单数据总数: %s" % cls.before_nums)
 
     # 运行TestCase之后数据查询工作
     @classmethod
     def tearDownClass(cls):
         # select测试完后的待支付订单数量
-        cls.after_nums = sql.results.select_num("select COUNT(*) FROM axd_user WHERE id=1541682410768827427")
+        cls.after_nums = sql.results.select_num(
+            "Select COUNT(*) FROM axd_user WHERE id=1657209832668004354 AND status=1")
         if cls.after_nums == cls.before_nums + 1:
-            logger.info("{开始测试后}-待支付订单数据总数: %s" % cls.after_nums)
+            logger.info("{开始测试后} — 待支付订单数据总数: %s" % cls.after_nums)
         else:
             logger.error("待支付订单数量错误: %s" % (cls.after_nums-cls.before_nums))
 

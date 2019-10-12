@@ -71,7 +71,7 @@ class FirstClass(object):
                     return self.three(response_json, case_name)
             else:
                 # 此处预留, 后续编写keys value is not dict
-                logger.info("        现阶段程序不支持json int and str type ~~~")
+                logger.info("        现阶段程序不支持json int str and list type ~~~")
                 print(case_name + " : " + str(response_json))
                 print(), sleep(1)
                 return response_json
