@@ -11,7 +11,7 @@ o_path = os.getcwd()
 sys.path.append(o_path)
 from time import sleep
 from interfaceTest.robot_package import robot_report
-from interfaceTest.judge_inheritance import inheritance
+from interfaceTest.judge_inheritance import Inheritanced
 from interfaceTest.logs_result import Log
 from interfaceTest.readexcel_package import readExcel
 from interfaceTest.http_package import configHttp
@@ -142,7 +142,7 @@ class AutomatedInterfaces(unittest.TestCase):
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("login is successful")
                 # 调用封装匹配response.json方法
-                r = inheritance.ret.enter(self.results.json(), self.case_name)
+                r = Inheritanced.ret.Response_method(self.results.json(), self.case_name)
                 # 如果匹配为空,则添加至verificationErrors处理
                 if r is None:
                     return self.verificationErrors.append(r)
@@ -193,7 +193,7 @@ class AutomatedInterfaces(unittest.TestCase):
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("assert url is successful")
                 # 调用封装匹配response.json方法
-                r = inheritance.ret.enter(self.results.json(), case_name)
+                r = Inheritanced.ret.Response_method(self.results.json(), case_name)
                 # 如果匹配为空,则添加至verificationErrors处理
                 if r is None:
                     return self.verificationErrors.append(r)
