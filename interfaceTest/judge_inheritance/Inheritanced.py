@@ -30,10 +30,7 @@ def method_str(response_json, case_name):
 
 def method_list(response_json, case_name):
 
-    if response_json[ret.methods] is None:
-        return response_check.rc.Check_error(response_json, case_name)
-    else:
-        return response_check.rc.Check_info(response_json, case_name)
+    return method_int(response_json, case_name)
 
 def method_dict(response_json, case_name):
 
@@ -61,14 +58,13 @@ def method_dict(response_json, case_name):
             print(), sleep(1)
             return response_json
 
+
 class FirstClass(object):
 
     def __init__(self):
-
         self.methods = "data"
 
     def Response_method(self, response_json, case_name):
-
         result = None
         if type(response_json[self.methods]) is int:
             result = method_int(response_json, case_name)
