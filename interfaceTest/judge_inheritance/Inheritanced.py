@@ -64,7 +64,7 @@ class FirstClass(object):
     def __init__(self):
         self.methods = "data"
 
-    def Response_method(self, response_json, case_name):
+    def response_method(self, response_json, case_name):
         result = None
         if type(response_json[self.methods]) is int:
             result = method_int(response_json, case_name)

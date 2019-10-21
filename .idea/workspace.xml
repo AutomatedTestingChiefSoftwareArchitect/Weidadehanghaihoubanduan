@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cf5e9c91-1d7f-46f5-a2f3-4cd375411af8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-963">
-              <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+            <state relative-caret-position="557">
+              <caret line="197" column="29" lean-forward="true" selection-start-line="197" selection-start-column="29" selection-end-line="197" selection-end-column="29" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -42,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+            <state relative-caret-position="480">
+              <caret line="66" column="23" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="23" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -147,11 +148,11 @@
         <option value="$PROJECT_DIR$/interfaceTest/requestcode/Test py.py" />
         <option value="$PROJECT_DIR$/interfaceTest/sql_package/My_sql.py" />
         <option value="$PROJECT_DIR$/interfaceTest/config_package/config.ini" />
-        <option value="$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py" />
         <option value="$PROJECT_DIR$/interfaceTest/judge_inheritance/inheritance.py" />
         <option value="$PROJECT_DIR$/interfaceTest/judge_inheritance/response_check.py" />
         <option value="$PROJECT_DIR$/interfaceTest/logs_result/logs" />
         <option value="$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py" />
+        <option value="$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py" />
       </list>
     </option>
   </component>
@@ -499,14 +500,7 @@
       <workItem from="1569231905551" duration="18192000" />
       <workItem from="1570516731023" duration="35799000" />
       <workItem from="1570876902870" duration="2470000" />
-      <workItem from="1571635318765" duration="20255000" />
-    </task>
-    <task id="LOCAL-00070" summary="fix report path">
-      <created>1567049408562</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1567049408562</updated>
+      <workItem from="1571635318765" duration="20373000" />
     </task>
     <task id="LOCAL-00071" summary="fix report path9">
       <created>1567049976212</created>
@@ -844,7 +838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571660176726</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="fix response is list code">
+      <created>1571660940252</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1571660940252</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -880,7 +881,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="529418000" />
+    <option name="totallyTimeSpent" value="529536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1001,7 +1002,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix config charset is GB2312" />
     <MESSAGE value="add run path config88" />
     <MESSAGE value="优化程序多余空格" />
     <MESSAGE value="fix requestscode is none info" />
@@ -1026,7 +1026,8 @@
     <MESSAGE value="新增静态函数select方法" />
     <MESSAGE value="add" />
     <MESSAGE value="rewrite response check code" />
-    <option name="LAST_COMMIT_MESSAGE" value="rewrite response check code" />
+    <MESSAGE value="fix response is list code" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix response is list code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1335,22 +1336,22 @@
     <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/logs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py">
+    <entry file="file://$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-963">
-          <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
+        <state relative-caret-position="480">
+          <caret line="66" column="23" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="23" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py">
+    <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+        <state relative-caret-position="557">
+          <caret line="197" column="29" lean-forward="true" selection-start-line="197" selection-start-column="29" selection-end-line="197" selection-end-column="29" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#24#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
