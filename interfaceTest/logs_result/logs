@@ -1,0 +1,39 @@
+report.py - report - 2019-10-25 13:11:18,283 - INFO - 22 - ~~~ 测试报告准备中 ~~~
+report.py - report - 2019-10-25 13:11:18,283 - INFO - 23 - case执行开始 ~~~
+Automated_Interfaces.py - setUpClass - 2019-10-25 13:11:18,319 - INFO - 62 - Test user name : wgss5195339
+Automated_Interfaces.py - setUpClass - 2019-10-25 13:11:18,320 - INFO - 63 - Test user mobile : 15729999677
+Automated_Interfaces.py - setUpClass - 2019-10-25 13:11:18,355 - INFO - 67 - {开始测试前} — 待支付订单数据总数: 1
+Automated_Interfaces.py - Landing_even - 2019-10-25 13:11:18,403 - INFO - 115 - -------------------------------------------------
+Automated_Interfaces.py - Landing_even - 2019-10-25 13:11:18,403 - INFO - 116 - 请求方式:post
+Automated_Interfaces.py - Landing_even - 2019-10-25 13:11:18,403 - INFO - 117 - 请求链接:https://m.api.aixiangdao.com/user/app/user/info
+Automated_Interfaces.py - Landing_even - 2019-10-25 13:11:18,403 - INFO - 118 - 请求参数:{"clientType":"miniApp"}
+Automated_Interfaces.py - Landing_even - 2019-10-25 13:11:18,403 - INFO - 119 - Content_type: application/json
+Automated_Interfaces.py - Landing_even - 2019-10-25 13:11:18,403 - INFO - 120 - User_Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/7.0.2(0x17000222) NetType/WIFI Language/zh_CN
+Automated_Interfaces.py - Landing_even - 2019-10-25 13:11:18,403 - INFO - 121 - User_Token: 03-01512000578944964338-73162666-1571969416
+Automated_Interfaces.py - Landing_even - 2019-10-25 13:11:18,759 - INFO - 135 - login is successful
+Inheritanced.py - method_dict - 2019-10-25 13:11:18,776 - INFO - 39 - check keys nums ： ['id', 'name']
+Inheritanced.py - method_dict - 2019-10-25 13:11:18,776 - INFO - 53 -         id check is successful
+Inheritanced.py - method_dict - 2019-10-25 13:11:18,777 - INFO - 53 -         name check is successful
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:19,790 - INFO - 165 - ----------------------------------
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:19,791 - INFO - 166 - 请求方式:post
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:19,791 - INFO - 167 - 请求链接:https://m.api.aixiangdao.com/activity/app/secondKillRule/byCityIdGetStatus
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:19,791 - INFO - 168 - 请求参数:{"cityId":29,"clientType":"miniApp"}
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:20,128 - INFO - 181 - assert url is successful
+response_check.py - Check_info - 2019-10-25 13:11:20,128 - INFO - 11 -         [{'id': 19, 'cityId': 29, 'cityName': '', 'secondaryKillType': 1, 'secondkillStatus': 1, 'participant': 1, 'participation': '1,2', 'minimumHelp': 16, 'theGreatestHelp': 20, 'helpDuration': 2, 'participationCycle': 1, 'numberOfParticipants': 1, 'createTime': '2019-10-09T23:59:48.000+0000', 'updateTime': '2019-10-22T08:31:03.000+0000'}, {'id': 20, 'cityId': 29, 'cityName': '', 'secondaryKillType': 2, 'secondkillStatus': 1, 'participant': 2, 'participation': '1,2', 'minimumHelp': 8, 'theGreatestHelp': 20, 'helpDuration': 2, 'participationCycle': 2, 'numberOfParticipants': 1, 'createTime': '2019-10-10T00:00:03.000+0000', 'updateTime': '2019-10-10T00:58:50.000+0000'}, {'id': 21, 'cityId': 29, 'cityName': '', 'secondaryKillType': 3, 'secondkillStatus': 2, 'participant': 2, 'participation': '', 'minimumHelp': 3, 'theGreatestHelp': 20, 'helpDuration': 24, 'participationCycle': 1, 'numberOfParticipants': 1, 'createTime': '2019-10-10T00:13:59.000+0000', 'updateTime': '2019-10-10T01:39:50.000+0000'}] check is successful
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:21,128 - INFO - 165 - ----------------------------------
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:21,128 - INFO - 166 - 请求方式:post
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:21,128 - INFO - 167 - 请求链接:https://m.api.aixiangdao.com/activity/app/secondKillActivity/secondKillList
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:21,128 - INFO - 168 - 请求参数:{"cityId":29,"activeType":"1","pageIndex":"1","pageSize":"5","longitude":121.4576,"latitude":31.29689,"clientType":"miniApp"}
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:21,372 - INFO - 181 - assert url is successful
+Inheritanced.py - method_dict - 2019-10-25 13:11:21,388 - INFO - 39 - check keys nums ： []
+Inheritanced.py - method_dict - 2019-10-25 13:11:21,388 - INFO - 41 -     匹配不到对应的response keys  请联系管理进行手动添加 ~~~
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:22,388 - INFO - 165 - ----------------------------------
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:22,388 - INFO - 166 - 请求方式:post
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:22,388 - INFO - 167 - 请求链接:https://m.api.aixiangdao.com/merchant/app/voucherPackage/getDiscountCouponList
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:22,388 - INFO - 168 - 请求参数:{"pageIndex":0,"pageSize":1,"clientType":"miniApp"}
+Automated_Interfaces.py - Configure_even - 2019-10-25 13:11:22,774 - INFO - 181 - assert url is successful
+Inheritanced.py - method_dict - 2019-10-25 13:11:22,792 - INFO - 39 - check keys nums ： ['discountCouponList']
+Inheritanced.py - method_dict - 2019-10-25 13:11:22,792 - INFO - 53 -         discountCouponList check is successful
+Automated_Interfaces.py - tearDownClass - 2019-10-25 13:11:23,827 - ERROR - 78 - 待支付订单数量错误: 0
+report.py - report - 2019-10-25 13:11:33,828 - INFO - 49 -         ~~~ 测试报告已完成 ~~~
+report.py - report - 2019-10-25 13:11:33,832 - INFO - 58 - Windows 运行环境下，无法调用DingTalk !!!

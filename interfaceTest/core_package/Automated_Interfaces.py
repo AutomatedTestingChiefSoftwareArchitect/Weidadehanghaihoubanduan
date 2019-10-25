@@ -126,18 +126,10 @@ class AutomatedInterfaces(unittest.TestCase):
                     # 全局变量 接收 返回的结果
                     self.results = results
                     # 判断url连接错误
-                except requests.exceptions.ConnectionError as a:
-                    # 如果连接错误 就添加至到verificationErrors, 然后verificationErrors处理
-                    self.verificationErrors.append(a)
-                    return logger.error("login url error : %s" % self.results)
-                except TimeoutError as b:
-                    # 同上 超时错误 ！！！
-                    self.verificationErrors.append(b)
-                    return logger.error("login timeout error")
-                except RuntimeError as c:
-                    # 同上 运行错误 ！！！
-                    self.verificationErrors.append(c)
-                    return logger.error(" RuntimeError error")
+                except (requests.exceptions.ConnectionError or TimeoutError or RuntimeError or Exception) as exp:
+                    # 错误 就添加至到verificationErrors, 然后verificationErrors处理
+                    self.verificationErrors.append(exp)
+                    return logger.error("except error : %s" % exp)
                 # 判断 接口http状态码是否为200
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("login is successful")
@@ -145,10 +137,11 @@ class AutomatedInterfaces(unittest.TestCase):
                 r = Inheritanced.ret.response_method(self.results.json(), self.case_name)
                 # 如果匹配为空,则添加至verificationErrors处理
                 if r is None:
-                    return self.verificationErrors.append(r)
+                    self.verificationErrors.append(r)
+                    return logger.error("response is %s" % r)
                 # 备用, 用于返回cookie and session
                 return None
-            except AssertionError as e:
+            except (AssertionError or Exception) as e:
                 # 用于捕捉主体中的错误,添加至verificationErrors处理
                 self.verificationErrors.append(e)
                 return logger.error("login is %s" % self.results.status_code)
@@ -179,16 +172,10 @@ class AutomatedInterfaces(unittest.TestCase):
                     # 全局变量 接收 返回的结果
                     self.results = results
                     # 判断url连接错误
-                except requests.exceptions.ConnectionError as a:
-                    # 如果连接错误 就添加至到verificationErrors, 然后verificationErrors处理
-                    self.verificationErrors.append(a)
-                    return logger.error("url error : %s" % self.results)
-                except TimeoutError as b:
-                    self.verificationErrors.append(b)
-                    return logger.error("timeout error")
-                except RuntimeError as c:
-                    self.verificationErrors.append(c)
-                    return logger.error(" RuntimeError error")
+                except (requests.exceptions.ConnectionError or TimeoutError or RuntimeError or Exception) as exp:
+                    # 错误 就添加至到verificationErrors, 然后verificationErrors处理
+                    self.verificationErrors.append(exp)
+                    return logger.error("except error : %s" % exp)
                 # 判断 接口http状态码是否为200
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("assert url is successful")
@@ -196,8 +183,9 @@ class AutomatedInterfaces(unittest.TestCase):
                 r = Inheritanced.ret.response_method(self.results.json(), case_name)
                 # 如果匹配为空,则添加至verificationErrors处理
                 if r is None:
-                    return self.verificationErrors.append(r)
-        except AssertionError as e:
+                    self.verificationErrors.append(r)
+                    return logger.error("response is %s" % r)
+        except (AssertionError or Exception) as e:
             # 用于捕捉主体中的错误,添加至verificationErrors处理
             self.verificationErrors.append(e)
             return logger.error("%s assert is error" % self.results.status_code)
