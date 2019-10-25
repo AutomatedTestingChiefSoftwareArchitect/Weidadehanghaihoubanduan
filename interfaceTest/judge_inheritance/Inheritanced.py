@@ -34,33 +34,37 @@ def method_dict(response_json, case_name):
     for list_key in list_dates:
         list_keys = list_key
     dict_info = response_json[ret.methods]
-    dict_keys = list(dict_info.keys())
-    list_nums = [x for x in list_keys if x in dict_keys]
-    logger.info("check keys nums ： %s" % list_nums)
-    if len(list_nums) == 0:
-        logger.info("    匹配不到对应的response keys  请联系管理进行手动添加 ~~~")
-        print(case_name + " : " + str(response_json))
-        print(), sleep(1)
-        return response_json
-    for item in list_nums:
-        if response_json[ret.methods][item] is None:
-            logger.error("       %s is null" % item)
+    if len(dict_info) != 0:
+        dict_keys = list(dict_info.keys())
+        list_nums = [x for x in list_keys if x in dict_keys]
+        logger.info("check keys nums ： %s" % list_nums)
+        if len(list_nums) == 0:
+            logger.info("    匹配不到对应的response keys  请联系管理进行手动添加 ~~~")
             print(case_name + " : " + str(response_json))
             print(), sleep(1)
-            list_item.append(item)
-            return response_json[ret.methods][item]
-        else:
-            logger.info("        %s check is successful" % item)
-            list_item.append(item)
-    if list_item is not None:
-        print(case_name + " : " + str(response_json))
-        print(), sleep(1)
-        return response_json
-
+            return response_json
+        for item in list_nums:
+            if response_json[ret.methods][item] is None:
+                logger.error("       %s is null" % item)
+                print(case_name + " : " + str(response_json))
+                print(), sleep(1)
+                list_item.append(item)
+                return response_json[ret.methods][item]
+            else:
+                logger.info("        %s check is successful" % item)
+                list_item.append(item)
+        if list_item is not None:
+            print(case_name + " : " + str(response_json))
+            print(), sleep(1)
+            return response_json
+    else:
+       logger.info("response keys is %s" % dict_info)
+       return response_json
 
 class FirstClass(object):
 
     def __init__(self):
+
         self.methods = "data"
 
     def response_method(self, response_json, case_name):
