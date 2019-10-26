@@ -6,7 +6,6 @@ import unittest
 import requests
 import platform
 import traceback
-# 添加工作路径至sys
 o_path = os.getcwd()
 sys.path.append(o_path)
 from time import sleep
@@ -126,7 +125,7 @@ class AutomatedInterfaces(unittest.TestCase):
                     # 全局变量 接收 返回的结果
                     self.results = results
                     # 判断url连接错误
-                except (requests.exceptions.ConnectionError or TimeoutError or RuntimeError or Exception) as exp:
+                except (ConnectionError or TimeoutError or RuntimeError or BaseException) as exp:
                     # 错误 就添加至到verificationErrors, 然后verificationErrors处理
                     self.verificationErrors.append(exp)
                     return logger.error("except error : %s" % exp)
@@ -141,7 +140,7 @@ class AutomatedInterfaces(unittest.TestCase):
                     return logger.error("response is %s" % r)
                 # 备用, 用于返回cookie and session
                 return None
-            except (AssertionError or Exception) as e:
+            except (AssertionError or BaseException) as e:
                 # 用于捕捉主体中的错误,添加至verificationErrors处理
                 self.verificationErrors.append(e)
                 return logger.error("login is %s" % self.results.status_code)
@@ -172,7 +171,7 @@ class AutomatedInterfaces(unittest.TestCase):
                     # 全局变量 接收 返回的结果
                     self.results = results
                     # 判断url连接错误
-                except (requests.exceptions.ConnectionError or TimeoutError or RuntimeError or Exception) as exp:
+                except (ConnectionError or TimeoutError or RuntimeError or BaseException) as exp:
                     # 错误 就添加至到verificationErrors, 然后verificationErrors处理
                     self.verificationErrors.append(exp)
                     return logger.error("except error : %s" % exp)
@@ -185,7 +184,7 @@ class AutomatedInterfaces(unittest.TestCase):
                 if r is None:
                     self.verificationErrors.append(r)
                     return logger.error("response is %s" % r)
-        except (AssertionError or Exception) as e:
+        except (AssertionError or BaseException) as e:
             # 用于捕捉主体中的错误,添加至verificationErrors处理
             self.verificationErrors.append(e)
             return logger.error("%s assert is error" % self.results.status_code)
