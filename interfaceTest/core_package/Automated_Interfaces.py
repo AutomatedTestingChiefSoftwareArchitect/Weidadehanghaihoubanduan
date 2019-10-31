@@ -57,55 +57,45 @@ class AutomatedInterfaces(unittest.TestCase):
     def setUpClass(cls):
         # select测试账户
         mysql_list = \
-            sql.results.select_mysql("select name,mobile FROM axd_user WHERE id=1657209832668004354")
+            sql.results.select_mysql(rc.ret.get_mysql("user_info"))
         logger.info("Test user name : %s" % mysql_list[0])
         logger.info("Test user mobile : %s" % mysql_list[1])
         # select测试前待支付订单数量
-        cls.before_nums = sql.results.select_num(
-            "Select COUNT(*) FROM axd_user WHERE id=1657209832668004354 AND status=1")
+        cls.before_nums = sql.results.select_num(rc.ret.get_mysql("before_nums"))
         logger.info("{开始测试前} — 待支付订单数据总数: %s" % cls.before_nums)
 
     # 运行TestCase之后数据查询工作
     @classmethod
     def tearDownClass(cls):
         # select测试完后的待支付订单数量
-        cls.after_nums = sql.results.select_num(
-            "Select COUNT(*) FROM axd_user WHERE id=1657209832668004354 AND status=1")
+        cls.after_nums = sql.results.select_num(rc.ret.get_mysql("after_nums"))
         if cls.after_nums == cls.before_nums + 1:
             logger.info("{开始测试后} — 待支付订单数据总数: %s" % cls.after_nums)
         else:
             logger.error("待支付订单数量错误: %s" % (cls.after_nums-cls.before_nums))
 
-    """
-    用于登陆模块接口的main方法：
-        1.本程序有两个main方法,分别为login and Configure_even
-        2.login模块用于返回cookie and session and 提供Configure_even 参数
-        3.Configure_even 用来遍历excel 所有case
-    """
     def Landing_even(self):
         # 定义global全局变量,用于Configure_even调用
         global headers
         global xls_name
         global sheet_name
         # 遍历userCase excel login shell数据
-        date = readExcel.reds.get_xls('userCase.xlsx', 'login')
+        dates = readExcel.reds.get_xls('userCase.xlsx', 'login')
         # 定义变量method···等等, 接收遍历excel数据
-        for method, url, data, content_type, user_agent, user_token, case_name, \
-            interface_xls_name, interface_sheet_name in date:
+        for method, url, data, case_name, user_agent, content_type, \
+            interface_xls_name, interface_sheet_name in dates:
             # 将接收数据定义为全局变量
             self.method = method
             self.url = url
             self.data = data
             self.content_type = content_type
             self.user_agent = user_agent
-            self.user_token = user_token
             self.case_name = case_name
             # 定义变量接收变量  //此处后续需要优化 同时运行多个xls_name and sheet_name
             xls_name = interface_xls_name
             sheet_name = interface_sheet_name
         # 参数化headers , 数据均为excel中的遍历
-        headers = {"User-Agent": self.user_agent, "Content-Type": self.content_type,
-                   "userToken": self.user_token}
+        headers = {"User-Agent": self.user_agent, "Content-Type": self.content_type}
         # 判断shell login 链接和参数是否为空
         if self.url and self.data is not None:
             try:
@@ -138,8 +128,6 @@ class AutomatedInterfaces(unittest.TestCase):
                 if r is None:
                     self.verificationErrors.append(r)
                     return logger.error("response is %s" % r)
-                # 备用, 用于返回cookie and session
-                return None
             except (AssertionError or BaseException) as e:
                 # 用于捕捉主体中的错误,添加至verificationErrors处理
                 self.verificationErrors.append(e)
@@ -150,6 +138,7 @@ class AutomatedInterfaces(unittest.TestCase):
 
     def Configure_even(self):
         try:
+            headers_add = headers["userToken"] = None
             # 根据login excel 配置读取对于的excel 和 shell
             dates = readExcel.reds.get_xls(xls_name, sheet_name)
             # 判断读取数据是否为空
@@ -167,7 +156,7 @@ class AutomatedInterfaces(unittest.TestCase):
                     logger.info("请求参数:%s" % data)
                     urllib3.disable_warnings()
                     # 调用封装的http requests方法
-                    results = configHttp.runmain.run_main(method, url, data, headers)
+                    results = configHttp.runmain.run_main(method, url, data, headers_add)
                     # 全局变量 接收 返回的结果
                     self.results = results
                     # 判断url连接错误

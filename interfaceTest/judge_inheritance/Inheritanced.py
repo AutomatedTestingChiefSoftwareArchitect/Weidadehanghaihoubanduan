@@ -7,7 +7,7 @@ logger = Log.logger
 
 def method_int(response_json, case_name):
 
-    if response_json[ret.methods] is None or response_json[ret.methods] == 0:
+    if response_json[ret.methods] in (None, 0):
 
         return response_check.rc.Check_error(response_json, case_name)
     else:
@@ -15,8 +15,7 @@ def method_int(response_json, case_name):
 
 def method_str(response_json, case_name):
 
-    if response_json[ret.methods] is 'None' or response_json[ret.methods] is 'none'\
-            or response_json[ret.methods] is 'Null' or response_json[ret.methods] is 'null':
+    if response_json[ret.methods] in ('None', 'none', 'Null', 'null'):
 
         return response_check.rc.Check_error(response_json, case_name)
     else:
