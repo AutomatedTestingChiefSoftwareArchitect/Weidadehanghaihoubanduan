@@ -63,7 +63,6 @@ def method_dict(response_json, case_name):
 class FirstClass(object):
 
     def __init__(self):
-
         self.methods = "data"
 
     def response_method(self, response_json, case_name):
