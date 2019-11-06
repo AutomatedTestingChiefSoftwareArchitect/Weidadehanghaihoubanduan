@@ -107,7 +107,6 @@ class AutomatedInterfaces(unittest.TestCase):
                     logger.info("请求参数:%s" % self.data)
                     logger.info("Content_type: %s" % self.content_type)
                     logger.info("User_Agent: %s" % self.user_agent)
-                    logger.info("User_Token: %s" % self.user_token)
                     # headers连接未关闭后,报出SSH错误
                     urllib3.disable_warnings()
                     # 调用封装的http requests方法
@@ -138,7 +137,7 @@ class AutomatedInterfaces(unittest.TestCase):
 
     def Configure_even(self):
         try:
-            headers_add = headers["userToken"] = None
+            headers_addToken = headers["UserToken"] = "03-01512000578944964338-01008575-1572600160"
             # 根据login excel 配置读取对于的excel 和 shell
             dates = readExcel.reds.get_xls(xls_name, sheet_name)
             # 判断读取数据是否为空
@@ -156,7 +155,7 @@ class AutomatedInterfaces(unittest.TestCase):
                     logger.info("请求参数:%s" % data)
                     urllib3.disable_warnings()
                     # 调用封装的http requests方法
-                    results = configHttp.runmain.run_main(method, url, data, headers_add)
+                    results = configHttp.runmain.run_main(method, url, data, headers_addToken)
                     # 全局变量 接收 返回的结果
                     self.results = results
                     # 判断url连接错误
