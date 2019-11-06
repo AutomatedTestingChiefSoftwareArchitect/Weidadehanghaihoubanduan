@@ -76,9 +76,10 @@ class AutomatedInterfaces(unittest.TestCase):
 
     def Landing_even(self):
         # 定义global全局变量,用于Configure_even调用
-        global headers
         global xls_name
         global sheet_name
+        global headers_dict
+        global responses_json
         # 遍历userCase excel login shell数据
         dates = readExcel.reds.get_xls('userCase.xlsx', 'login')
         # 定义变量method···等等, 接收遍历excel数据
@@ -95,7 +96,7 @@ class AutomatedInterfaces(unittest.TestCase):
             xls_name = interface_xls_name
             sheet_name = interface_sheet_name
         # 参数化headers , 数据均为excel中的遍历
-        headers = {"User-Agent": self.user_agent, "Content-Type": self.content_type}
+        headers_dict = {"User-Agent": self.user_agent, "Content-Type": self.content_type}
         # 判断shell login 链接和参数是否为空
         if self.url and self.data is not None:
             try:
@@ -110,19 +111,19 @@ class AutomatedInterfaces(unittest.TestCase):
                     # headers连接未关闭后,报出SSH错误
                     urllib3.disable_warnings()
                     # 调用封装的http requests方法
-                    results = configHttp.runmain.run_main(self.method, self.url, self.data, headers)
+                    result = configHttp.runmain.run_main(self.method, self.url, self.data, headers_dict)
                     # 全局变量 接收 返回的结果
-                    self.results = results
+                    responses_json = result
                     # 判断url连接错误
                 except (ConnectionError or TimeoutError or RuntimeError or BaseException) as exp:
                     # 错误 就添加至到verificationErrors, 然后verificationErrors处理
                     self.verificationErrors.append(exp)
                     return logger.error("except error : %s" % exp)
                 # 判断 接口http状态码是否为200
-                self.assertEqual(self.results.status_code, requests.codes.OK)
+                self.assertEqual(responses_json.status_code, requests.codes.OK)
                 logger.info("login is successful")
                 # 调用封装匹配response.json方法
-                r = Inheritanced.ret.response_method(self.results.json(), self.case_name)
+                r = Inheritanced.ret.response_method(responses_json.json(), self.case_name)
                 # 如果匹配为空,则添加至verificationErrors处理
                 if r is None:
                     self.verificationErrors.append(r)
@@ -130,14 +131,14 @@ class AutomatedInterfaces(unittest.TestCase):
             except (AssertionError or BaseException) as e:
                 # 用于捕捉主体中的错误,添加至verificationErrors处理
                 self.verificationErrors.append(e)
-                return logger.error("login is %s" % self.results.status_code)
+                return logger.error("login is %s" % responses_json.status_code)
         else:
             # 跳过login登陆模块  注：不能不执行login main方法,因为Configure_even 接口需要 headers
             return logger.info("您未输入登陆和登陆参数，直接运行sheet Interface ~~~")
 
     def Configure_even(self):
         try:
-            headers_addToken = headers["UserToken"] = "03-01512000578944964338-01008575-1572600160"
+            headers_dict["UserToken"] = responses_json.json()["userToken"]
             # 根据login excel 配置读取对于的excel 和 shell
             dates = readExcel.reds.get_xls(xls_name, sheet_name)
             # 判断读取数据是否为空
@@ -155,7 +156,7 @@ class AutomatedInterfaces(unittest.TestCase):
                     logger.info("请求参数:%s" % data)
                     urllib3.disable_warnings()
                     # 调用封装的http requests方法
-                    results = configHttp.runmain.run_main(method, url, data, headers_addToken)
+                    results = configHttp.runmain.run_main(method, url, data, headers_dict)
                     # 全局变量 接收 返回的结果
                     self.results = results
                     # 判断url连接错误
