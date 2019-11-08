@@ -17,6 +17,7 @@ from interfaceTest.http_package import configHttp
 from interfaceTest.report_test import report
 from interfaceTest.sql_package import My_sql as sql
 from interfaceTest.config_package import readConfig as rc
+from interfaceTest.core_package import Payment_order
 
 # 实例化log方法
 logger = Log.logger
@@ -173,6 +174,9 @@ class AutomatedInterfaces(unittest.TestCase):
                 if r is None:
                     self.verificationErrors.append(r)
                     return logger.error("response is %s" % r)
+                else:
+                    if url[url.rindex('/') + 1:] == rc.ret.get_email("order_paid"):
+                        Payment_order.PayOrder().SendsubmitProductOrder()
         except (AssertionError or BaseException) as e:
             # 用于捕捉主体中的错误,添加至verificationErrors处理
             self.verificationErrors.append(e)
