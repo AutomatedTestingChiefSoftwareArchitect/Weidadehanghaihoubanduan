@@ -176,7 +176,7 @@ class AutomatedInterfaces(unittest.TestCase):
                     return logger.error("response is %s" % r)
                 else:
                     if url[url.rindex('/') + 1:] == rc.ret.get_email("order_paid"):
-                        Payment_order.PayOrder().SendsubmitProductOrder()
+                        Payment_order.PayOrder().SendsubmitProductOrder(self.results.json())
         except (AssertionError or BaseException) as e:
             # 用于捕捉主体中的错误,添加至verificationErrors处理
             self.verificationErrors.append(e)
