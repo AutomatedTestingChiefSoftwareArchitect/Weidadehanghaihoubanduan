@@ -5,7 +5,7 @@ import urllib3
 import unittest
 import requests
 import platform
-import traceback
+
 o_path = os.getcwd()
 sys.path.append(o_path)
 from time import sleep
@@ -135,7 +135,7 @@ class AutomatedInterfaces(unittest.TestCase):
 
     def Configure_even(self):
         try:
-            headers_dict["UserToken"] = responses_json.json()["userToken"]
+            headers_dict["userToken"] = responses_json.json()["userToken"]
             # 根据login excel 配置读取对于的excel 和 shell
             dates = readExcel.reds.get_xls(xls_name, sheet_name)
             # 判断读取数据是否为空
@@ -155,9 +155,9 @@ class AutomatedInterfaces(unittest.TestCase):
                     # 调用封装的http requests方法
                     self.results = configHttp.runmain.run_main(method, url, data, headers_dict)
                     if url[url.rindex('/') + 1:] != rc.ret.get_order("submitOrder"):
-                        self.orderId = Payment_order.PayOrder().SubmitOrder(self.results.json())
+                        self.orderId = Payment_order.SubmitOrder(self.results.json())
                     if self.orderId is not None:
-                        self.results = Payment_order.PayOrder().PrePay(headers_dict)
+                        self.results = Payment_order.PayOrder().PrePay(self.orderId, headers_dict)
                 # 判断url连接错误
                 except (ConnectionError or TimeoutError or RuntimeError or BaseException) as exp:
                     # 错误 就添加至到verificationErrors, 然后verificationErrors处理

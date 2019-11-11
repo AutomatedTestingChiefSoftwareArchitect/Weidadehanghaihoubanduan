@@ -1,21 +1,22 @@
+import urllib3
 from interfaceTest.config_package import readConfig
 from interfaceTest.http_package import configHttp
 from interfaceTest.core_package import Automated_Interfaces
 
+
+def SubmitOrder(resubmit):
+    # 获取submitProductOrder response
+    ProductOrder_orderId = resubmit["data"]["orderId"]
+    return ProductOrder_orderId
+
+
 class PayOrder(object):
 
-    def __init__(self):
-        # 定义全局变量
-        self.ProductOrder_orderId = None
-
-    def SubmitOrder(self, resubmit):
-        # 获取submitProductOrder response
-        self.ProductOrder_orderId = resubmit["data"]["orderId"]
-        return self.ProductOrder_orderId
-
-    def PrePay(self, headers_dict):
+    def PrePay(self, Order_Id, headers_dict):
         # 待支付接口
         url = readConfig.ret.get_order("PrePay_url")
-        data = {"payWayId":1,"orderId":self.ProductOrder_orderId,"clientType":"miniApp"}
+        data = {"payWayId":1,"orderId":Order_Id,"clientType":"miniApp"}
+        print(self.ProductOrder_orderId)
+        urllib3.disable_warnings()
         PrePayJson = configHttp.runmain.run_main('post', url, data, headers_dict)
         return PrePayJson
