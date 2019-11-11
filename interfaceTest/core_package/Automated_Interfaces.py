@@ -25,8 +25,6 @@ logger = Log.logger
 class AutomatedInterfaces(unittest.TestCase):
     # 运行TestCase之前准备工作
     def setUp(self):
-        # 全局变量来接收Case.json
-        self.results = None
         # 创建全局变量list
         self.verificationErrors = []
 
@@ -112,9 +110,7 @@ class AutomatedInterfaces(unittest.TestCase):
                     # headers连接未关闭后,报出SSH错误
                     urllib3.disable_warnings()
                     # 调用封装的http requests方法
-                    result = configHttp.runmain.run_main(self.method, self.url, self.data, headers_dict)
-                    # 全局变量 接收 返回的结果
-                    responses_json = result
+                    responses_json = configHttp.runmain.run_main(self.method, self.url, self.data, headers_dict)
                     # 判断url连接错误
                 except (ConnectionError or TimeoutError or RuntimeError or BaseException) as exp:
                     # 错误 就添加至到verificationErrors, 然后verificationErrors处理
@@ -157,10 +153,12 @@ class AutomatedInterfaces(unittest.TestCase):
                     logger.info("请求参数:%s" % data)
                     urllib3.disable_warnings()
                     # 调用封装的http requests方法
-                    results = configHttp.runmain.run_main(method, url, data, headers_dict)
-                    # 全局变量 接收 返回的结果
-                    self.results = results
-                    # 判断url连接错误
+                    self.results = configHttp.runmain.run_main(method, url, data, headers_dict)
+                    if url[url.rindex('/') + 1:] != rc.ret.get_order("submitOrder"):
+                        self.orderId = Payment_order.PayOrder().SubmitOrder(self.results.json())
+                    if self.orderId is not None:
+                        self.results = Payment_order.PayOrder().PrePay(headers_dict)
+                # 判断url连接错误
                 except (ConnectionError or TimeoutError or RuntimeError or BaseException) as exp:
                     # 错误 就添加至到verificationErrors, 然后verificationErrors处理
                     self.verificationErrors.append(exp)
@@ -169,14 +167,11 @@ class AutomatedInterfaces(unittest.TestCase):
                 self.assertEqual(self.results.status_code, requests.codes.OK)
                 logger.info("assert url is successful")
                 # 调用封装匹配response.json方法
-                r = Inheritanced.ret.response_method(self.results.json(), case_name)
+                ret = Inheritanced.ret.response_method(self.results.json(), case_name)
                 # 如果匹配为空,则添加至verificationErrors处理
-                if r is None:
+                if ret is None:
                     self.verificationErrors.append(r)
-                    return logger.error("response is %s" % r)
-                else:
-                    if url[url.rindex('/') + 1:] == rc.ret.get_email("order_paid"):
-                        Payment_order.PayOrder().SendsubmitProductOrder(self.results.json())
+                    return logger.error("response is %s" % ret)
         except (AssertionError or BaseException) as e:
             # 用于捕捉主体中的错误,添加至verificationErrors处理
             self.verificationErrors.append(e)

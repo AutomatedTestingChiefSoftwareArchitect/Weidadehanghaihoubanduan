@@ -14,18 +14,20 @@ config.read(config_path, encoding='utf-8')
 class ReadConfig(object):
 
     def get_http(self, name):
-        # 读取REPORT下变量name字段  注：name is str
         value = config.get('REPORT', name)
         return value
 
     def get_email(self, name):
-        # 读取EMAIL下变量name字段  注：name is str
         value = config.get('LOGS', name)
         return value
 
     def get_mysql(self, name):
-        # 读取DATABASE下变量name字段  注：name is str
         value = config.get('DATABASE', name)
         return value
+
+    def get_order(self, name):
+        value = config.get('ProductOrder', name)
+        return value
+
 # 实例化对象
 ret = ReadConfig()
