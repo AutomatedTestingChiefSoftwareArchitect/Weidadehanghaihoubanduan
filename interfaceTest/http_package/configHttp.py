@@ -9,7 +9,7 @@ class RunMain(object):
     # 封装http requests post 方法
     def send_post(self, url, data, headers):
         # 运行post接口,后返回  and json = data
-        result = requests.post(url=url, data= json.dumps(data), headers=headers, verify=False)
+        result = requests.post(url=url, data=json.dumps(data), headers=headers, verify=False)
         return result
 
     # 封装http requests get 方法

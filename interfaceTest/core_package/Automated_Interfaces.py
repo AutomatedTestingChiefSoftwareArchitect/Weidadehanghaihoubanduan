@@ -97,7 +97,7 @@ class AutomatedInterfaces(unittest.TestCase):
         # 参数化headers , 数据均为excel中的遍历
         headers_dict = {"User-Agent": self.user_agent, "Content-Type": self.content_type}
         # 判断shell login 链接和参数是否为空
-        if self.url and self.data is not None:
+        if self.url and self.data:
             try:
                 try:
                     # 打印shell login 数据
@@ -122,7 +122,7 @@ class AutomatedInterfaces(unittest.TestCase):
                 # 调用封装匹配response.json方法
                 r = Inheritanced.ret.response_method(responses_json.json(), self.case_name)
                 # 如果匹配为空,则添加至verificationErrors处理
-                if r is None:
+                if not r:
                     self.verificationErrors.append(r)
                     return logger.error("response is %s" % r)
             except (AssertionError or BaseException) as e:
@@ -139,7 +139,7 @@ class AutomatedInterfaces(unittest.TestCase):
             # 根据login excel 配置读取对于的excel 和 shell
             dates = readExcel.reds.get_xls(xls_name, sheet_name)
             # 判断读取数据是否为空
-            if dates is None:
+            if not dates:
                 # 数据为空时,抛出错误verificationErrors
                 self.verificationErrors.append(dates)
                 return logger.error("sheet Interface is %s" % dates)
@@ -156,7 +156,7 @@ class AutomatedInterfaces(unittest.TestCase):
                     self.results = configHttp.runmain.run_main(method, url, data, headers_dict)
                     if url[url.rindex('/') + 1:] != rc.ret.get_order("submitOrder"):
                         self.orderId = Payment_order.SubmitOrder(self.results.json())
-                    if self.orderId is not None:
+                    if self.orderId:
                         self.results = Payment_order.PayOrder().PrePay(self.orderId, headers_dict)
                 # 判断url连接错误
                 except (ConnectionError or TimeoutError or RuntimeError or BaseException) as exp:
@@ -169,7 +169,7 @@ class AutomatedInterfaces(unittest.TestCase):
                 # 调用封装匹配response.json方法
                 ret = Inheritanced.ret.response_method(self.results.json(), case_name)
                 # 如果匹配为空,则添加至verificationErrors处理
-                if ret is None:
+                if not ret:
                     self.verificationErrors.append(r)
                     return logger.error("response is %s" % ret)
         except (AssertionError or BaseException) as e:
