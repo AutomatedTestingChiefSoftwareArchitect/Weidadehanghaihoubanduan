@@ -5,7 +5,6 @@ import urllib3
 import unittest
 import requests
 import platform
-
 o_path = os.getcwd()
 sys.path.append(o_path)
 from time import sleep
