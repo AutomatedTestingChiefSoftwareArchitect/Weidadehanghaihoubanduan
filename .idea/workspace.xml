@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5e9c91-1d7f-46f5-a2f3-4cd375411af8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/judge_inheritance/response_check.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/judge_inheritance/response_check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceTest/testFile/userCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceTest/testFile/userCase.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,22 +33,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="177" selection-start-line="177" selection-end-line="177" />
+            <state relative-caret-position="280">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
-                <element signature="e#24#33#0" expanded="true" />
+                <element signature="e#771#820#0" />
+                <element signature="e#878#1724#0" />
+                <element signature="e#1813#2210#0" />
+                <element signature="e#2290#2599#0" />
+                <element signature="e#2637#5539#0" />
+                <element signature="e#5579#7866#0" />
+                <element signature="e#7899#7984#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="240">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#288#489#0" />
+                <element signature="e#527#751#0" />
+                <element signature="e#790#822#0" />
+                <element signature="e#860#1953#0" />
+                <element signature="e#2014#2035#0" />
+                <element signature="e#2102#3132#0" />
               </folding>
             </state>
           </provider>
@@ -59,16 +69,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/judge_inheritance/response_check.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="180">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#235#405#0" />
+                <element signature="e#443#611#0" />
+                <element signature="e#443#507#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interfaceTest/requestcode/Test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
@@ -80,20 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interfaceTest/http_package/configHttp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="17" column="81" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="81" />
+            <state relative-caret-position="60">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -195,12 +196,12 @@
         <option value="$PROJECT_DIR$/interfaceTest/config_package/readConfig.py" />
         <option value="$PROJECT_DIR$/interfaceTest/core_package/Payment_order.py" />
         <option value="$PROJECT_DIR$/interfaceTest/config_package/config.ini" />
-        <option value="$PROJECT_DIR$/interfaceTest/http_package/configHttp.py" />
-        <option value="$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py" />
         <option value="$PROJECT_DIR$/interfaceTest/logs_result/logs" />
-        <option value="$PROJECT_DIR$/interfaceTest/requestcode/Test.py" />
         <option value="$PROJECT_DIR$/interfaceTest/judge_inheritance/response_check.py" />
         <option value="$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py" />
+        <option value="$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py" />
+        <option value="$PROJECT_DIR$/interfaceTest/http_package/configHttp.py" />
+        <option value="$PROJECT_DIR$/interfaceTest/requestcode/Test.py" />
       </list>
     </option>
   </component>
@@ -213,7 +214,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -308,20 +308,21 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/smart-home-e-impl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -360,28 +361,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="C:\Users\Administrator\PycharmProjects\untitled6\Automated_Testing\interfaceTest\core_package\Automated_Interfaces.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Inheritanced" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PyrequestCode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interfaceTest/judge_inheritance" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -478,7 +457,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="getpathInfo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="get-pip" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PyrequestCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -486,12 +465,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interfaceTest" />
+      <option name="WORKING_DIRECTORY" value="C:/Program Files/Python37/Scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interfaceTest/getpathInfo.py" />
+      <option name="SCRIPT_NAME" value="C:/Program Files/Python37/Scripts/get-pip.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -500,22 +479,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in Automated_Interfaces.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="PyrequestCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interfaceTest/core_package" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Automated_Interfaces" />
       <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python.Inheritanced" />
       <item itemvalue="Python.Test_Interface" />
-      <item itemvalue="Python.getpathInfo" />
       <item itemvalue="Python.Payment_order" />
       <item itemvalue="Python.Test" />
+      <item itemvalue="Python.get-pip" />
+      <item itemvalue="Python tests.Unittests in Automated_Interfaces.py" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Test" />
+        <item itemvalue="Python tests.Unittests in Automated_Interfaces.py" />
+        <item itemvalue="Python.get-pip" />
         <item itemvalue="Python.Payment_order" />
         <item itemvalue="Python.Test_Interface" />
-        <item itemvalue="Python.getpathInfo" />
-        <item itemvalue="Python.Inheritanced" />
       </list>
     </recent_temporary>
   </component>
@@ -567,14 +561,12 @@
       <workItem from="1572502644237" duration="57931000" />
       <workItem from="1573737036944" duration="2484000" />
       <workItem from="1574054188343" duration="3912000" />
-      <workItem from="1574150238261" duration="40587000" />
-    </task>
-    <task id="LOCAL-00089" summary="add run path config66">
-      <created>1567394293575</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1567394293575</updated>
+      <workItem from="1574150238261" duration="42678000" />
+      <workItem from="1575025140325" duration="217000" />
+      <workItem from="1575025378005" duration="163000" />
+      <workItem from="1575025791331" duration="1982000" />
+      <workItem from="1575027795671" duration="259000" />
+      <workItem from="1575253812337" duration="5387000" />
     </task>
     <task id="LOCAL-00090" summary="fix config encoding">
       <created>1567394500303</created>
@@ -912,13 +904,17 @@
       <option name="project" value="LOCAL" />
       <updated>1574833295530</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="add check response">
+      <created>1574843706090</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1574843706090</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_Test_main_Interface - 2019.07.17 at 14h 38m 21s.xml">
-      <configuration name="Unittests for Test_main.Interface" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_Test_main_Interface - 2019.07.20 at 10h 26m 55s.xml">
       <configuration name="Unittests for Test_main.Interface" configurationId="tests" />
     </history-entry>
@@ -946,9 +942,12 @@
     <history-entry file="Unittests_for_Automated_Interfaces_AutomatedInterfaces - 2019.10.21 at 15h 46m 00s.xml">
       <configuration name="Unittests for Automated_Interfaces.AutomatedInterfaces" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_Automated_Interfaces_py - 2019.12.02 at 11h 11m 46s.xml">
+      <configuration name="Unittests in Automated_Interfaces.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="705527000" />
+    <option name="totallyTimeSpent" value="715626000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -963,7 +962,7 @@
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.20341787" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837488" visible="true" weight="0.21444322" />
       <window_info id="Structure" order="1" sideWeight="0.5016251" side_tool="true" weight="0.15938166" />
       <window_info id="Favorites" order="2" sideWeight="0.5016251" side_tool="true" weight="0.15938166" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -976,8 +975,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946696" weight="0.4366042" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.24593717" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.4983462" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.24506749" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.49740395" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1122,6 +1121,7 @@
     <SUITE FILE_PATH="coverage/Automated_Testing$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1571981813497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/requestcode" />
     <SUITE FILE_PATH="coverage/Automated_Testing$Payment_order.coverage" NAME="Payment_order Coverage Results" MODIFIED="1573458615907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/core_package" />
     <SUITE FILE_PATH="coverage/Automated_Testing$inheritance.coverage" NAME="inheritance Coverage Results" MODIFIED="1567996832339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/judge_inheritance" />
+    <SUITE FILE_PATH="coverage/Automated_Testing$get_pip.coverage" NAME="get-pip Coverage Results" MODIFIED="1575027905500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/Program Files/Python37/Scripts" />
     <SUITE FILE_PATH="coverage/PyrequestCode$readConfig.coverage" NAME="readConfig Coverage Results" MODIFIED="1567056359278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/config_package" />
     <SUITE FILE_PATH="coverage/PyrequestCode$login_report.coverage" NAME="login_report Coverage Results" MODIFIED="1563606029464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/testCase" />
     <SUITE FILE_PATH="coverage/PyrequestCode$Test_py.coverage" NAME="Test py Coverage Results" MODIFIED="1566975931619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest" />
@@ -1133,21 +1133,19 @@
     <SUITE FILE_PATH="coverage/Automated_Testing$Unittests_for_Automated_Interfaces_AutomatedInterfaces.coverage" NAME="Unittests for Automated_Interfaces.AutomatedInterfaces Coverage Results" MODIFIED="1571643956793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/core_package" />
     <SUITE FILE_PATH="coverage/PyrequestCode$Test.coverage" NAME="Test Coverage Results" MODIFIED="1563945842621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest" />
     <SUITE FILE_PATH="coverage/PyrequestCode$Power_activities.coverage" NAME="Power_activities Coverage Results" MODIFIED="1566354662634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/requestcode" />
-    <SUITE FILE_PATH="coverage/Automated_Testing$Automated_Interfaces.coverage" NAME="Automated_Interfaces Coverage Results" MODIFIED="1574839198493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/core_package" />
+    <SUITE FILE_PATH="coverage/Automated_Testing$Automated_Interfaces.coverage" NAME="Automated_Interfaces Coverage Results" MODIFIED="1575256313792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/core_package" />
     <SUITE FILE_PATH="coverage/Automated_Testing$My_sql.coverage" NAME="My_sql Coverage Results" MODIFIED="1570866283159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/sql_package" />
     <SUITE FILE_PATH="coverage/PyrequestCode$robot_report.coverage" NAME="robot_report Coverage Results" MODIFIED="1566981636858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/robot_package" />
     <SUITE FILE_PATH="coverage/PyrequestCode$Configure_even_code.coverage" NAME="Configure_even_code Coverage Results" MODIFIED="1567056948920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/core_package" />
     <SUITE FILE_PATH="coverage/Automated_Testing$Test_py.coverage" NAME="Test py Coverage Results" MODIFIED="1567993201661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/requestcode" />
     <SUITE FILE_PATH="coverage/PyrequestCode$readExcel.coverage" NAME="readExcel Coverage Results" MODIFIED="1565664890859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/readexcel_package" />
+    <SUITE FILE_PATH="coverage/Automated_Testing$Unittests_in_Automated_Interfaces_py.coverage" NAME="Unittests in Automated_Interfaces.py Coverage Results" MODIFIED="1575256306063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/core_package" />
     <SUITE FILE_PATH="coverage/Automated_Testing$getpathInfo.coverage" NAME="getpathInfo Coverage Results" MODIFIED="1572517277145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest" />
     <SUITE FILE_PATH="coverage/PyrequestCode$inheritance.coverage" NAME="inheritance Coverage Results" MODIFIED="1565606104959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/judge_inheritance" />
     <SUITE FILE_PATH="coverage/Automated_Testing$Configure_even_code.coverage" NAME="Automated_Interfaces Coverage Results" MODIFIED="1568691900762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/core_package" />
-    <SUITE FILE_PATH="coverage/Automated_Testing$Test.coverage" NAME="Test Coverage Results" MODIFIED="1574841643719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/requestcode" />
+    <SUITE FILE_PATH="coverage/Automated_Testing$Test.coverage" NAME="Test Coverage Results" MODIFIED="1575259176909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interfaceTest/requestcode" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-10-21-20-11-03.html" />
-    <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/logs.2019-10-15" />
-    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-10-22-13-47-33.html" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-10-22-13-52-45.html" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-10-22-13-55-39.html" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-10-22-14-09-44.html" />
@@ -1162,13 +1160,6 @@
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-10-25-12-05-39.html" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-10-25-13-11-18.html" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-10-25-17-43-13.html" />
-    <entry file="file://C:/Program Files/Python37/Lib/site-packages/requests/exceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-991083293/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
@@ -1293,16 +1284,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-11-20-18-03-17.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-11-20-18-05-50.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-11-20-18-03-17.html" />
+    <entry file="file://$PROJECT_DIR$/interfaceTest/result/report-2019-11-20-18-05-50.html" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Payment_order.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -1317,63 +1300,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/http_package/configHttp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="17" column="81" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/logs.2019-11-19">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/logs.2019-11-19" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/logs_result/logs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/requestcode/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="177" selection-start-line="177" selection-end-line="177" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/Python37/Scripts/get-pip.py" />
     <entry file="file://$PROJECT_DIR$/interfaceTest/judge_inheritance/response_check.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        <state relative-caret-position="180">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#235#405#0" />
+            <element signature="e#443#611#0" />
+            <element signature="e#443#507#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaceTest/judge_inheritance/Inheritanced.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="240">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#288#489#0" />
+            <element signature="e#527#751#0" />
+            <element signature="e#790#822#0" />
+            <element signature="e#860#1953#0" />
+            <element signature="e#2014#2035#0" />
+            <element signature="e#2102#3132#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/core_package/Automated_Interfaces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#771#820#0" />
+            <element signature="e#878#1724#0" />
+            <element signature="e#1813#2210#0" />
+            <element signature="e#2290#2599#0" />
+            <element signature="e#2637#5539#0" />
+            <element signature="e#5579#7866#0" />
+            <element signature="e#7899#7984#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/http_package/configHttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/report_test/report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/site-packages/requests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-887">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="e#871#885#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/site-packages/requests/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python37/Lib/site-packages/urllib3-1.25.7/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#23#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaceTest/requestcode/Test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
         </state>
       </provider>
     </entry>
